@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        .geral {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: -30px;
+            margin-bottom: 50px;
+        }
+
+        body {
+            background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .mensagem {
+            color: white;
+            text-align: center;
+        }
+
+        .login {
+            top: 70%;
+            left: 50%;
+            color: white;
+            width: 40%;
+            align-items: center;
+        }
+
+        #Nome::placeholder {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #Telefone::placeholder {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #Endereço::placeholder {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #CPF::placeholder {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #Email::placeholder {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #Senha::placeholder {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        input {
+            background: transparent;
+            padding: 15px;
+            border: 1px solid white;
+            color: white;
+            font-size: 15px;
+            border-radius: 15px;
+            width: 100%;
+            text-align: center;
+        }
+
+        button {
+            background-color: dodgerblue;
+            border: none;
+            padding: 15px;
+            width: 35%;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            margin-left: 35%;
+        }
+
+        button:hover {
+            background-color: deepskyblue;
+            cursor: pointer;
+        }
+
+        .titulo{
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .descricao{
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .cadastro{
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .titulo{
+            font-size: 45px;
+            margin-left: 35px;
+        }
+
+        .descricao{
+            margin-left: 30px;
+            margin-top: -25px;
+            font-style: italic;
+        }
+
+        .espaco{
+            margin-top: 10px;
+        }
+
+        .Grupo{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.62rem;
+            padding: 0 0 .5rem;
+        }
+
+        .Escolha{
+            display: flex;
+            align-items: center;
+        }
+
+        .Escolha input{
+            margin-right: 0.35rem;
+        }
+
+        .Escolha label{
+            font-size: 15px;
+            color: white;
+        }
+
+        .Opcoes{
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .Genero{
+            border-radius: 10px;
+            border: 1px solid white;
+            margin-right: -30px;
+        }
+
+        .Legenda{
+            font-family: 'Poppins', sans-serif;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="geral">
+        <div class="mensagem">
+            <h1 class="titulo">All Clean</h1>
+
+            <p class="descricao">A melhor maneira de lavar suas roupas<br> e economizar. Tudo ao mesmo tempo!</p>
+        </div>
+
+        <div class="login">
+        <div class="espaco">
+            <form action="">
+                <input id="Nome" type="Nome" placeholder="Nome">
+                <br><br>
+
+                <fieldset class="Genero">
+                    <legend class="Legenda">Gênero</legend>
+
+                <div class="Opcoes">
+
+                    <div class="Grupo">
+                        <div class="Escolha">
+                            <input type="radio" id="Feminino" name="Outro">
+                            <label for="Feminino">Feminino</label>
+                        </div>
+
+                        <div class="Escolha">
+                            <input type="radio" id="Masculino" name="Outro">
+                            <label for="Masculino">Masculino</label>
+                        </div>
+
+                        <div class="Escolha">
+                            <input type="radio" id="Outro" name="Outro">
+                            <label for="Outro">Outro</label>
+                        </div>
+
+                        <div class="Escolha">
+                            <input type="radio" id="Nenhum" name="Outro">
+                            <label for="Nenhum">Prefiro não dizer</label>
+                        </div>
+                    </div>
+                </div>
+                </fieldset>
+
+                <br>
+
+                <input id="Telefone" type="tel" placeholder="Telefone" autocomplete="tel" 
+                pattern="\([0-9]{2}\)[\s][0-9]{5}-[0-9]{4}" maxlength="11" data-mask="(00) 00000-0000"> 
+                <br><br>
+
+                <input id="Endereço" type="Endereço" placeholder="Endereço">
+                <br><br>
+
+                <input id="CPF" type="CPF" placeholder="CPF">
+                <br><br>
+
+                <input id="Email" type="Email" placeholder="Email">
+                <br><br>
+
+                <input id="Senha" type="Senha" placeholder="Senha">
+                <br><br>
+
+            </form>
+            </div>
+            <button class="cadastro">Cadastre-se</button>
+
+        </div>
+    </div>
+</body>
+</html>

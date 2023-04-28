@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        .geral {
+            margin-top: 90px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: -30px;
+        }
+
+        body {
+            background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .titulo{
+            font-size: 45px;
+            margin-left: 35px;
+        }
+
+        .subtitulo{
+            margin-left: 30px;
+            margin-top: -25px;
+            font-style: italic;
+        }
+
+        .mensagem {
+            color: white;
+            text-align: center;
+        }
+
+        .login {
+            top: 70%;
+            left: 50%;
+            color: white;
+            width: 40%;
+            align-items: center;
+        }
+
+        #email::placeholder {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #senha::placeholder {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        input {
+            background: transparent;
+            padding: 15px;
+            border: 1px solid white;
+            color: white;
+            font-size: 15px;
+            border-radius: 15px;
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: dodgerblue;
+            border: none;
+            padding: 15px;
+            width: 35%;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            margin-left: 35%;
+        }
+
+        button:hover {
+            background-color: deepskyblue;
+            cursor: pointer;
+        }
+
+        .fonte{
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .fonte1{
+            font-family: 'Poppins', sans-serif;
+        }
+
+        a:link{
+            text-decoration: none;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+
+        a:link{
+            color: white;
+        }
+
+        a:hover{
+            color: rgb(104, 8, 104, 0.692);
+        }
+
+        .link{
+            margin-left: 238px;
+        }
+
+    </style>
+</head>
+<div class="fonte">
+<body>
+    <div class="geral">
+        <div class="mensagem">
+            <h1 class="titulo">All Clean</h1>
+
+            <p class="subtitulo">A melhor maneira de lavar suas roupas<br> e economizar. Tudo ao mesmo tempo!</p>
+        </div>
+
+        <div class="login">
+
+            <form action="">
+                <input id="email" type="email" placeholder="Email">
+                <br><br>
+
+                <input id="senha" type="password" placeholder="Senha">
+                <br><br>
+                <button class="fonte1">Entrar</button>
+                <br><br>
+            </form>
+
+            <a class="link" href="#Cadastre-se">Cadastre-se</a>
+
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
