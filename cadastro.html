@@ -150,33 +150,48 @@
             <form action="">
                 <input id="Nome" type="Nome" placeholder="Nome">
                 <br><br>
-
+             <label>
                 <input id="Telefone" type="tel" placeholder="Telefone">
                 <br><br>
-
+            </label>
                 <input id="Rua" type="text" placeholder="Rua">
                 <br><br>
 
                 <input id="Bairro" type="text" placeholder="Bairro">
                 <br><br>
-
-                <input id="Número" type="number" placeholder="Número">
+            
+                <input type="text" id="Número" placeholder="Número">
                 <br><br>
-
-                <input id="CPF" type="CPF" placeholder="CPF">
+            
+            <label>
+                <input type="text" id="CPF"  placeholder="CPF">
                 <br><br>
-
+            </label>
                 <input id="Email" type="Email" placeholder="Email">
                 <br><br>
 
                 <input id="Senha" type="Senha" placeholder="Senha">
                 <br><br>
-
+                
+                <script src="./main.js"></script>
             </form>
             </div>
             <button class="cadastro">Cadastre-se</button>
 
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script>
+        var cleave = new Cleave('#CPF', {
+    delimiters: ['.', '.', '-'],
+    blocks: [3, 3, 3, 2],
+    numericOnly: true
+});
+    </script>
+    <script>
+        $('#Telefone').mask('(00) 9 0000-0000');
+    </script>
 </body>
 </html>
