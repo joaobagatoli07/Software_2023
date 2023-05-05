@@ -50,7 +50,17 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        #Endereço::placeholder {
+        #Rua::placeholder {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #Bairro::placeholder {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #Número::placeholder {
             color: white;
             font-family: 'Poppins', sans-serif;
         }
@@ -124,41 +134,6 @@
             margin-top: 10px;
         }
 
-        .Grupo{
-            display: flex;
-            justify-content: space-between;
-            margin-top: 0.62rem;
-            padding: 0 0 .5rem;
-        }
-
-        .Escolha{
-            display: flex;
-            align-items: center;
-        }
-
-        .Escolha input{
-            margin-right: 0.35rem;
-        }
-
-        .Escolha label{
-            font-size: 15px;
-            color: white;
-        }
-
-        .Opcoes{
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .Genero{
-            border-radius: 10px;
-            border: 1px solid white;
-            margin-right: -30px;
-        }
-
-        .Legenda{
-            font-family: 'Poppins', sans-serif;
-        }
-
     </style>
 </head>
 
@@ -176,42 +151,16 @@
                 <input id="Nome" type="Nome" placeholder="Nome">
                 <br><br>
 
-                <fieldset class="Genero">
-                    <legend class="Legenda">Gênero</legend>
-
-                <div class="Opcoes">
-
-                    <div class="Grupo">
-                        <div class="Escolha">
-                            <input type="radio" id="Feminino" name="Outro">
-                            <label for="Feminino">Feminino</label>
-                        </div>
-
-                        <div class="Escolha">
-                            <input type="radio" id="Masculino" name="Outro">
-                            <label for="Masculino">Masculino</label>
-                        </div>
-
-                        <div class="Escolha">
-                            <input type="radio" id="Outro" name="Outro">
-                            <label for="Outro">Outro</label>
-                        </div>
-
-                        <div class="Escolha">
-                            <input type="radio" id="Nenhum" name="Outro">
-                            <label for="Nenhum">Prefiro não dizer</label>
-                        </div>
-                    </div>
-                </div>
-                </fieldset>
-
-                <br>
-
-                <input id="Telefone" type="tel" placeholder="Telefone" autocomplete="tel" 
-                pattern="\([0-9]{2}\)[\s][0-9]{5}-[0-9]{4}" maxlength="11" data-mask="(00) 00000-0000"> 
+                <input id="Telefone" type="tel" placeholder="Telefone">
                 <br><br>
 
-                <input id="Endereço" type="Endereço" placeholder="Endereço">
+                <input id="Rua" type="text" placeholder="Rua">
+                <br><br>
+
+                <input id="Bairro" type="text" placeholder="Bairro">
+                <br><br>
+
+                <input id="Número" type="number" placeholder="Número">
                 <br><br>
 
                 <input id="CPF" type="CPF" placeholder="CPF">
