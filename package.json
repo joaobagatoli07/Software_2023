@@ -18,5 +18,8 @@
   "homepage": "https://github.com/joaobagatoli07/Software_2023#readme",
   "dependencies": {
     "mysql2": "^3.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }
