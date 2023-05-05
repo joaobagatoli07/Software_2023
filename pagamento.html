@@ -151,27 +151,90 @@
         height: 35%;
         position: static;
         border-radius: 8px;
-        margin-top: 15px;
+        margin-top: 10px;
         margin-left: 25%;
         font-family: 'Poppins', sans-serif;
      }
      .forma{
         margin-left: 10px;
      }
-     .opcao{
-        margin-left: 20px;
-     }
-     .opcao input{
-        display: none;
-     }
-     .opcao input + label:before{
-        content: '';
-        width: 18px;
-        height: 18px;
-        border-radius: 4px;
-        background-color: rgb(191, 73, 245);
-        display: inline-block;
-     }
+     .custom-checkbox input + label:before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid gray;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-bottom: 3px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.custom-checkbox input:checked + label:before {
+  background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 10 10'%3E%3Cg class='nc-icon-wrapper' stroke-width='1' fill='%23555555'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-cap='butt' d='M2.83 4.72l1.58 1.58 2.83-2.83'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: rgb(117, 61, 61);
+  background-position: center;
+  border: none;
+  padding: 1px;
+  font-family: 'Poppins', sans-serif;
+}
+.custom-checkbox input{
+  display: none;
+}
+.custom-checkbox {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+#numero::placeholder{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+#codigo::placeholder{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+#Nome::placeholder{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+#Validade::placeholder{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+input{
+    background: transparent;
+   
+}
+.campo{
+    margin-top: -200px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+    
+}
+.parcela2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.parcelas{
+    margin-top: -32px; 
+         margin-left: 250px; 
+         position: relative;
+         display: flex;
+         height: 2em;
+         line-height: 3;
+         background: #5c6664;
+         overflow: hidden;
+         border-radius: .25em;
+}
+
 
     </style>
 </head>
@@ -210,11 +273,46 @@
     </div>
     <div class="pagamento">
         <p class="forma"><b>Forma de Pagamento</b></p>
-        <form class="opcao">
-            <input type="checkbox" id="pagamento1" name="Crédito" value="Crédito">
-            <label for="Crédito"><b>Cartão de Crédito</b></label>
+        <div class="custom-checkbox">
+            <input id="checkbox-1" type="checkbox">
+            <label for="checkbox-1">Checkbox 1</label>
+          </div>
+
+          <!-- <div class="campo">
+            <form action="">
+                <input id="numero" type="numero" placeholder="numero">
+                <input id="codigo" type="codigo" placeholder="codigo"> <br>
+                <input id="Nome" type="Nome" placeholder="Nome">
+                <input id="Validade" type="Validade" placeholder="Validade">
+            </form>
+        </div> -->
+    </div>
+    
+
+    <div class="campo">
+        <form action="">
+            <input id="numero" type="numero" placeholder="numero">
+            <input id="codigo" type="codigo" placeholder="codigo"> <br>
+            <input id="Nome" type="Nome" placeholder="Nome">
+            <input id="Validade" type="Validade" placeholder="Validade">
         </form>
     </div>
+
+    <div class="parcela2">
+            <fieldset>
+                <legend>Nº de Parcelas</legend>
+                <div class="parcelas">
+                    <select id="">
+                        <option>1x de R$200,00</option>
+                        <option>2x de R$100,00</option>
+                        <option>3x de R$70,00</option>
+                        <option>4x de R$40,00</option>
+                    </select>
+                </div>
+
+            </fieldset>  
+    </div>      
+    
 
 </body>
 
