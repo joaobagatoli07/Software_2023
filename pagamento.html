@@ -145,6 +145,33 @@
      .horario2:hover::after{
         color: rgb(115, 102, 192);
      }
+     .pagamento{
+        background-color:rgb(214, 214, 214);
+        width: 50%;
+        height: 35%;
+        position: static;
+        border-radius: 8px;
+        margin-top: 15px;
+        margin-left: 25%;
+        font-family: 'Poppins', sans-serif;
+     }
+     .forma{
+        margin-left: 10px;
+     }
+     .opcao{
+        margin-left: 20px;
+     }
+     .opcao input{
+        display: none;
+     }
+     .opcao input + label:before{
+        content: '';
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        background-color: rgb(191, 73, 245);
+        display: inline-block;
+     }
 
     </style>
 </head>
@@ -179,7 +206,14 @@
             </select>
             </div>
         </fieldset>
-
+        
+    </div>
+    <div class="pagamento">
+        <p class="forma"><b>Forma de Pagamento</b></p>
+        <form class="opcao">
+            <input type="checkbox" id="pagamento1" name="Crédito" value="Crédito">
+            <label for="Crédito"><b>Cartão de Crédito</b></label>
+        </form>
     </div>
 
 </body>
