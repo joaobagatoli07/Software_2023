@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+        }
+        body {
+            background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
+            font-family: 'Poppins', sans-serif;
+           
+        }
+        .geral{
+            width: 100%;
+            height: 700px;
+            /* border: 1px solid blue;
+            margin-left: 150px;
+            margin-right: 150px; */
+            display: flex;
+            /* flex-direction: column;
+            align-items: center; */
+        }
+        .navegacao{
+            font-family: 'Poppins', sans-serif;
+            position: fixed;
+            height: 680px;
+            background:rgb(104, 49, 149);
+            width: 70px;
+            box-shadow: 10px 0 0 rgb(56, 0, 128);
+            border-left: 10px solid rgb(104, 49, 149);
+            overflow-x: hidden;
+            transition: 0.5s;
+            margin-top: -20px;
+            margin-left: -10px;
+        }
+        .navegacao:hover{
+            width: 300px;
+        }
+        a:hover{
+            background-color: rgb(56, 0, 128);
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .navegacao ul{
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 100%;
+            padding-left: 5px;
+            padding-top: 135px;
+        }
+        .navegacao ul li{
+            position: relative;
+            list-style: none;
+            width: 100%;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .navegacao ul li a{
+            position: relative;
+            display: flex;
+            width: 100%;
+            text-decoration: none;
+            color: white;
+        }
+        .navegacao ul li a .icon{
+            position: relative;
+            display: block;
+            min-width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 70px;
+        }
+        .navegacao ul li a .icon ion-icon{
+            position: relative;
+            font-size: 1.5rem;
+            z-index: 1;
+        }
+        .navegacao ul li a .title{
+            position: relative;
+            display: block;
+            padding-left: 10px;
+            height: 60px;
+            line-height: 60px;
+            white-space: nowrap;
+        }
+        .navegacao ul li.active{
+            background:rgb(56, 0, 128);
+        }
+        .navegacao ul li.active a::after{
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            background:rgb(104, 49, 149);
+            border-radius: 50%;
+            box-shadow: 15px -15px 0 rgb(56, 0, 128);
+        }
+        .imagem2{
+            margin-top: 10px;
+        }
+        .cabecalho{
+            display: flex;
+            width: 160%;
+            height: 30%;
+            background-color: rgb(0, 45, 112);
+            justify-content: center;
+        }
+        .bloco{
+            background-color: antiquewhite;
+            width: 60%;
+            height: 60%;
+            display: flex;
+            position: absolute;
+            top: 260px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-family: 'Poppins', sans-serif;
+            color: rgb(0, 45, 112);
+    
+        }
+        .icon2 ion-icon{
+            font-size: 2.0rem;
+            margin-left: 20px;
+            margin-top: 30px;
+        }
+        .title2{
+            position: relative;
+            display: block;
+            padding-left: 10px;
+            height: 60px;
+            line-height: 65px;
+            white-space: nowrap;
+            font-size: 15px;
+        }
+        input{
+            border-radius: 6px;
+            border: 1px solid;
+            width: 120%;
+            height: 20px;
+        }
+        .um{
+            margin-top: 45px;
+            margin-left: -43px;
+        }
+        .dois{
+            margin-top: -35px;
+            margin-left: 41px;
+        }
+        .tres{
+            margin-top: -35px;
+            margin-left: 41px;
+        }
+        .quatro{
+            margin-top: -35px;
+            margin-left: 41px;
+        }
+      
+        .title3{
+            position: relative;
+            display: block;
+            padding-left: 40px;
+            height: 60px;
+            /* line-height: 65px; */
+            white-space: nowrap;
+            font-size: 15px;
+            margin-top: -48px;
+        }
+        .icon3 ion-icon{
+            font-size: 2.0rem;
+            margin-top: 90px;
+        }
+        .phone{
+            margin-left: -217px;
+        }
+        .email{
+            margin-top: 160px;
+            margin-left: -217px;
+        }
+        .icon4 ion-icon{
+            font-size: 2.0rem;
+        }
+        .title4{
+            position: relative;
+            display: block;
+            padding-left: 41px;
+            height: 60px;
+            /* line-height: 65px; */
+            white-space: nowrap;
+            font-size: 15px;
+            margin-top: -48px;
+        }
+        .icon5 ion-icon{
+            font-size: 2.0rem;
+        }
+        .home{
+            margin-left: 150px;
+            margin-top: 30px;
+        }
+        .title5{
+            position: relative;
+            display: block;
+            padding-left: 41px;
+            height: 60px;
+            /* line-height: 65px; */
+            white-space: nowrap;
+            font-size: 15px;
+            margin-top: -48px;
+        }
+        
+        
+    </style>
+</head>
+<body>  
+    <div class="geral">
+    <div class="cabecalho">
+        <div class="bloco">
+            <span class="icon2"><ion-icon name="person-circle-outline"></ion-icon></ion-icon></ion-icon></span>
+                 <span class="title2">Nome</span>
+            <form class="um">
+                <input value="Robson Leones Tavares">
+            </form>
+           <div class="phone">
+            <span class="icon3"><ion-icon name="call-outline"></ion-icon></ion-icon></ion-icon></span>
+                 <span class="title3">Telefone</span>
+                 <form class="dois">
+                    <input value="teste">
+                </form>
+            </div>
+            <div class="email">
+                <span class="icon4"><ion-icon name="mail-outline"></ion-icon></ion-icon></ion-icon></span>
+                 <span class="title4">Email</span>
+                 <form class="tres">
+                    <input value="robsonleonestavares@gmai.com">
+                 </form>
+            </div>
+            <div class="home">
+                <span class="icon5"><ion-icon name="home-outline"></ion-icon></ion-icon></ion-icon></span>
+                <span class="title5">Endereço</span>
+                <form class="quatro">
+                    <input value="Rua Grão-Pará">
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    <div class="imagem">
+        <imag src="https://o.remove.bg/downloads/2d1c79b7-e2a9-47b4-80e9-3cd8c61a71be/perfil-removebg-preview.png" width="90px"></imag>
+        </div>
+    
+    <div class="navegacao">
+        
+        <div class="imagem2">
+            <img src="https://cdn.discordapp.com/attachments/1069135222173601863/1089886762639298580/logo2.png"
+            width="67px">
+            </div>
+        <ul>
+            <li class="list active">
+                 <a href="#">
+                     <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                     <span class="title">Inicio</span>
+                 </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                    <span class="title">Agendamento</span>
+                </a>
+           </li>
+           <li class="list">
+            <a href="#">
+                <span class="icon"><ion-icon name="calendar-number-outline"></ion-icon></ion-icon></span>
+                <span class="title">Meus Agendamentos</span>
+            </a>
+       </li>
+            <li class="list">
+                 <a href="#">
+                     <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                     <span class="title">Contato</span>
+                 </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                    <span class="title">Perfil</span>
+                </a>
+           </li>
+           <li class="list">
+            <a href="#">
+                 <span class="icon"><ion-icon name="construct-outline"></ion-icon></ion-icon></span>
+                 <span class="title">Configurações</span>
+            </a>
+       </li>
+        </ul>
+     </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+            list.forEach((item) =>
+            item.addEventListener('click', activeLink));
+    </script>
+</div>
+</body>
+</html>
