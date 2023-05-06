@@ -119,7 +119,7 @@
         .bloco{
             background-color: antiquewhite;
             width: 60%;
-            height: 60%;
+            height: 55%;
             display: flex;
             position: absolute;
             top: 260px;
@@ -158,7 +158,7 @@
             margin-left: 41px;
         }
         .tres{
-            margin-top: -20px;
+            margin-top: -30px;
             margin-left: 41px;
         }
         .quatro{
@@ -166,11 +166,11 @@
             margin-left: 41px;
         }
         .quinta{
-            margin-top: 20px;
+            margin-top: 14px;
             margin-left: 41px;
         }
         .sexta{
-            margin-top: 30px;
+            margin-top: 16px;
             margin-left: 41px;
         }
       
@@ -192,7 +192,7 @@
             margin-left: -217px;
         }
         .email{
-            margin-top: 190px;
+            margin-top: 150px;
             margin-left: -217px;
         }
         .icon4 ion-icon{
@@ -225,13 +225,50 @@
             font-size: 15px;
             margin-top: -48px;
         }
-        
+        .dados{
+            background-color: antiquewhite;
+            font-family: 'Poppins', sans-serif;
+            color: rgb(0, 45, 112);
+            width: 20%;
+            font-size: 10px;
+            height: 50px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            margin-top: 220px;
+            margin-right: 40%;
+        }
+        .pessoais{
+            margin-left: 20px;
+        }
+        .atualizar:hover{
+            color: white;
+            background-color: plum;
+            border-radius: 15px;
+        }
+        .atualizar{
+            background:rgb(104, 49, 149);
+            border: 2px solid black;
+            border-radius: 15px;
+            margin-top: 90px;
+            padding: 10px 30px; 
+            font-size: 17px;
+            margin-left: -100px;
+        }
+        .casa{
+            font-size: 15px;
+        }
+        .bairro{
+            font-size: 15px;
+        }
         
     </style>
 </head>
 <body>  
     <div class="geral">
     <div class="cabecalho">
+        <div class="dados">
+            <h1 class="pessoais">Dados Pessoais</h1>
+        </div>
         <div class="bloco">
             <span class="icon2"><ion-icon name="person-circle-outline"></ion-icon></ion-icon></ion-icon></span>
                  <span class="title2">Nome</span>
@@ -264,11 +301,13 @@
                 
                 </form>
                 <form class="sexta">
-                    <label for="89">Nº da casa</label>
+                    <label class="casa" for="89">Nº da casa</label>
                     <input value="89">
                 </form>
             
-                
+                <form>
+                    <button class="atualizar">Atualizar Cadastro</button>
+                </form>
             </div>
         </div>
     </div>
