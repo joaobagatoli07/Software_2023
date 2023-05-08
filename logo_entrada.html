@@ -7,20 +7,53 @@
     <title>All Clean</title>
 
     <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
         body{
+            width: 100%;
+            min-height: 100vh;
             background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
+            display: grid;
+            place-items: center;
         }  
         
         .imagem{
             margin-top: 50px;
         }
+        .loading{
+           position: relative;
+
+        }
+        .loading::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            width: 60px;
+            height: 60px;
+            border: 3px solid gold
+        }
+        .loading::after{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            content: "";
+            width: 47px;
+            height: 47px;
+            border: 3px solid gold
+        }
+        
     </style>
 </head>
 <body>
 
     <div class="imagem">
+        <div class="loading"></div>
     <center>
-    <img src="https://cdn.discordapp.com/attachments/1069135222173601863/1089886762639298580/logo2.png" 
+    <img src="Logofundo.png" 
     width="500px" height="600px">
     </center>
     </div>
