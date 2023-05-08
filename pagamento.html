@@ -17,7 +17,7 @@
         }
 
         body {
-            background-image: linear-gradient(450deg, rgb(104, 8, 104, 0.692), rgba(156, 105, 143), rgb(202, 167, 147), rgb(190, 112, 66));
+            background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
             font-family: Arial, Helvetica, sans-serif;
             height: 170vh;
         }
@@ -188,24 +188,25 @@
     margin-top: 10px;
 }
 #numero::placeholder{
-    color: white;
+    color: gray;
     font-family: 'Poppins', sans-serif;
 }
 #codigo::placeholder{
-    color: white;
+    color: rgb(173, 173, 173);
     font-family: 'Poppins', sans-serif;
 }
 #Nome::placeholder{
-    color: white;
+    color: gray;
     font-family: 'Poppins', sans-serif;
 }
 #Validade::placeholder{
-    color: white;
+    color: gray;
     font-family: 'Poppins', sans-serif;
 }
 input{
-    background: transparent;
-   
+    background: rgb(189, 187, 187);  
+   border-radius: 15px;
+   border: 1px solid;
 }
 .campo{
     margin-top: -200px;
@@ -213,7 +214,7 @@ input{
    flex-direction: column;
    justify-content: center;
    align-items: center;
-
+   align-content: space-between;
     
 }
 .parcela2{
@@ -234,21 +235,150 @@ input{
          overflow: hidden;
          border-radius: .25em;
 }
+.navegacao{
+            font-family: 'Poppins', sans-serif;
+            position: fixed;
+            height: 680px;
+            background:rgb(104, 49, 149);
+            width: 70px;
+            box-shadow: 10px 0 0 rgb(56, 0, 128);
+            border-left: 10px solid rgb(104, 49, 149);
+            overflow-x: hidden;
+            transition: 0.5s;
+            margin-top: -20px;
+            margin-left: -10px;
+        }
+        .navegacao:hover{
+            width: 300px;
+        }
+        a:hover{
+            background-color: rgb(56, 0, 128);
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .navegacao ul{
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 100%;
+            padding-left: 5px;
+            padding-top: 135px;
+        }
+        .navegacao ul li{
+            position: relative;
+            list-style: none;
+            width: 100%;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .navegacao ul li a{
+            position: relative;
+            display: flex;
+            width: 100%;
+            text-decoration: none;
+            color: white;
+        }
+        .navegacao ul li a .icon{
+            position: relative;
+            display: block;
+            min-width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 70px;
+        }
+        .navegacao ul li a .icon ion-icon{
+            position: relative;
+            font-size: 1.5rem;
+            z-index: 1;
+        }
+        .navegacao ul li a .title{
+            position: relative;
+            display: block;
+            padding-left: 10px;
+            height: 60px;
+            line-height: 60px;
+            white-space: nowrap;
+        }
+        .navegacao ul li.active{
+            background:rgb(56, 0, 128);
+        }
+        .navegacao ul li.active a::after{
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            background:rgb(104, 49, 149);
+            border-radius: 50%;
+            box-shadow: 15px -15px 0 rgb(56, 0, 128);
+        }
+        .imagem2{
+            margin-top: 10px;
+        }
 
 
     </style>
 </head>
 
 <body>
-    <div class="cabecalho">
-        <img class="logo"
-            src="https://cdn.discordapp.com/attachments/1069135222173601863/1089886762639298580/logo2.png">
-        <div class="c_direita">
-            <a class="botao"><b>PÁGINA INICIAL</b></a>
-            <a class="botao"><b>MEUS AGENDAMENTOS</b></a>
-            <a class="botao"><b>CONTATE-NOS</b></a>
-        </div>
-    </div>
+    <div class="navegacao">
+        
+        <div class="imagem2">
+            <img src="https://cdn.discordapp.com/attachments/1069135222173601863/1089886762639298580/logo2.png"
+            width="67px">
+            </div>
+        <ul>
+            <li class="list active">
+                 <a href="#">
+                     <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                     <span class="title">Inicio</span>
+                 </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                    <span class="title">Agendamento</span>
+                </a>
+           </li>
+           <li class="list">
+            <a href="#">
+                <span class="icon"><ion-icon name="calendar-number-outline"></ion-icon></ion-icon></span>
+                <span class="title">Meus Agendamentos</span>
+            </a>
+       </li>
+            <li class="list">
+                 <a href="#">
+                     <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                     <span class="title">Contato</span>
+                 </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                    <span class="title">Perfil</span>
+                </a>
+           </li>
+           <li class="list">
+            <a href="#">
+                 <span class="icon"><ion-icon name="construct-outline"></ion-icon></ion-icon></span>
+                 <span class="title">Configurações</span>
+            </a>
+       </li>
+        </ul>
+     </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+    const list = document.querySelectorAll('.list');
+    function activeLink(){
+        list.forEach((item) =>
+        item.classList.remove('active'));
+        this.classList.add('active');
+    }
+        list.forEach((item) =>
+        item.addEventListener('click', activeLink));
+</script>
 
     <div class="titulo">
         <h1>Conclusão</h1>
