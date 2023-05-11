@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     
     <style>
+
         .geral {
             display: flex;
             justify-content: center;
@@ -31,21 +32,23 @@
             font-family: 'Poppins', sans-serif;
             color: white;
             text-align: center;
-            margin-top: 0%;
+        }
 
+        .tema{
+            font-size: 40px;
+        }
+
+        .subtitulo{
+            font-size: 18px;
+            margin-top: -10px;
+            font-weight: bolder;
         }
 
         .inicialgeral{
             background-color: transparent;
             width: 90%;
             align-items: center;
-            margin-top: 30px;
-            
-        }
-        button:hover {
-            background-color: rgb(82, 3, 82);
-            cursor: pointer;
-            border-radius: 10px;
+            margin-top: 30px;   
         }
 
         .inicial{
@@ -64,7 +67,6 @@
             font-family: 'Poppins', sans-serif;
             color: white;
             font-size: 20px;
-            /* margin-top: 30px; */
             margin-left: 30px;
         }
 
@@ -77,45 +79,43 @@
             width: 20%;
             margin-left: 30px;
         }
+
         .Planos{
             font-family: 'Poppins', sans-serif;
             color: white;
             margin-left: 10%;
         }
+
         .B1{
-            background: transparent;
-            border: 2px solid rgb(83, 1, 90);
+            background: rgb(89, 12, 190);
+            border: 2px solid rgb(56, 0, 128);
             border-radius: 15px;
             margin-top: -15px;
             padding: 15px 40px; 
             font-size: 17px;
+            color: white;
         }
 
         .B2{
             background: transparent;
-            border: 2px solid rgb(83, 1, 90);
+            border: 2px solid rgb(56, 0, 128);
             border-radius: 15px;
             margin-top: -15px;
             padding: 4px 20px; 
-            font-size: 10px;
-        }
-        .B1:hover{
+            font-size: 12px;
             color: white;
-            background-color: rgb(115, 102, 192);
-            border-radius: 15px;
+            cursor: pointer;
         }
 
-        .B2:hover{
-            color: white;
+         .B2:hover{
             background-color: rgb(182, 111, 81);
             border-radius: 15px; 
-        }
+        } 
+
         .titulo1{
             margin-top: -10px;
         }
-        .rodapé{
-            text-align: center;
-        }
+
         .navegacao{
             font-family: 'Poppins', sans-serif;
             position: fixed;
@@ -126,17 +126,20 @@
             border-left: 10px solid rgb(104, 49, 149);
             overflow-x: hidden;
             transition: 0.5s;
-            margin-top: -20px;
+            margin-top: -30px;
             margin-left: -10px;
         }
+
         .navegacao:hover{
             width: 300px;
         }
+
         a:hover{
             background-color: rgb(56, 0, 128);
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
         }
+
         .navegacao ul{
             position: absolute;
             top: 30px;
@@ -145,6 +148,7 @@
             padding-left: 5px;
             padding-top: 135px;
         }
+
         .navegacao ul li{
             position: relative;
             list-style: none;
@@ -152,6 +156,7 @@
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
         }
+
         .navegacao ul li a{
             position: relative;
             display: flex;
@@ -159,6 +164,7 @@
             text-decoration: none;
             color: white;
         }
+
         .navegacao ul li a .icon{
             position: relative;
             display: block;
@@ -167,11 +173,13 @@
             text-align: center;
             line-height: 70px;
         }
+
         .navegacao ul li a .icon ion-icon{
             position: relative;
             font-size: 1.5rem;
             z-index: 1;
         }
+
         .navegacao ul li a .title{
             position: relative;
             display: block;
@@ -180,9 +188,11 @@
             line-height: 60px;
             white-space: nowrap;
         }
+
         .navegacao ul li.active{
             background:rgb(56, 0, 128);
         }
+
         .navegacao ul li.active a::after{
             content: '';
             position: absolute;
@@ -194,10 +204,15 @@
             border-radius: 50%;
             box-shadow: 15px -15px 0 rgb(56, 0, 128);
         }
+
         .imagem2{
             margin-top: 10px;
         }
-        
+
+        .rodape{
+            margin-top: 30px;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -261,28 +276,30 @@
 </script>
 
         <div class="mensagem">
-            <h1 class="titulo">Minha Agenda</h1>
+            <h1 class="tema">Minha Agenda</h1>
 
-            <p>Qua tal aquele cheirinho de roupa lavada?</p>
+            <p class="subtitulo">Que tal aquele cheirinho de roupa lavada?</p>
         </div>
+
     <div class="Planos">
 
         <div class="Plano1">
             <p><b>29 de Abril de 2023</b></p>
             <h1 class="titulo1">Plano Básico</h1>
             <form class="Botão 1">
-                <button class="B1">16:00h</button>
+                <button disabled class="B1">16:00h</button>
                 <button class="B2">Reagendar</button>
                 <button class="B2">Cancelar</button>
             </form>
             <br> 
 
         </div>
+
         <div class="Plano2">
             <p><b>15 de Abril de 2023</b></p>
             <h1 class="titulo1">Plano Básico</h1>
             <form class="Botão 2">
-                <button class="B1">9:00h</button>
+                <button disabled class="B1">9:00h</button>
                 <button class="B2">Reagendar</button>
                 <button class="B2">Cancelar</button>
             </form>
@@ -290,11 +307,12 @@
             <br> 
 
         </div>
+
         <div class="Plano3">
             <p><b>10 de Abril de 2023</b></p>
             <h1 class="titulo1">Plano Intermediário</h1>
             <form class="Botão 3">
-                <button class="B1">13:00h</button>
+                <button disabled class="B1">13:00h</button>
                 <button class="B2">Reagendar</button>
                 <button class="B2">Cancelar</button>
             </form>
@@ -302,16 +320,19 @@
             <br>
 
         </div>
+
         <div class="Plano4">
             <p><b>3 de Abril de 2023</b></p>
             <h1 class="titulo1">Plano Avançado</h1>
             <form class="Botão 4">
-                <button class="B1">17:00h</button>
+                <button disabled class="B1">17:00h</button>
                 <button class="B2">Reagendar</button>
                 <button class="B2">Cancelar</button>
             </form>
         </div>
-        <p class="rodapé">Lembre-se de sempre estar em casa no horário e dia marcados. Não será disponibilizado reembolso sem aviso prévio de ausência.</p>
+
+        <div><p class="rodape">Lembre-se de sempre estar em casa no horário e dia marcados. 
+                               Não será disponibilizado reembolso sem aviso prévio de ausência.</p></div>
     </div>
 </body>
 
