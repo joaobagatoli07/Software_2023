@@ -25,7 +25,7 @@
             font-family: 'Poppins', sans-serif;
             text-align: center;
             font-size: 40px;
-            margin-top: 70px;
+            margin-top: 30px;
             color: white;
         }
 
@@ -33,7 +33,7 @@
             font-family: 'Poppins', sans-serif;
             text-align: center;
             font-size: 18px;
-            margin-top: -20px;
+            margin-top: px;
             color: white;
         }
 
@@ -47,7 +47,7 @@
         } */
 
         .planos1{
-            background-color: rgb(88, 64, 150);
+            background-color: rgb(58, 4, 102);
             border-radius: 10px;
             height: 50px;
             width: 140px;
@@ -59,7 +59,7 @@
         }
 
         .planos2{
-            background-color: rgb(88, 64, 150);
+            background-color: rgb(58, 4, 102);
             border-radius: 10px;
             height: 50px;
             width: 140px;
@@ -71,7 +71,7 @@
         }
 
         .planos3{
-            background-color: rgb(88, 64, 150);
+            background-color: rgb(58, 4, 102);
             border-radius: 10px;
             height: 50px;
             width: 140px;
@@ -83,7 +83,7 @@
         }
 
         .planos5{
-            background-color: rgb(88, 64, 150);
+            background-color: rgb(58, 4, 102);
             width: 429px;
             height: 50px;
             border-radius: 10px;
@@ -93,24 +93,48 @@
 
         .planos4{
             margin: auto;
-            background-color: rgb(88, 64, 150);
+            background-color: rgb(58, 4, 102);
             width: 32%;
             display: flex;
             justify-content: space-around;
             border-radius: 15px;
         }
 
-        .telabrancapagamento{
-            background-color: white;
-            height: 400px;
-            width: 900px;
-            margin-top: -380px;
-            border-radius: 15px;
-            margin-left: 230px;
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
+        .box-degrade{
+            width: 70%;
+            padding: 200px 0;
+            border:3px solid white;
+            margin-left: 210px;
+            margin-top: -290px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: linear-gradient(to left, rgb(119, 54, 204), rgb(106, 42, 189), rgb(84, 22, 134));
+            background-size: 500% 100%;
+            animation: degrade-animado 5s infinite alternate;
+
+        }
+
+        @keyframes degrade-animado{
+            0%{
+                background-position-x: 0%;
+            }
+
+            100%{
+                background-position-x: 100%;
+            }
+        }
+
+
         .escolherplano1{
-            background-color: rgb(88, 64, 150);
+            background-color: rgb(58, 4, 102);
             width: 800px;
             height: 50px;
             border-radius: 15px;
@@ -124,47 +148,51 @@
         }
 
         .reais{
-            margin-left: 20%;
+            margin-left: 30%;
+            font-size: 50px;
             margin-top: -310px;
             font-family: 'Poppins', sans-serif;
         }
 
         .intermediario{
-            margin-left: 20%;
-            margin-top: -100px;
-            font-size: 20px;
+            margin-left: 43%;
+            margin-top: -300px;
+            font-size: 30px;
             font-family: 'Poppins', sans-serif;
+            color: white;
         }
 
         .preco{
             font-size: 16px;
             font-family: 'Poppins', sans-serif;
             font-size: 63px;
-            margin-left: 23%;
-            margin-top: -16px
+            margin-left: 579px;
+            margin-top: 0px;
+            color: white;
         }
 
         .praticidade{
             font-family: 'Poppins', sans-serif;
             margin-left: 35%;
-            margin-top: 125px;
+            margin-top: 70px;
+            color: white;
         }
 
 
         .planos1:hover{
-            background-color: rgb(56, 0, 128);
+            background-color: rgb(82, 3, 82);
         }
 
         .planos2:hover{
-            background-color: rgb(56, 0, 128);
+            background-color: rgb(82, 3, 82);
         }
 
         .planos3:hover{
-            background-color: rgb(56, 0, 128);
+            background-color: rgb(82, 3, 82);
         }
 
         .escolherplano1:hover{
-            background-color: rgb(56, 0, 128);
+            background-color: rgb(82, 3, 82);
         }
 
     </style>
@@ -185,20 +213,18 @@
 <div class="telabrancapagamento"></div>
 
 <div>
-    <h2 class="reais">R$</h2>
-</div>
-
-<div>
     <h2 class="intermediario">Intermediário</h2>
 </div>
 
 <div>
-    <h2 class="preco"><b>150</b></h2>
+    <h2 class="preco"><b>R$ 150</b></h2>
 </div>
 
 <div class="praticidade">
     <p>A praticidade está apenas a alguns cliques de você</p>
 </div>
+
+<div class="box-degrade"></div>
 
 </body>
 </html>
