@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,15 +14,21 @@
 
 <body>
     <style>
-        body {
-            width: 99%;
-            background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
-            font-family: Arial, Helvetica, sans-serif;
-            font-family: Arial, Helvetica, sans-serif;
-            height: 170vh;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .agendamento{
+        body {
+            width: 98vw;
+            height: 95vh;
+            background-image: linear-gradient(450deg, rgb(105, 90, 194), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
+            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .agendamento {
             font-family: 'Poppins', sans-serif;
             text-align: center;
             font-size: 40px;
@@ -29,202 +36,133 @@
             color: white;
         }
 
-        .escolha{
+        .escolha {
             font-family: 'Poppins', sans-serif;
             text-align: center;
             font-size: 18px;
-            margin-top: px;
+            margin-top: 8px;
             color: white;
         }
 
-        /* .planos{
-            background-color: rgb(145, 55, 110);
-            width: 50px;
-            height: 50px;
-            margin-left: 470px;
-            margin-top: 40px;
-            border-radius: 15px;
-        } */
-
-        .planos1{
-            background-color: rgb(58, 4, 102);
-            border-radius: 10px;
-            height: 50px;
-            width: 140px;
-            font-size: 20px;
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            border: transparent;
-            cursor: pointer;
-        }
-
-        .planos2{
-            background-color: rgb(58, 4, 102);
-            border-radius: 10px;
-            height: 50px;
-            width: 140px;
-            font-size: 20px;
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            border: transparent;
-            cursor: pointer;
-        }
-
-        .planos3{
-            background-color: rgb(58, 4, 102);
-            border-radius: 10px;
-            height: 50px;
-            width: 140px;
-            font-size: 20px;
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            border: transparent;
-            cursor: pointer;
-        }
-
-        .planos5{
-            background-color: rgb(58, 4, 102);
-            width: 429px;
-            height: 50px;
-            border-radius: 10px;
-            margin-left: 450px;
-            margin-top: -50px;
-        }
-
-        .planos4{
+        .divplanos {
             margin: auto;
             background-color: rgb(58, 4, 102);
             width: 32%;
+            margin-top: 20px;
             display: flex;
             justify-content: space-around;
             border-radius: 15px;
         }
-
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        
+        .planos {
+            background-color: rgb(58, 4, 102);
+            border-radius: 10px;
+            height: 50px;
+            width: 140px;
+            font-size: 20px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            border: transparent;
+            cursor: pointer;
         }
 
-        .box-degrade{
-            width: 70%;
-            padding: 200px 0;
-            border:3px solid white;
-            margin-left: 210px;
-            margin-top: -290px;
+        .box-degrade {
+            width: 40%;
+            height: 50%;
+            border: 3px solid white;
+            box-shadow: 20px 20px 20px rgb(77, 77, 77);
+            margin: auto;
+            margin-top: 20px; 
             border-radius: 15px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-image: linear-gradient(to left, rgb(119, 54, 204), rgb(106, 42, 189), rgb(84, 22, 134));
+            background-image: linear-gradient(to left, rgb(115, 102, 192), rgb(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
             background-size: 500% 100%;
-            animation: degrade-animado 5s infinite alternate;
+            animation: degrade-animado 3s infinite alternate;
 
         }
 
-        @keyframes degrade-animado{
-            0%{
+        @keyframes degrade-animado {
+            0% {
                 background-position-x: 0%;
             }
 
-            100%{
+            100% {
                 background-position-x: 100%;
             }
         }
 
-
-        .escolherplano1{
-            background-color: rgb(58, 4, 102);
-            width: 800px;
-            height: 50px;
-            border-radius: 15px;
-            border: transparent;
-            font-family: 'Poppins', sans-serif;
-            font-size: 20px;
-            color: white;
-            margin-left: 285px;
-            margin-top: 350px;
-            cursor: pointer;
-        }
-
-        .reais{
-            margin-left: 30%;
-            font-size: 50px;
-            margin-top: -310px;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .intermediario{
-            margin-left: 43%;
-            margin-top: -300px;
+        .intermediario {
             font-size: 30px;
             font-family: 'Poppins', sans-serif;
             color: white;
         }
 
-        .preco{
+        .preco {
             font-size: 16px;
             font-family: 'Poppins', sans-serif;
             font-size: 63px;
-            margin-left: 579px;
-            margin-top: 0px;
             color: white;
         }
 
-        .praticidade{
+        .praticidade {
             font-family: 'Poppins', sans-serif;
-            margin-left: 35%;
-            margin-top: 70px;
             color: white;
+            width: 80%;
+            text-align: center;
         }
 
+        .escolherplano {
+            background-color: rgb(58, 4, 102);
+            width: 80%;
+            height: 50px;
+            border-radius: 15px;
+            border: transparent;
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            color: white;
+            margin-top: 20px;
+            cursor: pointer;
+        }
 
-        .planos1:hover{
+        .planos:hover {
             background-color: rgb(82, 3, 82);
         }
 
-        .planos2:hover{
+        .escolherplano:hover {
             background-color: rgb(82, 3, 82);
         }
-
-        .planos3:hover{
-            background-color: rgb(82, 3, 82);
-        }
-
-        .escolherplano1:hover{
-            background-color: rgb(82, 3, 82);
-        }
-
     </style>
 
 
-<h1 class="agendamento">Agendamento</h1>
-<h2 class="escolha">Escolha o plano desejado</h2>
+    <h1 class="agendamento">Agendamento</h1>
+    <h2 class="escolha">Escolha o plano desejado</h2>
 
 
-<div class="planos4">
-    <button class="planos1">Básico</button>
-    <button class="planos2">Intermediário</button>
-    <button class="planos3">Avançado</button>
-</div>
+    <div class="divplanos">
+        <button class="planos">Básico</button>
+        <button class="planos">Intermediário</button>
+        <button class="planos">Avançado</button>
+    </div>
 
-<div class="escolherplano">
-    <button class="escolherplano1">Escolher Plano</button></div>
-<div class="telabrancapagamento"></div>
+    <div class="box-degrade">
+        
+        
+            <h2 class="intermediario">Intermediário</h2>
+        
 
-<div>
-    <h2 class="intermediario">Intermediário</h2>
-</div>
+            <h2 class="preco"><b>R$ 150</b></h2>
+        
 
-<div>
-    <h2 class="preco"><b>R$ 150</b></h2>
-</div>
+        <div class="praticidade">
+            <p>A praticidade está apenas a alguns cliques de você</p>
+        </div>
+        <button class="escolherplano">Escolher Plano</button>
 
-<div class="praticidade">
-    <p>A praticidade está apenas a alguns cliques de você</p>
-</div>
-
-<div class="box-degrade"></div>
+    </div>
 
 </body>
+
 </html>
