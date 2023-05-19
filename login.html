@@ -119,6 +119,20 @@
             margin-left: 200px;
         }
 
+        .mostrar{
+            display: flex;
+        }
+
+        #password{
+            border: none;
+            border-bottom: 1px solid black;
+        }
+
+        .open{
+            width: 18px;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <div class="fonte">
@@ -136,8 +150,28 @@
                 <input id="email" type="email" placeholder="Email">
                 <br><br>
 
-                <input id="senha" type="password" placeholder="Senha">
+                <div class="mostrar">
+                <input id="senha" type="password" id="password" placeholder="Senha">
+                <img src="eye.svg" class="open">
+                </div>
                 <br><br>
+
+                <script>
+                    let container = document.querySelector('.mostrar')
+                    let input = document.querySelector('#password')
+                    let icon = document.querySelector('.open')
+
+                    icon.addEventListener('click', function(){
+                        container.classList.toggle('visible')
+                        if(container.classList.contains('visible')){
+                            icon.src = 'eye-off.svg'
+                            input.type = 'text'
+                        }else{
+                            icon.src = 'eye.svg'
+                            input.type = 'password'
+                        }
+                    })
+                </script>
                 <button class="fonte1">Entrar</button>
                 <br><br>
             </form>
