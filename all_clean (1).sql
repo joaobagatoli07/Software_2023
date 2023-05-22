@@ -2,9 +2,9 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3307
--- Tempo de geração: 05-Maio-2023 às 13:14
--- Versão do servidor: 10.4.22-MariaDB
+-- Host: 127.0.0.1
+-- Tempo de geração: 20-Maio-2023 às 13:56
+-- Versão do servidor: 8.0.21
 -- versão do PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `banco all clean`
+-- Banco de dados: `all_clean`
 --
 
 -- --------------------------------------------------------
@@ -28,11 +28,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `contato` (
-  `id_contato` int(11) NOT NULL,
-  `id_usuario` int(11) NOT NULL,
+  `id_contato` int NOT NULL,
+  `id_usuario` int NOT NULL,
   `assunto` varchar(100) NOT NULL,
   `mensagem` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -41,14 +41,14 @@ CREATE TABLE `contato` (
 --
 
 CREATE TABLE `forma_pagamento` (
-  `id_forma_pagamento` int(11) NOT NULL,
-  `tipo_cartao` varchar(100) NOT NULL,
-  `numero_cartao` int(11) NOT NULL,
-  `codigo_seguranca_cartao` int(11) NOT NULL,
+  `id_forma_pagamento` int NOT NULL,
+  `forma_pagamento` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `numero_cartao` int NOT NULL,
+  `codigo_seguranca_cartao` int NOT NULL,
   `nome_cartao` varchar(100) NOT NULL,
   `validade_cartao` date NOT NULL,
-  `quantidade_parcelas` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `quantidade_parcelas` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -57,15 +57,15 @@ CREATE TABLE `forma_pagamento` (
 --
 
 CREATE TABLE `pedido` (
-  `id_pedido` int(11) NOT NULL,
-  `id_planos` int(11) NOT NULL,
-  `id_usuario` int(11) NOT NULL,
+  `id_pedido` int NOT NULL,
+  `id_planos` int NOT NULL,
+  `id_usuario` int NOT NULL,
   `data_pedido` date NOT NULL,
   `horario_pedido` time NOT NULL,
   `valor_pedido` decimal(10,0) NOT NULL,
   `endereco_pedido` varchar(100) NOT NULL,
-  `id_forma_pagamento` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `id_forma_pagamento` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -74,12 +74,12 @@ CREATE TABLE `pedido` (
 --
 
 CREATE TABLE `planos` (
-  `id_planos` int(11) NOT NULL,
+  `id_planos` int NOT NULL,
   `nome_plano` varchar(100) NOT NULL,
   `descricao_plano` varchar(100) NOT NULL,
   `valor_plano` decimal(10,2) NOT NULL,
-  `peso_plano` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `peso_plano` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -88,15 +88,17 @@ CREATE TABLE `planos` (
 --
 
 CREATE TABLE `usuario` (
-  `id_usuario` int(50) NOT NULL,
+  `id_usuario` int NOT NULL,
   `nome_usuario` varchar(100) NOT NULL,
   `telefone_usuario` varchar(100) NOT NULL,
-  `endereco_usuario` varchar(100) NOT NULL,
-  `cpf_usuario` int(50) NOT NULL,
+  `cpf_usuario` int NOT NULL,
   `email_usuario` varchar(100) NOT NULL,
   `senha_usuario` varchar(50) NOT NULL,
-  `data_cadastro_usuario` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `data_cadastro_usuario` date NOT NULL,
+  `rua_usuario` varchar(100) NOT NULL,
+  `bairro_usuario` varchar(100) NOT NULL,
+  `numero_casa_usuario` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Índices para tabelas despejadas
@@ -144,31 +146,31 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `contato`
 --
 ALTER TABLE `contato`
-  MODIFY `id_contato` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_contato` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `forma_pagamento`
 --
 ALTER TABLE `forma_pagamento`
-  MODIFY `id_forma_pagamento` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_forma_pagamento` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `pedido`
 --
 ALTER TABLE `pedido`
-  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pedido` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `planos`
 --
 ALTER TABLE `planos`
-  MODIFY `id_planos` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_planos` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuario` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restrições para despejos de tabelas
