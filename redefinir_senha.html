@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Redefinir Senha</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
 
     <style>
         .geral {
-            margin-top: 90px;
+            margin-top: 130px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -38,12 +38,16 @@
             font-style: italic;
         }
 
+        .fonte{
+            font-family: 'Poppins', sans-serif;
+        }
+
         .mensagem {
             color: white;
             text-align: center;
         }
 
-        .login {
+        .redefinir {
             top: 70%;
             left: 50%;
             color: white;
@@ -52,11 +56,6 @@
         }
 
         #email::placeholder {
-            color: white;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        #senha::placeholder {
             color: white;
             font-family: 'Poppins', sans-serif;
         }
@@ -89,95 +88,27 @@
             cursor: pointer;
         }
 
-        .fonte{
-            font-family: 'Poppins', sans-serif;
-        }
 
-        .fonte1{
-            font-family: 'Poppins', sans-serif;
-        }
-
-        a:link{
-            text-decoration: none;
-        }
-
-        a:hover{
-            text-decoration: underline;
-        }
-
-        a:link{
-            color: white;
-        }
-
-        a:hover{
-            color: rgb(104, 8, 104, 0.692);
-        }
-
-        .link{
-            margin-left: 236px;
-        }
-        .link2{
-            margin-left: 200px;
-        }
-
-        .link3{
-            margin-left: 225px;
-        }
-
-        div i{
-            font-size: 30px;
-            cursor: pointer;
-            position: absolute;
-            left: 920px;
-            color: rgb(255, 255, 255);
-            margin-top: -46px;
-
-        }
     </style>
-
-<script>
-    function mostrarSenha(){
-        var inputPass = document.getElementById('senha')
-        var btnShowPass = document.getElementById('btn-senha')
-
-        if(inputPass.type === 'password'){
-            inputPass.setAttribute('type', 'text')
-            btnShowPass.classList.replace('bi-eye-fill', 'bi-eye-slash-fill')
-        }else{
-            inputPass.setAttribute('type', 'password')
-            btnShowPass.classList.replace('bi-eye-slash-fill', 'bi-eye-fill')
-        }
-
-    }
-</script>
 
 </head>
 <div class="fonte">
 <body>
     <div class="geral">
         <div class="mensagem">
-            <h1 class="titulo">All Clean</h1>
+            <h1 class="titulo">Redefinir Senha</h1>
 
-            <p class="subtitulo">A melhor maneira de lavar suas roupas<br> e economizar. Tudo ao mesmo tempo!</p>
+            <p class="subtitulo">Insira o seu email e enviaremos um link<br>para você voltar a acessar sua conta</p>
         </div>
 
-        <div class="login">
+        <div class="redefinir">
 
             <form action="">
                 <input id="email" type="email" placeholder="Email">
                 <br><br>
 
-                <input id="senha" type="password" id="password" placeholder="Senha" maxlength="25">
-                <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()"></i>
+                <button class="fonte">Enviar link para login</button>
                 <br><br>
-
-                <button class="fonte1">Entrar</button>
-                <br><br>
-            </form>
-
-            <a class="link" href="#Cadastre-se">Cadastre-se</a>
-            <a class="link2" href="#Visitante">Entrar como Visitante</a><br>
-            <a class="link3" href="#Redefinir">Esqueceu a senha?</a>
 
         </div>
     </div>
