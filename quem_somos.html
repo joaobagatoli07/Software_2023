@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <title>Quem Somos</title>
 
     <style>
@@ -18,7 +19,6 @@
             font-family: Arial, Helvetica, sans-serif;
             display: flex;
             flex-direction: column;
-            /* align-items: center; */
             justify-content: center;
         }
 
@@ -32,8 +32,9 @@
             border-left: 10px solid rgb(104, 49, 149);
             overflow-x: hidden;
             transition: 0.5s;
-            margin-top: 640px;
+            margin-top: 50px;
             margin-left: -10px;
+            z-index: 3;
         }
 
         .navegacao:hover{
@@ -115,17 +116,57 @@
             margin-top: 10px;
         }
 
-        .principal{
+        .imagem{
             position: relative;
         }
 
-        .imagem{
-            opacity: 50%;
+        .titulo{
+            color: white;
+            margin: auto;
+        }
+
+        .principal{
+            position: relative;
+            display: inline-block;
+            height: 400px;
+            width: 1363px;
+        }
+
+        .principal::before{
+            content: "";
             position: absolute;
+            top: 0;
+            left: 0;
+            width: 1363px;
+            height: 400px;
+            background-image: linear-gradient(450deg, rgba(115, 102, 192, 0.6), rgba(156, 105, 143, 0.6), rgba(147, 108, 167, 0.6), rgba(182, 111, 81, 0.6));
+            z-index: 1;
         }
 
         .titulo{
-            position: absolute;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            z-index: 4;
+            top: -230px;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .square1{
+            width: 1363px;
+            display: flex;
+            margin-left: 150px;
+        }
+
+        .texto1{
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            width: 50%;
+            text-align: justify;
+        }
+
+        .imagem1{
+            width: 50%;
         }
 
 </style>
@@ -133,15 +174,28 @@
 <body>
 
     <div class="principal">
-
     <img class="imagem" src="https://s.zst.com.br/cms-assets/2022/08/como_lavar_roupa_capa.webp" 
     width="1363px" height="400px">
-
-    <h1 class="titulo">Quem Somos</h1>
-
     </div>
 
-    <h1>Quem Somos</h1>
+    <div class="titulo">
+    <p>Quem Somos</p>
+    </div>
+
+    <div class="square1">
+        <div class="texto1">A empresa de lavagem de roupas All Clean tem como alvo revolucionar o mercado<br> 
+                            e não ser uma lavanderia comum. Não possuímos uma loja física fixa, mas sim um<br> 
+                            conceito inovador de serviço de lavagem móvel.<br> 
+                            <br> 
+                            A equipe da All Clean consiste em profissionais altamente treinados e equipados<br>  
+                            com uma van especializada, contendo todos os equipamentos necessários para realizar  
+                            a lavagem e a limpeza de roupas de seus clientes. Somos uma lavanderia competente,  
+                            pronta para atender as necessidades dos clientes onde quer que eles estejam.<br> 
+        </div>
+        <div class="imagem1">
+        <img src="">
+        </div>
+    </div>
 
     <div class="navegacao">
         
