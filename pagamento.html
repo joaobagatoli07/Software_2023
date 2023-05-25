@@ -125,7 +125,7 @@
      .pagamento{
         background-color:rgb(214, 214, 214);
         width: 40%;
-        height: 35%;
+        height: auto;
         border-radius: 8px;
         font-family: 'Poppins', sans-serif;
      }
@@ -140,6 +140,7 @@
     width: 100%;
     position: relative;
      top: 30px;
+     line-height: 0;
 }   
 .forma{
         margin-left: 15px;
@@ -147,7 +148,7 @@
      }
      form{
         width: 500px;
-        height: 100px;
+        height: 156px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -286,14 +287,83 @@ input{
             background-color: rgb(214, 214, 214);
         }
         fieldset{
-            right: 173px;
+            right: 170px;
+            top: -16px;
             position: relative;
         }
         #cartao{
             position: relative;
             left: 20px;
         }
-
+        .label{
+            position: relative;
+            left: 22px;
+            top: -6px;
+        }
+        .numero1{
+            position: relative;
+            right: 181px;
+            top: -165px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+        }
+        .codigo{
+            position: relative;
+            left: 124px;
+            top: -166px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+        }
+        .nome1{
+            position: relative;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            right: 188px;
+            top: -87px;
+        }
+        .validade1{
+            position: relative;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            left: 82px;
+            top: -88px;
+        }
+        #pix{
+            /* right: 228px; */
+            left: 20px;
+            display: flex;
+            flex-direction: row;
+            padding-top: 40px;
+            padding-left: 20px;
+        }
+        .finalizar {
+            background-color: rgb(58, 4, 102);
+            border: none;
+            padding: 7px;
+            width: 35%;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            margin-left: 35%;
+            font-family: 'Poppins', sans-serif;
+        }
+        .novo{
+            background-color: rgb(58, 4, 102);
+            border: none;
+            padding: 6px;
+            width: 29%;
+            border-radius: 18px;
+            color: white;
+            font-size: 15px;
+            margin-left: 35%;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+        }
+        
+        button:hover {
+            background-color: rgb(82, 3, 82);
+            cursor: pointer;
+        }
 
     </style>
 </head>
@@ -368,38 +438,68 @@ input{
 
     </div>
         
-    <div class="pagamento">
+    <div class="pagamento" id="opcao pagamento">
         <p class="forma"><b>Forma de Pagamento</b></p>
         <input type="radio" id="cartao" name="fav_language" value="HTML" style="width: 15px;">
-        <label for="html">Cartão de Crédito</label>
-    
-    
+        <label class="label" for="html">Cartão de Crédito</label>   
 
-    <div class="campo">
-        <form action="">
-            <input id="numero" type="numero" placeholder="numero">
-            <input id="codigo" type="codigo" placeholder="codigo">
-            <input id="Nome" type="Nome" placeholder="Nome">
-            <input id="Validade" type="Validade" placeholder="Validade">
-        </form>
-    <!-- </div> -->
+        <div class="campo">
+            <form action="">
+                <input id="numero" type="numero" >
+                <input id="codigo" type="codigo" >
+                <input id="Nome" type="Nome" >
+                <input id="Validade" type="Validade">
+            </form>
+            
+            <p class="numero1">Número do Cartão</p>
+            <p class="codigo">Código de Segurança</p>
+            <p class="nome1">Nome do Cartão</p>
+            <p class="validade1">Validade</p>
 
-    <!-- <div class="parcela2"> -->
-            <fieldset>
-                <legend>Nº de Parcelas</legend>
-                <div class="parcelas">
-                    <select id="">
-                        <option>1x de R$200,00</option>
-                        <option>2x de R$100,00</option>
-                        <option>3x de R$70,00</option>
-                        <option>4x de R$40,00</option>
-                    </select>
+                <fieldset>
+                    <legend>Nº de Parcelas</legend>
+                    <div class="parcelas">
+                        <select id="">
+                            <option>1x de R$200,00</option>
+                            <option>2x de R$100,00</option>
+                            <option>3x de R$70,00</option>
+                            <option>4x de R$40,00</option>
+                        </select>
+                    </div>
+
+                </fieldset> 
+            </div> 
+            <div id="pix">
+                <div>
+                    <input id="radiopix" type="radio" name="fav_language" value="HTML" style="width: 15px;">
+                    <label class="label" for="html" style=" left: 4px;">PIX</label>
                 </div>
-
-            </fieldset>  
-    </div>      
-    
+                <div id="qrcode"> 
+                    
+                </div>
+                
+            </div>
+            <button class="finalizar"><b>Finalizar Agendamento</b></button>
+            <button class="novo"><b>Escolher novo plano</b></button>
+        </div>      
+        
     </div>
+    <script>
+
+        var opcao = document.getElementById("opcao pagamento");
+        opcao.addEventListener("click", function() {
+
+            var radiopix = document.getElementById("radiopix");
+            if (radiopix.checked){
+                document.getElementById("qrcode").innerHTML = '<img id="qrimagem" src="code.png" width="200px">'
+            }
+            else if(document.getElementById("qrimagem")){
+                document.getElementById("qrimagem").remove()
+            }
+        })
+
+       
+    </script>
 </body>
 
 </html>
