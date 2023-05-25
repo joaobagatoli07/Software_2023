@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <title>Quem Somos</title>
 
     <style>
@@ -14,15 +15,12 @@
 
     body{
             width: 99%;
+            height: 100vh;
             background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
             font-family: Arial, Helvetica, sans-serif;
             display: flex;
             flex-direction: column;
-            /* align-items: center; */
-            justify-content: center;
         }
-
-
 
     .navegacao{
             font-family: 'Poppins', sans-serif;
@@ -34,8 +32,9 @@
             border-left: 10px solid rgb(104, 49, 149);
             overflow-x: hidden;
             transition: 0.5s;
-            margin-top: 640px;
+            margin-top: 50px;
             margin-left: -10px;
+            z-index: 3;
         }
 
         .navegacao:hover{
@@ -117,33 +116,159 @@
             margin-top: 10px;
         }
 
-        .principal{
+        .imagem{
             position: relative;
         }
 
-        .imagem{
-            opacity: 50%;
+        .titulo{
+            color: white;
+            margin: auto;
+        }
+
+        .principal{
+            position: relative;
+            display: inline-block;
+            height: 400px;
+            width: 100%;
+        }
+
+        .principal::before{
+            content: "";
             position: absolute;
+            top: 0;
+            left: 0;
+            width: 101%;
+            height: 400px;
+            background-image: linear-gradient(450deg, rgba(115, 102, 192, 0.7), rgba(156, 105, 143, 0.7), rgba(147, 108, 167, 0.7), rgba(182, 111, 81, 0.7));
+            z-index: 1;
         }
 
         .titulo{
-            position: absolute;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            z-index: 4;
+            top: -250px;
+            font-size: 50px;
+            font-weight: bold;
         }
+
+        .square1{
+            width: 88%;
+            display: flex;
+            margin-left: 150px;
+        }
+
+        .texto1{
+            font-family: 'Poppins', sans-serif;
+            color: black;
+            background-color: white;
+            width: 50%;
+            text-align: justify;
+            box-shadow: 2px 2px 2px 2px rgb(56, 0, 128);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 50px;
+            text-indent: 20px;
+        }
+
+        .texto1 .keep1{
+            text-indent: 20px;
+        }
+
+        .box_image1{
+            width: 50%;
+        }
+
+        .van{
+            border-radius: 20px;
+            box-shadow: 2px 2px 2px 2px rgb(56, 0, 128);
+            margin-left: 30px;
+        }
+
+        .square2{
+            width: 88%;
+            display: flex;
+            margin-left: 150px;
+        } 
+
+        .texto2{
+            font-family: 'Poppins', sans-serif;
+            color: black;
+            background-color: white;
+            width: 49%;
+            text-align: justify;
+            box-shadow: 2px 2px 2px 2px rgb(56, 0, 128);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 50px;
+            text-indent: 20px;
+        }
+
+        .texto2 .keep2{
+            text-indent: 20px;
+        }
+
+        .produto{
+            border-radius: 20px;
+            box-shadow: 2px 2px 2px 2px rgb(56, 0, 128);
+            margin-right: 30px;
+        }
+        
 
 </style>
 </head>
 <body>
 
     <div class="principal">
-
     <img class="imagem" src="https://s.zst.com.br/cms-assets/2022/08/como_lavar_roupa_capa.webp" 
-    width="1363px" height="400px">
+    width="101%" height="400px">
+    </div>
 
-    <h1 class="titulo">Quem Somos</h1>
+    <div class="titulo">
+    <p>Quem Somos</p>
+    </div>
+
+    <div class="square1">
+
+        <div class="texto1">
+            <p>A empresa de lavagem de roupas All Clean tem como alvo revolucionar o mercado 
+            e não ser uma lavanderia comum. Não possuímos uma loja física fixa, mas sim um 
+            conceito inovador de serviço de lavagem móvel.<br></p> 
+            <br> 
+            <p class="keep1">
+            A equipe da All Clean consiste em profissionais altamente treinados e equipados  
+            com uma van especializada, contendo todos os equipamentos necessários para realizar  
+            a lavagem e a limpeza de roupas de seus clientes. Somos uma lavanderia competente,  
+            pronta para atender as necessidades dos clientes onde quer que eles estejam.<br></p> 
+        </div>
+
+        <div class="box_image1">
+        <img class="van" src="https://static.vecteezy.com/ti/vetor-gratis/p1/9671284-entrega-rapida-de-maquina-de-lavar-para-cliente-via-van-laundry-concept-flat-vector-illustration-isolated-vetor.jpg"
+        width="80%" height="85%">
+        </div>
 
     </div>
 
-    <h1>Quem Somos</h1>
+    <div class="square2">
+
+        <div class="box_image2">
+            <img class="produto" src="https://babies.constancezahn.com/wp-content/uploads/sites/2/2021/05/produtos-eco-bioz.png"
+            width="85%" height="40%">
+        </div>
+
+        <div class="texto2"><p>Imagine a conveniência de ter suas roupas lavadas e limpas enquanto você está no trabalho, 
+            em casa ou até mesmo durante uma viagem. A All Clean oferece esse serviço com eficiência e qualidade.
+            Você pode agendar um horário através de um site fácil de usar e então nossa equipe chegará ao local 
+            escolhido por você, estacionará a van e cuidadosamente recolherá as roupas a serem lavadas.<br></p> 
+            <br>
+
+            <p class="keep2">All Clean é reconhecida por seu compromisso com a sustentabilidade. Utilizamos produtos de limpeza 
+            ecológicos e adotamos práticas que reduzem o consumo de água e energia, sem comprometer a qualidade 
+            do serviço.</p>
+        </div>
+
+
+    </div>
 
     <div class="navegacao">
         
