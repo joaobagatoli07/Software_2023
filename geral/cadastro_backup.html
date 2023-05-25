@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        .geral {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: -30px;
+            margin-bottom: 50px;
+        }
+
+        body {
+            background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .mensagem {
+            color: white;
+            text-align: center;
+        }
+
+        .login {
+            top: 70%;
+            left: 50%;
+            color: white;
+            width: 40%;
+            align-items: center;
+        }
+
+        #Nome::placeholder {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #Telefone::placeholder {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #Rua::placeholder {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #Bairro::placeholder {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #Número::placeholder {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #CPF::placeholder {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #Email::placeholder {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #Senha::placeholder {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        input {
+            background: transparent;
+            padding: 15px;
+            border: 1px solid white;
+            color: white;
+            font-size: 15px;
+            border-radius: 15px;
+            width: 100%;
+            text-align: center;
+        }
+
+        button {
+            background-color: rgb(58, 4, 102);
+            border: none;
+            padding: 15px;
+            width: 35%;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            margin-left: 35%;
+        }
+
+        button:hover {
+            background-color: rgb(82, 3, 82);
+            cursor: pointer;
+        }
+
+        .titulo{
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .descricao{
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #cadastro{
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .titulo{
+            font-size: 45px;
+            margin-left: 35px;
+        }
+
+        .descricao{
+            margin-left: 30px;
+            margin-top: -25px;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        .espaco{
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="geral">
+        <div class="mensagem">
+            <h1 class="titulo">All Clean</h1>
+
+            <p class="descricao">A melhor maneira de lavar suas roupas<br> e economizar. Tudo ao mesmo tempo!</p>
+        </div>
+
+        <div class="login">
+        <div class="espaco">
+            <form action="">
+                <input id="Nome" type="Nome" placeholder="Nome">
+                <br><br>
+             <label>
+                <input id="Telefone" type="tel" placeholder="Telefone">
+                <br><br>
+            </label>
+                <input id="Rua" type="text" placeholder="Rua">
+                <br><br>
+
+                <input id="Bairro" type="text" placeholder="Bairro">
+                <br><br>
+            
+                <input type="text" id="Número" placeholder="Número">
+                <br><br>
+            
+            <label>
+                <input type="text" id="CPF"  placeholder="CPF">
+                <br><br>
+            </label>
+                <input id="Email" type="Email" placeholder="Email">
+                <br><br>
+
+                <input id="Senha" type="Senha" placeholder="Senha">
+                <br><br>
+                
+                <script src="./main.js"></script>
+            </form>
+            </div>
+            <button id="cadastro">Cadastre-se</button>
+            
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script>
+        var cleave = new Cleave('#CPF', {
+    delimiters: ['.', '.', '-'],
+    blocks: [3, 3, 3, 2],
+    numericOnly: true
+});
+    </script>
+    <script>
+        $('#Telefone').mask('(00) 9 0000-0000');
+    </script>
+</body>
+</html>
