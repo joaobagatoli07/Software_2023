@@ -26,7 +26,7 @@ connection.connect(function (err) {
 });
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/home.html')
+  res.sendFile(__dirname + '/login.html')
 })
 
 app.post('/login', (req, res) => {
