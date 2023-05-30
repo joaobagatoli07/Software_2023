@@ -14,7 +14,7 @@ const connection = mysql.createConnection({
   host: '127.0.0.1',
   user: 'root',
   password: 'root',
-  database: 'bd-node',
+  database: 'all_clean2',
 });
 
 connection.connect(function (err) {
@@ -33,12 +33,12 @@ app.post('/login', (req, res) => {
   let username = req.body.username;
   let password = req.body.password;
 
-  connection.query("SELECT * FROM usuario where email = '" + username + "'" , function (err, rows, fields) {
+  connection.query("SELECT * FROM usuario where email_usuario = '" + username + "'" , function (err, rows, fields) {
     console.log("Results:", rows);
     if (!err) {
       if (rows.length > 0) {
 
-        if ( rows[0].senha === password) {
+        if ( rows[0].senha_usuario === password) {
             res.send('Login com Sucesso!!!');
             } else {
              res.send('Senha incorreta');
