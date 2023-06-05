@@ -11,18 +11,18 @@
 
         *{
             margin: 0;
-        }
+         }
 
-    body{
+        body{
             width: 99%;
-            height: 100vh;
+            /* height: 100vh; */
             background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
             font-family: Arial, Helvetica, sans-serif;
             display: flex;
             flex-direction: column;
         }
 
-    .navegacao{
+        .navegacao{
             font-family: 'Poppins', sans-serif;
             position: fixed;
             height: 100vh;
@@ -151,106 +151,34 @@
             font-weight: bold;
         }
 
-        .square1{
-            width: 88%;
-            display: flex;
-            margin-left: 150px;
-            margin-top: -20px;
-        }
-
-        .texto1{
+        .secao1,
+        .secao2{
+            color: white;
             font-family: 'Poppins', sans-serif;
-            color: black;
-            background-color: white;
-            width: 50%;
+        }
+
+        .secao1 img{
+            margin-left: 50px;
+            margin-top: -100px;
+            float: left;
+            shape-outside: circle(50%);
+        }
+
+        .secao1 p{
             text-align: justify;
-            box-shadow: 2px 2px 2px 2px rgb(56, 0, 128);
-            border-radius: 20px;
-            padding: 20px;
-            margin-bottom: 50px;
-            text-indent: 20px;
+            margin-top: -5px;
         }
 
-        .texto1 .keep1{
-            text-indent: 20px;
+        .secao2 img{
+            border-radius: 50%;
+            float: right;
+            shape-outside: circle(50%);
+            margin-top: -50px;
         }
 
-        .box_image1{
-            width: 50%;
-        }
-
-        .van{
-            border-radius: 20px;
-            box-shadow: 2px 2px 2px 2px rgb(56, 0, 128);
-            margin-left: 30px;
-        }
-
-        .square2{
-            width: 88%;
-            display: flex;
-            margin-left: 150px;
-        } 
-
-        .box_image2{
-            border-radius: 20px;
-            box-shadow: 2px 2px 2px 2px rgb(56, 0, 128);
-            margin-left: 150px;
-        }
-
-        .texto2{
-            font-family: 'Poppins', sans-serif;
-            color: black;
-            background-color: white;
-            width: 49%;
-            height: 270px;
+        .secao2 p{
             text-align: justify;
-            box-shadow: 2px 2px 2px 2px rgb(56, 0, 128);
-            border-radius: 20px;
-            padding: 20px;
-            margin-top: 65px;
-            text-indent: 20px;
-        } 
-
-        .texto2 .keep2{
-            text-indent: 20px;
-        } 
-
-        .texto3{
-            font-family: 'Poppins', sans-serif;
-            color: black;
-            background-color: white;
-            width: 35%;
-            height: 300px;
-            text-align: justify;
-            box-shadow: 2px 2px 2px 2px rgb(56, 0, 128);
-            border-radius: 20px;
-            padding: 20px;
-            margin-top: 50px;
-            text-indent: 20px;
-            margin-left: 30px;
-        } 
-
-        .texto3 .keep3{
-            text-indent: 20px;
-        } 
-
-        .square3{
-            width: 88%;
-            display: flex;
-            margin-left: 150px;
-        } 
-
-        .box_image3{
-            border-radius: 20px;
-            box-shadow: 2px 2px 2px 2px rgb(56, 0, 128);
-        }
-
-        #special{
-            margin-left: 18px;
-        }
-
-        .square3{
-            margin-top: 50px;
+            margin-left: 100px;
         }
 
 </style>
@@ -266,63 +194,23 @@
     <p>Quem Somos</p>
     </div>
 
-    <div class="square1">
+    <div class="secao1">
+        <img src="https://cdn.discordapp.com/attachments/1031736165017071657/1115250090009960448/9671284-entrega-rapida-de-maquina-de-lavar-para-cliente-via-van-laundry-concept-flat-vector-illustration-isolated-vetor-removebg-preview.png"
+        height="300px" width="400px">
 
-        <div class="texto1">
-            <p>A empresa de lavagem de roupas All Clean tem como alvo revolucionar o mercado 
-            e não ser uma lavanderia comum. Não possuímos uma loja física, mas sim um 
-            conceito inovador de serviço de lavagem móvel.<br></p> 
-            <br> 
-            <p class="keep1">
-            A equipe da All Clean consiste em profissionais altamente treinados e equipados  
-            com uma van especializada, contendo todos os equipamentos necessários para realizar  
-            a lavagem e a limpeza de roupas de seus clientes. Somos uma lavanderia competente,  
-            pronta para atender as necessidades dos clientes onde quer que eles estejam.<br></p> 
-        </div>
-
-        <div class="box_image1">
-        <img class="van" src="https://static.vecteezy.com/ti/vetor-gratis/p1/9671284-entrega-rapida-de-maquina-de-lavar-para-cliente-via-van-laundry-concept-flat-vector-illustration-isolated-vetor.jpg"
-        width="80%" height="85%">
-        </div>
-
+        <p> A empresa de lavagem de roupas All Clean tem como alvo revolucionar o mercado e não ser uma lavanderia comum. Não possuímos uma loja física fixa, mas sim um conceito inovador de serviço de lavagem móvel.
+            A equipe da All Clean consiste em profissionais altamente treinados e equipados com uma van especializada, contendo todos os equipamentos necessários para realizar a lavagem e a limpeza de roupas de seus 
+            clientes. Somos uma lavanderia competente, pronta para atender as necessidades dos clientes onde quer que eles estejam.
+        </p>
     </div>
 
-            <img class="box_image2" src="https://blog.frigelar.com.br/wp-content/uploads/2021/09/homem-lavando-roupa-homem-usando-sabao-liquido-lavadora-de-roupas-maquina-de-lavar-roupa-frigelar-1154x470.jpg"
-            width="82%" height="40%">
+    <div class="secao2">
+        <img src="https://cdn.discordapp.com/attachments/1031736165017071657/1113444442238631957/washing-machine-5423359_1280.jpg"
+        height="300px" width="300px">
 
-    <div class="square2">
-
-          <div class="texto2"><p>Imagine a conveniência de ter suas roupas lavadas e limpas enquanto você está no trabalho, 
-            em casa ou até mesmo durante uma viagem. A All Clean oferece esse serviço com eficiência e qualidade.
-            Você pode agendar um horário através de um site fácil de usar e então nossa equipe chegará ao local 
-            escolhido por você, estacionará a van e cuidadosamente recolherá as roupas a serem lavadas.<br></p> 
-            <br>
-
-            <p class="keep2">All Clean é reconhecida por seu compromisso com a sustentabilidade. Utilizamos produtos de limpeza 
-            ecológicos e adotamos práticas que reduzem o consumo de água e energia, sem comprometer a qualidade 
-            do serviço.</p>
-        </div>
-
-        <div class="texto3"><p>À medida que a empresa cresce, nosso objetivo é expandir nossa equipe e frota de vans para atender 
-            a uma demanda cada vez maior. A qualidade do serviço e a conveniência oferecida conquistaram a confiança de muitos clientes, 
-            que se tornaram fiéis e indicam a All Clean para amigos e familiares.<br></p> 
-          <br>
-
-          <p class="keep3">A All Clean deseja se tornar uma referência no setor de lavagem de roupas móvel, combinando praticidade, qualidade 
-            e responsabilidade ambiental.</p>
-      </div>
-
-    </div>
-
-    <div class="square3">
-        <img class="box_image3" src="https://cdn.discordapp.com/attachments/1031736165017071657/1113442268406362214/hand-5913851_1280.jpg"
-        width="30%" height="100%">
-
-        <img class="box_image3" id="special" src="https://cdn.discordapp.com/attachments/1031736165017071657/1113444442238631957/washing-machine-5423359_1280.jpg"
-        width="30%" height="100%">
-
-        <img class="box_image3" id="special" src="https://img.freepik.com/fotos-gratis/homem-segurando-uma-pilha-de-roupas-limpas_23-2149117026.jpg"
-        width="30%" height="100%">
+        <p> Imagine a conveniência de ter suas roupas lavadas e limpas enquanto você está no trabalho, em casa ou até mesmo durante uma viagem. A All Clean oferece esse serviço com eficiência e qualidade.
+            Você pode agendar um horário através de um site fácil de usar e então nossa equipe chegará ao local escolhido por você, estacionará a van e cuidadosamente recolherá as roupas a serem lavadas.             
+        </p>
     </div>
 
     <div class="navegacao">
