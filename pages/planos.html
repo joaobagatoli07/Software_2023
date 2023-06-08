@@ -68,6 +68,42 @@
             cursor: pointer;
         }
 
+        #planos1 {
+            background-color: rgb(58, 4, 102);
+            border-radius: 10px;
+            height: 50px;
+            width: 140px;
+            font-size: 20px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            border: transparent;
+            cursor: pointer;
+        }
+
+        #planos2 {
+            background-color: rgb(58, 4, 102);
+            border-radius: 10px;
+            height: 50px;
+            width: 140px;
+            font-size: 20px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            border: transparent;
+            cursor: pointer;
+        }
+
+        #planos3 {
+            background-color: rgb(58, 4, 102);
+            border-radius: 10px;
+            height: 50px;
+            width: 140px;
+            font-size: 20px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            border: transparent;
+            cursor: pointer;
+        }
+
         .box-degrade {
             width: 40%;
             height: 33%;
@@ -96,17 +132,19 @@
             }
         }
 
-        .intermediario {
+        #plano{
             font-size: 30px;
             font-family: 'Poppins', sans-serif;
             color: white;
         }
 
-        .preco {
+
+        #preco {
             font-size: 16px;
             font-family: 'Poppins', sans-serif;
             font-size: 63px;
             color: white;
+            margin-top: -20px;
         }
 
         .praticidade {
@@ -130,10 +168,17 @@
             cursor: pointer;
         }
 
-        .planos:hover {
+        #planos1:hover {
             background-color: rgb(82, 3, 82);
         }
 
+        #planos2:hover {
+            background-color: rgb(82, 3, 82);
+        }
+
+        #planos3:hover {
+            background-color: rgb(82, 3, 82);
+        }
         .escolherplano:hover {
             background-color: rgb(82, 3, 82);
         }
@@ -147,7 +192,7 @@
             border-left: 10px solid rgb(104, 49, 149);
             overflow-x: hidden;
             transition: 0.5s;
-            margin-top: -560px;
+            margin-top: -590px;
             margin-left: -10px;
         }
 
@@ -259,19 +304,6 @@
             margin-top: 70px;
         }
 
-        .plano2{
-            margin-left: 290px;
-            margin-top: 50px;
-            color: white;
-            display: flex;
-            display: none;
-
-        }
-
-        .plano2 h1{
-            margin-right: 40px;
-        }
-
         .pesos{
             display: flex;
             margin-left: 340px;
@@ -296,6 +328,12 @@
             color: white;
             margin-top: -10px;
         }
+
+        #plano2{
+            color: white;
+            text-align: center;
+            margin-top: -640px;
+        }
     </style>
 
 
@@ -304,20 +342,18 @@
 
 
     <div class="divplanos">
-        <button class="planos">Básico</button>
-        <button class="planos">Intermediário</button>
-        <button class="planos">Avançado</button>
+        <button id="planos1">Básico</button>
+        <button id="planos2">Intermediário</button>
+        <button id="planos3">Avançado</button>
     </div>
 
     <div class="box-degrade">
         
         
-            <h2 class="intermediario">Intermediário</h2>
-        
 
-            <h2 class="preco"><b>R$ 150</b></h2>
-
-            <h2 class="peso2">10KG</h2>
+            <h2 id="plano"></h2>
+            <h2 id="preco"></h2>
+            <h2 class="peso2"></h2>
 
             
         
@@ -329,9 +365,6 @@
 
     </div>
 
-    <div class="comparar2">
-        <button class="comparar">Comparar Planos</button>
-    </div>
 
     <div class="navegacao">
         
@@ -407,36 +440,69 @@
     </ul>
 </div>
 
-<div class="plano2">
-    <h1>Plano Básico</h1>
-    <h1>Plano Intermediário</h1>
-    <h1>Plano Avançado</h1>
-    
-</div>
 
-<div class="pesos">
-    <h2>5KG</h2>
-    <h2>10KG</h2>
-    <h2>16KG</h2>
-</div>
+<h2 id="plano2"></h2>
+
 
 
 <script>
-    var botao = document.querySelector('.comparar');
-    var texto = document.querySelector('.plano2');
-    var texto2 = document.querySelector('.pesos');
+   // Função para exibir o valor do botão 1
+   function exibirValorBotao1() {
+      document.getElementById("preco").textContent = "R$80";
+    }
 
-    botao.addEventListener("click", function() {
-            if (texto.classList.contains("texto-expandido")) {
-                texto.style.display = "flex";
-                texto.classList.remove("texto-expandido");
-                botao.textContent = "Clique para fechar";
-            } else {
-                texto.style.display = "none";
-                texto.classList.add("texto-expandido");
-                botao.textContent = "Clique para expandir";
-            }
-        });
+    // Função para exibir o valor do botão 2
+    function exibirValorBotao2() {
+      document.getElementById("preco").textContent = "R$150";
+    }
+
+    // Função para exibir o valor do botão 3
+    function exibirValorBotao3(){
+        document.getElementById("preco").textContent = "R$220"
+    }
+
+    // Função para exibir o plano do botão 1
+    function exibirValorBotao4(){
+        document.getElementById("plano").textContent = "Básico"
+    }
+
+    // Função para exibir o plano do botão 2
+    function exibirValorBotao5(){
+        document.getElementById("plano").textContent = "Intermediário"
+    }
+
+    //Função para exibir o plano do botão 3
+    function exibirValorBotao6(){
+        document.getElementById("plano").textContent = "Avançado"
+    }
+
+    //Função para exibir o peso do botão 1
+    function exibirValorBotao7(){
+        document.getElementById("plano2").textContent = "5KG"
+    }
+
+    //Função para exibir o peso do botão 2
+    function exibirValorBotao8(){
+        document.getElementById("plano2").textContent = "10KG"
+    }
+
+    //Função para exibir o peso do botão 3
+    function exibirValorBotao9(){
+        document.getElementById("plano2").textContent = "16KG"
+    }
+    // Adiciona os eventos de clique aos botões
+    document.getElementById("planos1").addEventListener("click", exibirValorBotao1);
+    document.getElementById("planos2").addEventListener("click", exibirValorBotao2);
+    document.getElementById("planos3").addEventListener("click", exibirValorBotao3);
+    document.getElementById("planos1").addEventListener("click", exibirValorBotao4);
+    document.getElementById("planos2").addEventListener("click", exibirValorBotao5);
+    document.getElementById("planos3").addEventListener("click", exibirValorBotao6);
+    document.getElementById("planos1").addEventListener("click", exibirValorBotao7);
+    document.getElementById("planos2").addEventListener("click", exibirValorBotao8);
+    document.getElementById("planos3").addEventListener("click", exibirValorBotao9);
+
+    
+
 </script>
 
 </body>
