@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 30-Maio-2023 às 16:45
+-- Tempo de geração: 02-Jun-2023 às 17:12
 -- Versão do servidor: 8.0.21
 -- versão do PHP: 8.1.2
 
@@ -30,7 +30,6 @@ SET time_zone = "+00:00";
 CREATE TABLE `cliente_cartao` (
   `id_cliente_cartao` int NOT NULL,
   `numero_cartao` varchar(500) NOT NULL,
-  `codigo_seguranca_cartao` int NOT NULL,
   `nome_cartao` varchar(100) NOT NULL,
   `validade_cartao` date NOT NULL,
   `id_usuario` int NOT NULL
@@ -40,12 +39,12 @@ CREATE TABLE `cliente_cartao` (
 -- Extraindo dados da tabela `cliente_cartao`
 --
 
-INSERT INTO `cliente_cartao` (`id_cliente_cartao`, `numero_cartao`, `codigo_seguranca_cartao`, `nome_cartao`, `validade_cartao`, `id_usuario`) VALUES
-(1, '4317907462930526', 388, 'João', '2026-11-12', 3),
-(2, '4589653904992317', 492, 'Emily', '2023-07-21', 4),
-(3, '4308012397140159', 197, 'Cabral', '2027-05-12', 5),
-(4, '4881336073644761', 557, 'Daniel', '2027-01-14', 6),
-(5, '4761685760862135', 680, 'Guilherme', '2025-05-01', 7);
+INSERT INTO `cliente_cartao` (`id_cliente_cartao`, `numero_cartao`, `nome_cartao`, `validade_cartao`, `id_usuario`) VALUES
+(1, '4317907462930526', 'João', '2026-11-12', 3),
+(2, '4589653904992317', 'Emily', '2023-07-21', 4),
+(3, '4308012397140159', 'Cabral', '2027-05-12', 5),
+(4, '4881336073644761', 'Daniel', '2027-01-14', 6),
+(5, '4761685760862135', 'Guilherme', '2025-05-01', 7);
 
 -- --------------------------------------------------------
 
@@ -91,12 +90,12 @@ CREATE TABLE `pedido` (
   `id_usuario` int NOT NULL,
   `data_pedido` date NOT NULL,
   `horario_pedido` time NOT NULL,
-  `endereco_pedido` varchar(100) NOT NULL,
+  `endereco_pedido` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `id_forma_pagamento` int NOT NULL,
   `status_pedido` varchar(100) NOT NULL,
-  `id_cliente_cartao` int NOT NULL,
+  `id_cliente_cartao` int DEFAULT NULL,
   `status_pagamento` varchar(500) NOT NULL,
-  `qtd_parcelas` int NOT NULL
+  `qtd_parcelas` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -104,11 +103,16 @@ CREATE TABLE `pedido` (
 --
 
 INSERT INTO `pedido` (`id_pedido`, `id_planos`, `id_usuario`, `data_pedido`, `horario_pedido`, `endereco_pedido`, `id_forma_pagamento`, `status_pedido`, `id_cliente_cartao`, `status_pagamento`, `qtd_parcelas`) VALUES
-(1, 3, 3, '2023-05-22', '18:25:55', 'Rua Farim Fala Maluf', 1, 'Confirmado', 1, 'Aprovado', 3),
-(2, 2, 4, '2023-05-24', '13:28:28', 'Rua 13 de Março', 1, 'Confirmado', 2, 'Aprovado', 10),
-(3, 3, 5, '2023-05-26', '13:29:41', 'Rua Andorinhos', 1, 'Confirmado', 3, 'Aprovado', 4),
-(4, 2, 6, '2023-05-29', '12:33:20', 'Rua XV de Novembro', 1, 'Confirmado', 4, 'Aprovado', 2),
-(5, 1, 7, '2023-05-25', '11:35:40', 'Rua Oxford', 1, 'Confirmado', 5, 'Aprovado', 1);
+(1, 3, 3, '2023-05-22', '18:25:55', '', 1, 'Confirmado', 1, 'Aprovado', 3),
+(2, 2, 4, '2023-05-24', '13:28:28', 'Rua 13 de Março, Centro, 789', 1, 'Confirmado', 2, 'Aprovado', 10),
+(3, 3, 5, '2023-05-26', '13:29:41', '', 1, 'Confirmado', 3, 'Aprovado', 4),
+(4, 2, 6, '2023-05-29', '12:33:20', 'Rua XV de Novembro, Centro, 956', 1, 'Confirmado', 4, 'Aprovado', 2),
+(5, 1, 7, '2023-05-25', '11:35:40', '', 1, 'Confirmado', 5, 'Aprovado', 1),
+(7, 1, 8, '2023-06-07', '14:06:39', NULL, 2, 'Confirmado', NULL, 'Aprovado', NULL),
+(8, 2, 5, '2023-06-20', '15:08:58', 'Rua dos Pelados, Nudismo, 678', 2, 'Cancelado', NULL, 'Reembolsado', NULL),
+(9, 3, 4, '2023-06-20', '18:09:42', NULL, 2, 'Confirmado', NULL, 'Aprovado', NULL),
+(10, 1, 9, '2023-06-19', '13:10:31', NULL, 2, 'Confirmado', NULL, 'Aprovado', NULL),
+(11, 2, 11, '2023-06-30', '15:11:01', NULL, 2, 'Cancelado', NULL, 'Reembolsado', NULL);
 
 -- --------------------------------------------------------
 
@@ -146,27 +150,25 @@ CREATE TABLE `usuario` (
   `email_usuario` varchar(100) NOT NULL,
   `senha_usuario` varchar(50) NOT NULL,
   `data_cadastro_usuario` date NOT NULL,
-  `rua_usuario` varchar(100) NOT NULL,
-  `bairro_usuario` varchar(100) NOT NULL,
-  `numero_casa_usuario` int NOT NULL,
-  `cpf_usuario` varchar(100) NOT NULL
+  `cpf_usuario` varchar(100) NOT NULL,
+  `endereco_usuario` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `nome_usuario`, `telefone_usuario`, `email_usuario`, `senha_usuario`, `data_cadastro_usuario`, `rua_usuario`, `bairro_usuario`, `numero_casa_usuario`, `cpf_usuario`) VALUES
-(3, 'Joãozinho', '(48) 961860921', 'joaozinho@gmail.com', '4545', '2023-05-19', 'Rua Farim Fala Maluf', 'Bom Retiro', 482, '86477088142'),
-(4, 'Emily', '(48) 967784462', 'emily.castro@gmail.com', '2345', '2023-05-10', 'Rua 13 de Março', 'Centro', 382, '35515484711'),
-(5, 'Cabral', '(48) 973274393', 'cabral.faria@gmail.com', '2389', '2023-05-11', 'Rua Higienópolis', 'Bom Retiro', 892, '14783372730'),
-(6, 'Daniel ', '(48) 922167322', 'daniel.faria@gmail.com', '6523', '2023-05-12', 'Rua XV de Novembro', 'Gloria', 834, '84855014206'),
-(7, 'Guilherme', '(48) 906173400', 'guilherme.faria@gmail.com', '4590', '2023-05-24', 'Rua 9 de Julho', 'Centro', 902, '32758833301'),
-(8, 'Giovana', '(48) 950336207', 'giovana.costa@gmail.com', '8456', '2023-04-01', 'Rua Paraisópolis', 'Paraisópolis', 782, '19556885838'),
-(9, 'Juliana', '(48) 986932844', 'juliana.hostosa@gmail.com', '8954', '2023-06-14', 'Avenida dos Bandeirantes', 'Norte', 903, '65471815297'),
-(10, 'Marina ', '(48) 947245862', 'marina.cabelo@gmail.com', '7897', '2023-04-13', 'Rua dos Pintados', 'Pintados', 874, '66444898269'),
-(11, 'Matheus', '(48) 918700318', 'matheus.machado@gmail.com', '7687', '2023-05-09', 'Avenida Paulista', 'Consolação', 897, '04413134699'),
-(12, 'Beatriz', '(48) 951045879', 'safadinha.bia@gmail.com', '4378', '2023-05-08', 'Rua Inambú', 'Costa e Silva', 387, '88816873566');
+INSERT INTO `usuario` (`id_usuario`, `nome_usuario`, `telefone_usuario`, `email_usuario`, `senha_usuario`, `data_cadastro_usuario`, `cpf_usuario`, `endereco_usuario`) VALUES
+(3, 'Joãozinho', '(48) 961860921', 'joaozinho@gmail.com', '4545', '2023-05-19', '86477088142', 'Rua Rouxinol, Aventureiro, 482'),
+(4, 'Emily', '(48) 967784462', 'emily.castro@gmail.com', '2345', '2023-05-10', '35515484711', 'Rua Inambú, Costa e Silva, 3245'),
+(5, 'Cabral', '(48) 973274393', 'cabral.faria@gmail.com', '2389', '2023-05-11', '14783372730', 'Rua Terezopolis, Costa e Silva, 234'),
+(6, 'Daniel ', '(48) 922167322', 'daniel.faria@gmail.com', '6523', '2023-05-12', '84855014206', 'Rua Geovani, Fátima, 456'),
+(7, 'Guilherme', '(48) 906173400', 'guilherme.faria@gmail.com', '4590', '2023-05-24', '32758833301', 'Rua dos Macumbeiros, Iririu, 678'),
+(8, 'Giovana', '(48) 950336207', 'giovana.costa@gmail.com', '8456', '2023-04-01', '19556885838', 'Rua Higeonópolis, Boa Vista, 785'),
+(9, 'Juliana', '(48) 986932844', 'juliana.hostosa@gmail.com', '8954', '2023-06-14', '65471815297', 'Rua Casarão, América, 678'),
+(10, 'Marina ', '(48) 947245862', 'marina.cabelo@gmail.com', '7897', '2023-04-13', '66444898269', 'Rua dos Noturnos, Costa e Silva, 896'),
+(11, 'Matheus', '(48) 918700318', 'matheus.machado@gmail.com', '7687', '2023-05-09', '04413134699', 'Rua dos Emocionados, Jardim Paraiso, 657'),
+(12, 'Beatriz', '(48) 951045879', 'safadinha.bia@gmail.com', '4378', '2023-05-08', '88816873566', 'Rua dos Atiradores, Jardim Paraiso, 157');
 
 --
 -- Índices para tabelas despejadas
@@ -240,7 +242,7 @@ ALTER TABLE `forma_pagamento`
 -- AUTO_INCREMENT de tabela `pedido`
 --
 ALTER TABLE `pedido`
-  MODIFY `id_pedido` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_pedido` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de tabela `planos`

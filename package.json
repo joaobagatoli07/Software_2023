@@ -1,7 +1,6 @@
 {
   "name": "nodejs-teste",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,5 +12,15 @@
     "body-parser": "^1.20.2",
     "express": "^4.18.2",
     "mysql2": "^3.3.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaobagatoli07/Software_2023.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joaobagatoli07/Software_2023/issues"
+  },
+  "homepage": "https://github.com/joaobagatoli07/Software_2023#readme",
+  "description": ""
 }

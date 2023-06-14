@@ -11,30 +11,30 @@
 
         *{
             margin: 0;
-        }
+            box-sizing: border-box;
+            padding: 0;
+         }
 
-    body{
+        body{
             width: 99%;
-            height: 100vh;
+            height: 170vh;
             background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
             font-family: Arial, Helvetica, sans-serif;
             display: flex;
             flex-direction: column;
         }
 
-    .navegacao{
+        .navegacao{
             font-family: 'Poppins', sans-serif;
             position: fixed;
-            height: 680px;
+            height: 100vh;
             background:rgb(104, 49, 149);
             width: 70px;
             box-shadow: 10px 0 0 rgb(56, 0, 128);
             border-left: 10px solid rgb(104, 49, 149);
             overflow-x: hidden;
             transition: 0.5s;
-            margin-top: 50px;
             margin-left: -10px;
-            z-index: 3;
         }
 
         .navegacao:hover{
@@ -116,159 +116,292 @@
             margin-top: 10px;
         }
 
-        .imagem{
-            position: relative;
-        }
-
-        .titulo{
-            color: white;
-            margin: auto;
-        }
-
-        .principal{
-            position: relative;
-            display: inline-block;
-            height: 400px;
-            width: 100%;
-        }
-
-        .principal::before{
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 101%;
-            height: 400px;
-            background-image: linear-gradient(450deg, rgba(115, 102, 192, 0.7), rgba(156, 105, 143, 0.7), rgba(147, 108, 167, 0.7), rgba(182, 111, 81, 0.7));
-            z-index: 1;
-        }
-
-        .titulo{
-            font-family: 'Poppins', sans-serif;
-            position: relative;
-            z-index: 4;
-            top: -250px;
-            font-size: 50px;
-            font-weight: bold;
-        }
-
-        .square1{
-            width: 88%;
+        .intro{
+            padding-top: 80px;
             display: flex;
-            margin-left: 150px;
         }
 
-        .texto1{
+        .intro-text{
             font-family: 'Poppins', sans-serif;
-            color: black;
-            background-color: white;
+            color: white;
+            margin-left: 130px;
             width: 50%;
+        }
+
+        .intro-text h1{
+            font-size: 1.4rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .intro-text h2{
+            font-size: 3.5rem;
+            font-weight: 500;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            line-height: 75px;
+        }
+
+        .intro-text p{
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin-top: 10px;
             text-align: justify;
-            box-shadow: 2px 2px 2px 2px rgb(56, 0, 128);
-            border-radius: 20px;
-            padding: 20px;
-            margin-bottom: 50px;
-            text-indent: 20px;
         }
 
-        .texto1 .keep1{
-            text-indent: 20px;
+        .intro-text a{
+            text-decoration: none;
+            color: white;
         }
 
-        .box_image1{
-            width: 50%;
+        .intro-text a:hover{
+            background-color: transparent;
         }
 
-        .van{
-            border-radius: 20px;
-            box-shadow: 2px 2px 2px 2px rgb(56, 0, 128);
+        .intro-text button{
+            background-color: rgb(58, 4, 102);
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 15px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .intro-img{
             margin-left: 30px;
         }
 
-        .square2{
-            width: 88%;
-            display: flex;
-            margin-left: 150px;
-        } 
+        .intro-img img{
+            margin-top: -70px;
+        }
 
-        .texto2{
+        .middle{
             font-family: 'Poppins', sans-serif;
-            color: black;
-            background-color: white;
-            width: 49%;
+            color: white;
+            margin-left: 80px;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            justify-content: space-around;
+        }
+
+        .middle-title,
+        .middle-text{
+            width: 40%;
+            box-sizing: border-box;
+        }
+
+        .middle-title p{
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .middle-text p{
+            font-size: 1rem;
             text-align: justify;
-            box-shadow: 2px 2px 2px 2px rgb(56, 0, 128);
-            border-radius: 20px;
-            padding: 20px;
+            text-indent: 5%;
+        }  
+
+        .under-middle{
+            display: flex;
+            justify-content: center;
+            margin-left: 100px;
+            padding-top: 80px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .under-middle h1{
+            color: rgb(58, 4, 102);
+            font-size: 4.8rem;
+            font-weight: bold;
+        }
+
+        .under-middle p{
+            color: #5b627d;
+            font-size: 16px;
+        }
+
+        .under-middle-whitecard{
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(245,249,255);
+            height: 200px;
+            width: 80%;
+            box-shadow: 0 5px 14px rgb(104, 49, 149), 0 0 3px rgb(104, 49, 149);
+            border-radius: 10px;
+        }
+
+        .under-middle-whitecard .card1,
+        .under-middle-whitecard .card2,
+        .under-middle-whitecard .card3{
+            height: 100%;
+            width: 31%;
+            padding: 10px;
+        }
+
+        .under-middle-whitecard .card1:hover,
+        .under-middle-whitecard .card2:hover,
+        .under-middle-whitecard .card3:hover{
+            border: 3px solid rgb(58, 4, 102);
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        #almost-end{
+            display: flex;
+            justify-content: center;
+            margin-left: 100px;
+            padding-top: 80px;
+        }
+
+        video{
+            width: 800px;
+            border-radius: 10px;
+        }
+
+        .end{
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            margin-left: 130px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-top: 70px;
+        }
+
+        .end .end-text{
+            /* width: 70%; */
+            width: 100%;
+        }
+
+        .end .end-button{
+            /* width: 40%; */
+            width: 100%;
+        }
+
+        .end .end-text p{
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .end .end-text p span{
+            color: rgb(58, 4, 102);
+            font-weight: bold;
+        }
+
+        .end button {
+            background-color: rgb(58, 4, 102);
+            border: none;
+            padding: 15px;
+            width: 18%;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            margin-top: 15px;
+            margin-left: 480px;
             margin-bottom: 50px;
-            text-indent: 20px;
         }
 
-        .texto2 .keep2{
-            text-indent: 20px;
+        .end button:hover {
+            background-color: rgb(82, 3, 82);
+            cursor: pointer;
         }
-
-        .produto{
-            border-radius: 20px;
-            box-shadow: 2px 2px 2px 2px rgb(56, 0, 128);
-            margin-right: 30px;
-        }
-        
 
 </style>
 </head>
 <body>
 
-    <div class="principal">
-    <img class="imagem" src="https://s.zst.com.br/cms-assets/2022/08/como_lavar_roupa_capa.webp" 
-    width="101%" height="400px">
-    </div>
+    <section class="intro">
 
-    <div class="titulo">
-    <p>Quem Somos</p>
-    </div>
+        <div class="intro-text">
 
-    <div class="square1">
+            <h1>Sobre nós</h1>
+            <h2>Revolucionando o mercado e a sua rotina</h2>
+            <p>Imagine a conveniência de ter suas roupas lavadas e limpas enquanto você está no trabalho, 
+                em casa ou até mesmo durante uma viagem. Você pode agendar um horário e então nossa equipe irá até você para buscar suas roupas.
+                Tudo com o máximo conforto e qualidade. 
+            </p>
 
-        <div class="texto1">
-            <p>A empresa de lavagem de roupas All Clean tem como alvo revolucionar o mercado 
-            e não ser uma lavanderia comum. Não possuímos uma loja física fixa, mas sim um 
-            conceito inovador de serviço de lavagem móvel.<br></p> 
-            <br> 
-            <p class="keep1">
-            A equipe da All Clean consiste em profissionais altamente treinados e equipados  
-            com uma van especializada, contendo todos os equipamentos necessários para realizar  
-            a lavagem e a limpeza de roupas de seus clientes. Somos uma lavanderia competente,  
-            pronta para atender as necessidades dos clientes onde quer que eles estejam.<br></p> 
+            <button><a href="#almost-end">Nossas tecnologias</a></button>
+
         </div>
 
-        <div class="box_image1">
-        <img class="van" src="https://static.vecteezy.com/ti/vetor-gratis/p1/9671284-entrega-rapida-de-maquina-de-lavar-para-cliente-via-van-laundry-concept-flat-vector-illustration-isolated-vetor.jpg"
-        width="80%" height="85%">
+        <div class="intro-img">
+            <img src="https://cdn.discordapp.com/attachments/1031736165017071657/1116802435655151676/istockphoto-538121201-612x612-removebg-preview.png"
+            height="440px" width="580px">
         </div>
 
-    </div>
+    </section>
 
-    <div class="square2">
+    <section class="middle">
 
-        <div class="box_image2">
-            <img class="produto" src="https://babies.constancezahn.com/wp-content/uploads/sites/2/2021/05/produtos-eco-bioz.png"
-            width="85%" height="40%">
+        <div class="middle-title">
+            <p>A qualidade e a conveniência oferecida conquistaram a confiança de muitos clientes, 
+                que se tornaram fiéis e indicam a All Clean para amigos e familiares.</p>
         </div>
 
-        <div class="texto2"><p>Imagine a conveniência de ter suas roupas lavadas e limpas enquanto você está no trabalho, 
-            em casa ou até mesmo durante uma viagem. A All Clean oferece esse serviço com eficiência e qualidade.
-            Você pode agendar um horário através de um site fácil de usar e então nossa equipe chegará ao local 
-            escolhido por você, estacionará a van e cuidadosamente recolherá as roupas a serem lavadas.<br></p> 
-            <br>
+        <div class="middle-text">
+            <p> Temos profissionais altamente treinados e equipados com uma van especializada, 
+                que contém todos os equipamentos necessários para realizar uma limpeza eficiente.<br>
+            </p>
 
-            <p class="keep2">All Clean é reconhecida por seu compromisso com a sustentabilidade. Utilizamos produtos de limpeza 
-            ecológicos e adotamos práticas que reduzem o consumo de água e energia, sem comprometer a qualidade 
-            do serviço.</p>
+            <p>Somos uma lavanderia competente, pronta para atender as necessidades dos clientes onde quer que eles estejam.</p><br>
+
+            <p>A All Clean é reconhecida por seu compromisso com a sustentabilidade. Utilizamos produtos de limpeza ecológicos 
+                e adotamos práticas que reduzem o consumo de água e energia, sem comprometer a qualidade do serviço.</p>
+        </div>
+    
+    </section>
+
+    <section class="under-middle">
+
+        <div class="under-middle-whitecard">
+
+            <div class="card1">
+                <h1>90%</h1>
+                <p>Dos clientes ficaram satisfeitos com os resultados</p>
+            </div>
+
+            <div class="card2">
+                <h1>95%</h1>
+                <p>Dos clientes recomendariam nossos serviços a outras pessoas</p>
+            </div>
+
+            <div class="card3">
+                <h1>48h</h1>
+                <p>Tempo médio de entrega dos serviços</p>
+            </div>
+
         </div>
 
+    </section>
 
-    </div>
+    <section id="almost-end">
+
+        <div>
+        <video src="video.mp4" controls></video>
+        </div>
+
+    </section>
+
+    <section class="end">
+
+        <div class="end-text">
+            <p>À medida que a empresa cresce, nosso objetivo é expandir nossa equipe e frota de vans para atender a uma demanda 
+                cada vez maior. A All Clean deseja se tornar uma referência no setor de lavagem de roupas móvel, combinando 
+                <span>praticidade</span>, <span>qualidade</span> e <span>responsabilidade ambiental</span>.</p>
+        </div>
+
+        <div class="end-button">
+            <button>Fazer agendamento</button>
+        </div>
+
+    </section>
 
     <div class="navegacao">
         
