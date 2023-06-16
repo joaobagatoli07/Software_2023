@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="user-scalable=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Document</title>
+    <title>Agendamento</title>
 </head>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,10 +119,9 @@
             background-image: linear-gradient(to left, rgb(115, 102, 192), rgb(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
             background-size: 500% 100%;
             animation: degrade-animado 3s infinite alternate;
-
         }
 
-        @keyframes degrade-animado {
+        @keyframes degrade-animado{
             0% {
                 background-position-x: 0%;
             }
@@ -138,8 +137,7 @@
             color: rgb(0, 0, 0);
         }
 
-
-        #preco {
+        #preco{
             font-size: 16px;
             font-family: 'Poppins', sans-serif;
             font-size: 63px;
@@ -180,20 +178,22 @@
         #planos3:hover {
             background-color: rgb(82, 3, 82);
         }
+
         .escolherplano:hover {
             background-color: rgb(82, 3, 82);
         }
+
         .navegacao{
             font-family: 'Poppins', sans-serif;
             position: fixed;
-            height: 200vh;
+            height: 120vh;
             background:rgb(104, 49, 149);
             width: 70px;
             box-shadow: 10px 0 0 rgb(56, 0, 128);
             border-left: 10px solid rgb(104, 49, 149);
             overflow-x: hidden;
             transition: 0.5s;
-            margin-top: -570px;
+            margin-top: -580px;
             margin-left: -10px;
         }
 
@@ -271,6 +271,7 @@
             border-radius: 50%;
             box-shadow: 15px -15px 0 rgb(56, 0, 128);
         }
+
         .imagem2{
             margin-top: 7px;
         }
@@ -326,7 +327,6 @@
         #plano2{
             color: white;
             text-align: center;
-            margin-top: -340px;
             font-style: italic;
         }
 
@@ -397,12 +397,24 @@
             justify-content: center;
         }
 
-    </style>
+        .methods{
+            height: 600px;
+            width: 100%;
+            margin-top: 50px;
+            background-color: red;
+            margin-left: 10px;
+            display: flex;
+            flex-wrap: wrap;
+        }
 
+        .methods-card{
+            https://www.simone-viola.com/projects/
+        }
+
+    </style>
 
     <h1 class="agendamento">Agendamento</h1>
     <h2 class="escolha">Escolha o pacote desejado</h2>
-
 
     <div class="divplanos">
         <button id="planos1">Básico</button>
@@ -412,14 +424,9 @@
 
     <div class="box-degrade">
         
-        
-
+            <h2 id="plano2">5KG</h2>
             <h2 id="plano">Básico</h2>
             <h2 id="preco">R$80</h2>
-
-
-
-
 
         <div class="praticidade">
             <p>A praticidade está apenas a alguns cliques de você</p>
@@ -429,8 +436,17 @@
         <div class="queroupas">
             <button id="openModalBtn">Que roupas lavamos?</button>
         </div>
+
     </div>
 
+ <section class="methods">
+    <div class="methods-card"></div>
+    <div class="methods-card"></div>
+    <div class="methods-card"></div>
+    <div class="methods-card"></div>
+    <div class="methods-card"></div>
+    <div class="methods-card"></div>
+ </section>
 
     <div class="navegacao">
         
@@ -490,11 +506,6 @@
         item.addEventListener('click', activeLink));
 </script>
 
-
-<h2 id="plano2">5KG</h2>
-
-
-
 <script>
    // Função para exibir o valor do botão 1
    function exibirValorBotao1() {
@@ -550,8 +561,6 @@
     document.getElementById("planos1").addEventListener("click", exibirValorBotao7);
     document.getElementById("planos2").addEventListener("click", exibirValorBotao8);
     document.getElementById("planos3").addEventListener("click", exibirValorBotao9);
-
-    
 
 </script>
 
