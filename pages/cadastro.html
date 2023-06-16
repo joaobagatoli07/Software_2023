@@ -255,13 +255,14 @@
                function hideModal(){
                 var element = document.getElementById("modal");
                 element.classList.remove("show-modal")
+                window.location.href= "home_page.html"
                }
             </script>
             
             <button  onclick="showModal()" id="cadastro">Cadastre-se</button>
             <div class="modal" id="modal">
                 <div class="modal-content">
-                    <span onclick="hideModal()">&times;</span>
+                    <span onclick="hideModal()" >&times;</span>
                     <h1 class="corh1">Seu cadastro foi concluido com sucesso</h1>
                     <img src="https://cdn.discordapp.com/attachments/1045805391746973727/1111302167530311742/check-icone-1-scaled.png" width="50px" class="imagemmodal">
                 </div>
