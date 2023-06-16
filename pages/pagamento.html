@@ -144,7 +144,8 @@
             height: 156px;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: center;
+            align-self: center;
         }
 
         #numero::placeholder {
@@ -289,10 +290,12 @@
         }
 
         .horario {
-            width: 50%;
+            width: 40%;
             background-color: rgb(214, 214, 214);
-            height: 25%;
+            height: 20%;
             border-radius: 8px;
+            display: flex;
+            justify-content: center;
         }
 
         .valor {
@@ -400,6 +403,10 @@
             /* width: 40%; */
             font-family: 'Poppins', sans-serif;
             font-weight: bold;
+            display: flex;
+            background-color: #5c6664;
+            height: 40%;
+            border-radius: 5px;
         }
 
         .f2 {
@@ -446,6 +453,16 @@
             font-size: 13px;
             display: block;
             height: 20px;
+        }
+        #data{
+            width: 90%;
+        }
+        .data_hora{
+            display: flex;
+            gap: 44px;
+        }
+        .data{
+            height: 57%;
         }
     </style>
 </head>
@@ -517,20 +534,23 @@
         <form class="form_agend">
             <div>
                 <input value="Rua XV de Novembro 2345, Glória, Joiville - SC" id="endereco">
+                <div class="data_hora">
                 <div class="data">
                     <p>Calendário</p>
                     <input type="date" id="data">
                 </div>
                 <div class="p1">
                     <!-- <fieldset> -->
-                    <p>Selecione o horário desejado</p>
-
+                        <div> 
+                            <p>Selecione o horário desejado</p>
+                        </div>
                     <div class="horario2">
                         <select id="">
                             <option>15:30</option>
                             <option>16:30</option>
                         </select>
                     </div>
+                </div>
                     <!-- </fieldset> -->
                 </div>
             </div>
@@ -556,19 +576,19 @@
                 <div class="f2">
                     <label class="n" for="numero">
                         <p>Número do Cartão</p>
-                        <input id="numero" type="numero">
+                        <input id="numero" type="text">
                     </label>
                     <label class="c" for="codigo">
                         <p>Código de Segurança</p>
-                        <input id="codigo" type="codigo">
+                        <input id="codigo" type="text">
                     </label>
                     <label class="n1" for="Nome">
                         <p>Nome do Cartão</p>
-                        <input id="Nome" type="Nome">
+                        <input id="Nome" type="text">
                     </label>
-                    <label class="v" for="Validade">
+                    <label class="v" for="text">
                         <p>Validade do Cartão</p>
-                        <input id="Validade" type="Validade">
+                        <input id="Validade" type="text">
                     </label>
                 </div>
                 <fieldset>
