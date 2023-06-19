@@ -1,4 +1,4 @@
-const input = document.querySelector('input')
+const input = document.getElementById('#CPF')
 
 input.addEventListener('keypress', () => {
     let inputLength = input.value.length
