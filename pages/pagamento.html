@@ -72,8 +72,7 @@
         .horario2 {
             position: relative;
             display: flex;
-            width: 6.5em;
-            height: 2em;
+            width: 6.2em;
             line-height: 3;
             background: #5c6664;
             overflow: hidden;
@@ -144,7 +143,6 @@
             height: 156px;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
             align-self: center;
         }
 
@@ -292,7 +290,7 @@
         .horario {
             width: 40%;
             background-color: rgb(214, 214, 214);
-            height: 20%;
+            height: 17%;
             border-radius: 8px;
             display: flex;
             justify-content: center;
@@ -404,9 +402,11 @@
             font-family: 'Poppins', sans-serif;
             font-weight: bold;
             display: flex;
-            background-color: #5c6664;
+            background-color: rgb(189, 186, 186);
             height: 40%;
             border-radius: 5px;
+            gap: 5px;
+            margin-top: 19px;
         }
 
         .f2 {
@@ -463,6 +463,22 @@
         }
         .data{
             height: 57%;
+            width: 22%;
+        }
+        .date{
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+        }
+        .endereco1{
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            width: 99%;
+        }
+        ::-webkit-scrollbar{
+            width: 7px;
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color: tomato;
         }
     </style>
 </head>
@@ -531,17 +547,18 @@
         <h2>Estamos quase lá</h2>
     </div>
     <div class="horario">
+        
         <form class="form_agend">
             <div>
-                <input value="Rua XV de Novembro 2345, Glória, Joiville - SC" id="endereco">
+                <label class="endereco1" for="endereco">Endereço<input value="Rua XV de Novembro 2345, Glória, Joiville - SC" id="endereco"></label>
                 <div class="data_hora">
                 <div class="data">
-                    <p>Calendário</p>
-                    <input type="date" id="data">
+                    <!-- <p>Calendário</p> -->
+                   <label class="date" for="data">Calendário<input type="date" id="data"></label>
                 </div>
                 <div class="p1">
                     <!-- <fieldset> -->
-                        <div> 
+                        <div style="margin-top: 2px; margin-left: 6px;"> 
                             <p>Selecione o horário desejado</p>
                         </div>
                     <div class="horario2">
