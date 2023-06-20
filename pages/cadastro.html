@@ -65,7 +65,7 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        #Número::placeholder {
+        #Numero::placeholder {
             color: white;
             font-family: 'Poppins', sans-serif;
         }
@@ -125,7 +125,7 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        #cadastro{
+        #botao-cadastrar{
             font-family: 'Poppins', sans-serif;
         }
 
@@ -218,21 +218,23 @@
         <div class="login">
         <div class="espaco">
             <form action="">
-                
-                <input id="Nome" type="text" placeholder="Nome">
-                <br><br>
+
+
+            <input id="Nome" type="text" placeholder="Nome">
+            <br><br>
             
              <label>
                 <input id="Telefone" type="tel" placeholder="Telefone">
                 <br><br>
-            </label>
+             </label>
+             
             <input id="Rua" type="text" placeholder="Rua">
             <br><br>
 
             <input id="Bairro" type="text" placeholder="Bairro">
             <br><br>
         
-            <input type="text" id="Número" placeholder="Número">
+            <input type="text" id="Numero" placeholder="Número">
                 <br><br>
 
             
@@ -244,10 +246,6 @@
 
                 <input id="Senha" type="password" placeholder="Senha">
                 <br><br>
-
-                <input id="Confirmar" type="password" placeholder="Confirme sua senha">
-                <br><br>
-                
                 
                 <script src="./main.js"></script>
             </form>
@@ -266,7 +264,7 @@
                }
             </script>
             
-            <button  onclick="showModal()" id="cadastro">Cadastre-se</button>
+            <button  onclick="showModal()" id="botao-cadastrar" disabled>Cadastre-se</button>
             <div class="modal" id="modal">
                 <div class="modal-content">
                     <span onclick="hideModal()" >&times;</span>
@@ -291,5 +289,40 @@
     <script>
         $('#Telefone').mask('(00) 9 0000-0000');
     </script>
+
+    <script>
+// Obtém referências aos elementos do formulário
+    const nomeInput = document.getElementById('Nome');
+    const telefoneInput = document.getElementById('Telefone');
+    const ruaInput = document.getElementById('Rua');
+    const bairroInput = document.getElementById('Bairro');
+    const numeroInput = document.getElementById('Numero');
+    const cpfInput = document.getElementById ('CPF');
+    const emailInput = document.getElementById('Email');
+    const senhaInput = document.getElementById('Senha');
+    const botaoCadastrar = document.getElementById('botao-cadastrar');
+
+// Adiciona um evento de input aos campos
+    nomeInput.addEventListener('input', verificarCamposPreenchidos);
+    telefoneInput.addEventListener('input', verificarCamposPreenchidos);
+    ruaInput.addEventListener('input', verificarCamposPreenchidos);
+    bairroInput.addEventListener('input', verificarCamposPreenchidos);
+    numeroInput.addEventListener('input', verificarCamposPreenchidos);
+    cpfInput.addEventListener('input', verificarCamposPreenchidos);
+    emailInput.addEventListener('input', verificarCamposPreenchidos);
+    senhaInput.addEventListener('input', verificarCamposPreenchidos);
+
+
+// Função para verificar se todos os campos estão preenchidos
+function verificarCamposPreenchidos() {
+    if (nomeInput.value !== '' && telefoneInput.value !== '' && ruaInput.value !== '' && bairroInput.value !== '' && numeroInput.value !== '' && cpfInput.value !== '' && emailInput.value !== '' && senhaInput.value !== '') {
+    botaoCadastrar.disabled = false; // Habilita o botão de cadastrar
+    } else {
+    botaoCadastrar.disabled = true; // Desabilita o botão de cadastrar
+  }
+}
+
+    </script>
+
 </body>
 </html>
