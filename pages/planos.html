@@ -411,9 +411,9 @@
 
         .methods{
             height: 600px;
-            width: 90%;
+            width: 100%;
             margin-top: 50px;
-            margin-left: 87px;
+            margin-left: 90px;
             display: flex;
             flex-wrap: wrap;
         }
@@ -421,15 +421,41 @@
         .methods-card{
            height: 50%;
            width: 33%;
-           border: solid 1px #dbdbdb;
+           border: 3px solid white;
         }
 
-        .methods-card:hover{
-            opacity: 0.4;
+        #one,
+        #two,
+        #three{
+            border-bottom: none;
+        }
+
+        #two,
+        #five{
+            border-left: none;
+            border-right: none;
         }
 
         .methods-card img{
-            opacity: 0.8;
+            opacity: 0.9;
+            transition: all .5s ease-out;
+        }
+        
+        .methods-card img:hover{
+            opacity: 0.4;
+        }
+
+        .content{
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+
+        .overlay{
+            opacity: 0;
+        }
+
+        .methods:hover .overlay{
+            opacity: 1;
         }
 
     </style>
@@ -580,15 +606,20 @@
 <section class="methods">
 
     <div class="methods-card" id="one">
-        <img src="https://thumb-cdn.soluall.net/prod/shp_products/sp1280fw/5eb1a55b-373c-4ac7-84e6-3875ac1e0cb4/5eb1a55b-e8dc-49ac-8eff-3875ac1e0cb4.jpg" height="100%" width="100%">
+        <img src="" height="100%" width="100%">
+            <div class="overlay">
+                <div class="content">
+                    <p>Texto teste</p>
+                </div>
+            </div>
     </div>
 
     <div class="methods-card" id="two">
-        <img src="https://i.zst.com.br/images/maquina-de-lavar-economica-veja-3-modelos-photo74213270-44-1d-34.jpg" height="100%" width="100%">
+        <img src="" height="100%" width="100%">
     </div>
 
     <div class="methods-card" id="three">
-        <img src="https://image.coolblue.nl/content/e499b5e642271b4a967fb4c67a72ba12" height="100%" width="100%">
+        <img src="" height="100%" width="100%">
     </div>
 
     <div class="methods-card" id="four">

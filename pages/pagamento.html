@@ -142,9 +142,245 @@
             background-color: tomato;
         }
         .primary{
-            width: 70%;
-            height: 90%;
+            width: 77%;
+            height: 95%;
             background-color: white;
+            display: flex;
+        }
+        .secondary{
+            background-color: aqua;
+            width: 50%;
+            height: 100%;
+        }
+        .tertiary{
+            background-color: cornflowerblue;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+         form {
+            width: 500px;
+            /* height: 300px; */
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .form_agend > div {
+            width: 499px;
+            height: 156px;
+            display: flex;
+            flex-wrap: wrap;
+            align-self: center;
+            position: relative;
+            top: 20px;
+        }
+        .endereco1{
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            width: 99%;
+        }
+        #endereco {
+            width: 100%;
+        }
+        .data_hora{
+            display: flex;
+            gap: 44px;
+        }
+        .data{
+            height: 57%;
+            width: 22%;
+        }
+        #data{
+            width: 90%;
+        }
+        .date{
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+        }
+        .p1 {
+            /* width: 40%; */
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            display: flex;
+            background-color: rgb(189, 186, 186);
+            height: 40%;
+            border-radius: 5px;
+            gap: 5px;
+            margin-top: 19px;
+        }
+        .horario2 {
+            position: relative;
+            display: flex;
+            width: 6.2em;
+            line-height: 3;
+            background: #5c6664;
+            overflow: hidden;
+            border-radius: .25em;
+        }
+         .horario2::after {
+            content: '\25BC';
+            position: absolute;
+            top: -7px;
+            right: 0;
+            padding: 0 1em;
+            background: #2b2e2e;
+            cursor: pointer;
+            pointer-events: none;
+            transition: .25s all ease;
+        }
+         select {
+            flex: 1;
+            padding: 0 .5em;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1em;
+            font-family: 'Poppins', sans-serif;
+        }
+         select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            outline: 0;
+            box-shadow: none;
+            border: 0 !important;
+            background: #5c6664;
+            background-image: none;
+        }
+         select::-ms-expand {
+            display: none;
+        }
+          input {
+            width: 200px;
+            height: 25px;
+            background: rgb(189, 186, 186);
+            border-radius: 15px;
+            border: 1px solid;
+        }
+        .quaternary{
+            background-color:darkgrey;
+            width: 100%;
+            height: 62%;
+            position: relative;
+            top: 82px;
+        }
+        .forma {
+            position: relative;
+            left: 20px;
+            top: 10px;
+        }
+        .campo { 
+            margin-left: 25px;
+            height: 280px;
+        }
+        .f1 {
+            position: relative;
+            top: 10px;
+        }
+        #cartao {
+            position: relative;
+        }
+        .f2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            height: 130px;
+            position: relative;
+            top: 29px;
+            left: 20px;
+        } 
+        #numero::placeholder {
+            color: gray;
+            font-family: 'Poppins', sans-serif;
+        }
+        #codigo::placeholder {
+            color: rgb(173, 173, 173);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #Nome::placeholder {
+            color: gray;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #Validade::placeholder {
+            color: gray;
+            font-family: 'Poppins', sans-serif;
+        }
+        .n,
+        .c,
+        .n1,
+        .v {
+            width: 50%;
+            height: 20px;
+        }
+        .n, .c, .n1, .v>p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            display: block;
+            height: 20px;
+        }
+        .codigo {
+            position: relative;
+            left: 124px;
+            top: -166px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+        }
+        fieldset {
+            border: none;
+            width: 100px;
+            position: relative;
+            top: 21px;
+            left: 10px;
+        }
+        .parcelas {
+            display: flex;
+            height: 2em;
+            line-height: 3;
+            background: #5c6664;
+            overflow: hidden;
+            border-radius: .25em;
+            margin-top: 7px;
+        }
+        #pix {
+            display: flex;
+            flex-direction: row;
+        }
+        .pix2 {
+            width: 40%;
+            margin-left: 25px;
+        }
+        .l2 {
+            position: relative;
+            left: 7px;
+        }
+        .finalizar {
+            position: relative;
+            left: 16%;
+            top: -41px;
+            background-color: rgb(58, 4, 102);
+            border: none;
+            padding: 7px;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;
+            width: 38%;
+            height: 12%;
+        }
+        .novo {
+            position: relative;
+            left: 334px;
+            top: -26px;
+            background-color: rgb(58, 4, 102);
+            border: none;
+            padding: 6px;
+            border-radius: 18px;
+            color: white;
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
         }
     </style>
 </head>
@@ -209,8 +445,101 @@
     </script>
 
   <div class="primary">
+        <div class="secondary">
 
+        </div>
+
+        <div class="tertiary">
+             <form class="form_agend">
+                 <div>
+                     <label class="endereco1" for="endereco">Endereço<input value="Rua XV de Novembro 2345, Glória, Joiville - SC" id="endereco"></label>
+                     <div class="data_hora">
+                            <div class="data">
+                                    <label class="date" for="data">Calendário<input type="date" id="data"></label>
+                            </div>
+                             <div class="p1">
+                  
+                                <div style="margin-top: 2px; margin-left: 6px;"> 
+                                    <p>Selecione o horário desejado</p>
+                                </div>
+                                <div class="horario2">
+                                    <select id="">
+                                        <option>15:30</option>
+                                        <option>16:30</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="quaternary">
+                        <p class="forma"><b>Forma de Pagamento</b></p>
+                        <form action="">
+                            <div class="campo">
+                                 <div class="f1">
+                                    <label class="l1" for="cartao"><input type="radio" id="cartao" name="fav_language" value="HTML" style="width: 15px;">
+                                     Cartão de Crédito</label>
+                                </div>
+                                <div class="f2">
+                                    <label class="n" for="numero">
+                                        <p>Número do Cartão</p>
+                                        <input id="numero" type="text">
+                                    </label>
+                                    <label class="c" for="codigo">
+                                        <p>Código de Segurança</p>
+                                        <input id="codigo" type="text">
+                                    </label>
+                                    <label class="n1" for="Nome">
+                                        <p>Nome do Cartão</p>
+                                        <input id="Nome" type="text">
+                                    </label>
+                                    <label class="v" for="text">
+                                        <p>Validade do Cartão</p>
+                                        <input id="Validade" type="text">
+                                    </label>
+                                </div>
+                                <fieldset>
+                                    <legend>Nº de Parcelas</legend>
+                                    <div class="parcelas">
+                                        <select id="">
+                                            <option>1x de R$200,00</option>
+                                            <option>2x de R$100,00</option>
+                                            <option>3x de R$70,00</option>
+                                            <option>4x de R$40,00</option>
+                                        </select>
+                                    </div>
+                                </fieldset>
+               
+                            </div>
+
+                            <div class="pix2" id="pix">
+                                <div>
+                                    <input id="radiopix" type="radio" name="fav_language" value="HTML" style="width: 15px;">
+                                    <label class="l2" for="html">PIX</label>
+                                </div>
+                            <div id="qrcode"></div>
+                            </div>
+                                <button class="finalizar" onclick="window.location.href = 'confirm_pedido.html'"><b>Finalizar Agendamento</b></button>
+                                <button class="novo"><b>Escolher novo plano</b></button>
+                        </form>
+                </div>
+        </div>
   </div>
+  <script>
+
+    var opcao = document.getElementById("opcao pagamento");
+    opcao.addEventListener("click", function () {
+
+        var radiopix = document.getElementById("radiopix");
+        if (radiopix.checked) {
+            document.getElementById("qrcode").innerHTML = '<img id="qrimagem" src="code.png" width="200px">'
+        }
+        else if (document.getElementById("qrimagem")) {
+            document.getElementById("qrimagem").remove()
+        }
+    })
+</script>
 </body>
 
 </html>
