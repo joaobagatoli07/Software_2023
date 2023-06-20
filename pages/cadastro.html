@@ -218,17 +218,11 @@
         <div class="login">
         <div class="espaco">
             <form action="">
-<<<<<<< HEAD
+
 
             <input id="Nome" type="text" placeholder="Nome">
             <br><br>
-
-=======
-                
-                <input id="Nome" type="text" placeholder="Nome">
-                <br><br>
             
->>>>>>> 42f2f6a18720547036c1cda83c1d31fc3428e72c
              <label>
                 <input id="Telefone" type="tel" placeholder="Telefone">
                 <br><br>
@@ -251,9 +245,6 @@
                 <br><br>
 
                 <input id="Senha" type="password" placeholder="Senha">
-                <br><br>
-
-                <input id="Confirmar" type="password" placeholder="Confirme sua senha">
                 <br><br>
                 
                 <script src="./main.js"></script>
@@ -309,7 +300,6 @@
     const cpfInput = document.getElementById ('CPF');
     const emailInput = document.getElementById('Email');
     const senhaInput = document.getElementById('Senha');
-    const confirmarInput = document.getElementById ('Confirmar')
     const botaoCadastrar = document.getElementById('botao-cadastrar');
 
 // Adiciona um evento de input aos campos
@@ -321,16 +311,18 @@
     cpfInput.addEventListener('input', verificarCamposPreenchidos);
     emailInput.addEventListener('input', verificarCamposPreenchidos);
     senhaInput.addEventListener('input', verificarCamposPreenchidos);
-    confirmarInput.addEventListener('input', verificarCamposPreenchidos);
+
 
 // Função para verificar se todos os campos estão preenchidos
 function verificarCamposPreenchidos() {
-    if (nomeInput.value !== '' && telefoneInput.value !== '' && ruaInput.value !== '' && bairroInput.value !== '' && numeroInput.value !== '' && cpfInput.value !== '' && emailInput.value !== '' && senhaInput.value !== '' && confirmarInput.value !== '') {
+    if (nomeInput.value !== '' && telefoneInput.value !== '' && ruaInput.value !== '' && bairroInput.value !== '' && numeroInput.value !== '' && cpfInput.value !== '' && emailInput.value !== '' && senhaInput.value !== '') {
     botaoCadastrar.disabled = false; // Habilita o botão de cadastrar
     } else {
     botaoCadastrar.disabled = true; // Desabilita o botão de cadastrar
   }
 }
+
     </script>
+
 </body>
 </html>
