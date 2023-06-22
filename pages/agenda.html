@@ -400,7 +400,7 @@
         }
 
         .modal {
-            display: none;
+            /* display: none; */
             position: fixed;
             z-index: 1;
             left: 0;
@@ -476,6 +476,52 @@
         #Endereco::placeholder {
             color: white;
         }
+
+        .time-select {
+            background-color: rgb(56, 0, 128);
+            display: inline-block;
+            position: relative;
+            width: 150px;
+            height: 30px;
+            border: 1px solid #050505;
+            border-radius: 4px;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+
+        .time-select select {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 100%;
+            height: 100%;
+            padding: 4px;
+            border: none;
+            background-color: transparent;
+            font-size: 16px;
+            cursor: pointer;
+            color: rgb(255, 255, 255);
+        }
+
+        .time-select::after {
+            content: '\25BC';
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            font-size: 16px;
+            pointer-events: none;
+        }
+
+        .time-select select option {
+            background-color: rgb(56, 0, 128);
+            color: #fff;
+        }
+
+        .horario{
+            margin-top: -20px;
+        }
+
     </style>
 </head>
 
@@ -757,6 +803,21 @@
                         <input id="Endereco" type="endereco" placeholder="Endereço">
                         <br><br>
                     </label>
+
+                    <div style="display: flex; justify-content: center;" class="horario">
+                    <div class="time-select">
+                        
+                        <select>
+                            <option value="08:00">08:00</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                        </select>
+                    
+                    </div>
+                </div>
+
                 </div>
             </div>
 
