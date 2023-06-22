@@ -283,6 +283,7 @@
             border-radius: 10px;
             border: 2px solid white;
             opacity: 75%;
+            margin-top: -30px;
         }
 
         .img2 {
@@ -352,7 +353,129 @@
             background-color: red;
         }
 
+        .calendar {
+            font-family: 'Poppins', sans-serif;
+            max-width: 400px;
+            margin: 0 auto;
+        }
 
+        .calendar h2 {
+            text-align: center;
+        }
+
+        .calendar .month {
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+
+        .calendar .weekdays {
+            display: flex;
+            justify-content: center;
+        }
+
+        .calendar .weekdays div {
+            width: 40px;
+            text-align: center;
+        }
+
+        .calendar .days {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .calendar .days div {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid #ccc;
+        }
+
+        .calendar .days div:hover {
+            background-color: #f3b303;
+        }
+
+        .calendar .days .active {
+            background-color: #ccc;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #e4e4e4;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 15px;
+        }
+
+        .close {
+            color: #000000;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: red;
+        }
+
+        .confirmar1 {
+            border-color: black;
+            border-radius: 10px;
+            background-color: rgb(56, 0, 128);
+            color: white;
+            margin-top: 20px;
+        }
+
+        .confirmar1:hover {
+            background-color: red;
+        }
+
+        #month {
+            background-color: rgb(56, 0, 128);
+            border-radius: 10px;
+            border-color: black;
+            margin-left: 55px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+
+        .Ano1 {
+            background-color: rgb(56, 0, 128);
+            border-radius: 10px;
+            border-color: black;
+            color: white;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #Endereco{
+            background-color: rgb(56, 0, 128);
+            border-radius: 10px;
+            border-color: black;
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #Endereco::placeholder{
+            color: white;
+        }
     </style>
 </head>
 
@@ -434,7 +557,7 @@
 
         <div>
             <button id="B2_2">Cancelar</button>
-            <button id="B2_2">Reagendar</button>
+            <button id="B2_2" onclick="openModal()">Reagendar</button>
         </div>
 
 
@@ -449,8 +572,8 @@
         </div>
 
         <div>
-            <button id="B2_3" >Cancelar</button>
-            <button id="B2_2">Reagendar</button>
+            <button id="B2_3">Cancelar</button>
+            <button id="B2_2" onclick="openModal()">Reagendar</button>
         </div>
 
         <div class="Plano3">
@@ -463,8 +586,8 @@
         </div>
 
         <div>
-            <button id="B2_4" >Cancelar</button>
-            <button id="B2_2">Reagendar</button>
+            <button id="B2_4">Cancelar</button>
+            <button id="B2_2" onclick="openModal()">Reagendar</button>
         </div>
 
         <div class="Plano4">
@@ -477,8 +600,8 @@
         <br>
 
         <div>
-            <button id="B2_5" >Cancelar</button>
-            <button id="B2_2">Reagendar</button>
+            <button id="B2_5">Cancelar</button>
+            <button id="B2_2" onclick="openModal()">Reagendar</button>
         </div>
 
         <div class="image1">
@@ -498,7 +621,7 @@
         </div>
     </div>
 
-    
+
     <div id="modal">
         <div id="modal-content">
             <h2>Tem certeza que deseja cancelar?</h2>
@@ -593,6 +716,96 @@
         modal.style.display = 'none';
     });
 
+</script>
+
+
+<!-- Modal -->
+<div id="rescheduleModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="calendar">
+            <h2>Selecione uma Data</h2>
+            <div class="month">
+                <select id="month" onchange="generateCalendar()">
+                    <option value="0">Janeiro</option>
+                    <option value="1">Fevereiro</option>
+                    <option value="2">Março</option>
+                    <option value="3">Abril</option>
+                    <option value="4">Maio</option>
+                    <option value="5">Junho</option>
+                    <option value="6">Julho</option>
+                    <option value="7">Agosto</option>
+                    <option value="8">Setembro</option>
+                    <option value="9">Outubro</option>
+                    <option value="10">Novembro</option>
+                    <option value="11">Dezembro</option>
+                </select>
+                <input type="number" id="year" min="2023" value="2023" onchange="generateCalendar()" class="Ano1">
+            </div>
+            <div class="weekdays">
+                <div>S</div>
+                <div>T</div>
+                <div>Q</div>
+                <div>Q</div>
+                <div>S</div>
+                <div>S</div>
+                <div>D</div>
+            </div>
+<div style="display: flex; justify-content: center;">
+    <div>
+            <label>
+                <input id="Endereco" type="endereco" placeholder="Endereço">
+                <br><br>
+             </label>
+            </div>
+</div>
+
+            <div class="days" id="days"></div>
+        </div>
+        <button onclick="rescheduleService()" class="confirmar1">Confirmar</button>
+    </div>
+</div>
+
+<script>
+    // Função para abrir a modal
+    function openModal() {
+        var modal = document.getElementById("rescheduleModal");
+        modal.style.display = "block";
+    }
+
+    // Função para fechar a modal
+    function closeModal() {
+        var modal = document.getElementById("rescheduleModal");
+        modal.style.display = "none";
+    }
+
+    // Função para gerar o calendário com base no mês e ano selecionados
+    function generateCalendar() {
+        var monthSelect = document.getElementById("month");
+        var yearInput = document.getElementById("year");
+        var daysContainer = document.getElementById("days");
+
+        var monthIndex = monthSelect.value;
+        var year = yearInput.value;
+
+        // Lógica para gerar os dias do calendário (simplificada para exemplo)
+        var daysHtml = "";
+        for (var i = 1; i <= 31; i++) {
+            daysHtml += "<div>" + i + "</div>";
+        }
+
+        daysContainer.innerHTML = daysHtml;
+    }
+
+        // Função para reagendar o serviço (exemplo)
+        function rescheduleService() {
+
+        // Lógica para reagendar o serviço (pode ser personalizada conforme suas necessidades)
+        alert("Serviço reagendado com sucesso!");
+
+        // Fechar a modal após reagendar o serviço
+        closeModal();
+    }
 </script>
 
 </html>
