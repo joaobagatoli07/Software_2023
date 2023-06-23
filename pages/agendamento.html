@@ -418,6 +418,7 @@
             margin-left: 82px;
             display: flex;
             flex-wrap: wrap;
+            position: relative; /*teste*/
         }
 
         .methods-card{
@@ -426,6 +427,12 @@
            border: 3px solid white;
            background-repeat: no-repeat;
            background-size: cover;
+           bottom: 0; /*teste*/
+           transition: transform 0.5s; /*teste*/
+        }
+
+        .methods-card.show{
+            transform: translateY(-100%); /*teste*/
         }
 
         #one,
@@ -744,6 +751,22 @@ function ocultarDetalhes(element){
     element.style.backgroundColor= 'rgba(0,0,0,0)';
     var content = element.querySelectorAll('div')[0];
     content.style.display = 'none';
+}
+
+window.addEventListener('scroll', showImages);
+
+function showImages() {
+  var images = document.querySelectorAll('.methods-card');
+
+  for (var i = 0; i < images.length; i++) {
+    var image = images[i];
+    var position = image.getBoundingClientRect().top;
+    var screenHeight = window.innerHeight;
+
+    if (position < screenHeight) {
+      image.classList.add('show');
+    }
+  }
 }
 
 </script>
