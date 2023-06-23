@@ -32,7 +32,6 @@
             height: 102vh;
             background-image: linear-gradient(450deg, rgb(105, 90, 194), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
             font-family: Arial, Helvetica, sans-serif;
-            font-family: Arial, Helvetica, sans-serif;
         }
 
         .agendamento {
@@ -422,7 +421,7 @@
         }
 
         .methods-card{
-           height: 50%;
+           height: 300px;
            width: 33%;
            border: 3px solid white;
            background-repeat: no-repeat;
@@ -763,7 +762,7 @@ function showImages() {
     var position = image.getBoundingClientRect().top;
     var screenHeight = window.innerHeight;
 
-    if (position < screenHeight) {
+    if (position < screenHeight && !image.classList.contains('show')) {
       image.classList.add('show');
     }
   }
