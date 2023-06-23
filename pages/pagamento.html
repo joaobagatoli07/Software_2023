@@ -706,51 +706,52 @@
                         </div>
                         <div class="data">
                             <!-- Botão para abrir a modal -->
-    <button onclick="openModal()">Reagendar Serviço</button>
+                            <button onclick="openModal()">Reagendar Serviço</button>
 
-    <!-- Modal -->
-    <div id="rescheduleModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div class="calendar">
-                <h2>Selecione uma Data</h2>
-                <div class="month">
-                    <select id="month" onchange="generateCalendar()">
-                        <option value="0">Janeiro</option>
-                        <option value="1">Fevereiro</option>
-                        <option value="2">Março</option>
-                        <option value="3">Abril</option>
-                        <option value="4">Maio</option>
-                        <option value="5">Junho</option>
-                        <option value="6">Julho</option>
-                        <option value="7">Agosto</option>
-                        <option value="8">Setembro</option>
-                        <option value="9">Outubro</option>
-                        <option value="10">Novembro</option>
-                        <option value="11">Dezembro</option>
-                    </select>
-                    <input type="number" id="year" min="2023" value="2023" onchange="generateCalendar()" class="Ano1">
-                </div>
-                <div class="weekdays">
-                    <div>S</div>
-                    <div>T</div>
-                    <div>Q</div>
-                    <div>Q</div>
-                    <div>S</div>
-                    <div>S</div>
-                    <div>D</div>
-                </div>
-                <div class="days" id="days"></div>
-            </div>
-            <div>
-                <label>
-                    <input id="Endereco" type="endereco" placeholder="Endereço">
-                    <br><br>
-                 </label>
-                </div>
-    </div>
-            <button onclick="rescheduleService()" class="confirmar1">Confirmar</button>
-        </div>
+                            <!-- Modal -->
+                            <div id="rescheduleModal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close" onclick="closeModal()">&times;</span>
+                                    <div class="calendar">
+                                        <h2>Selecione uma Data</h2>
+                                        <div class="month">
+                                            <select id="month" onchange="generateCalendar()">
+                                                <option value="0">Janeiro</option>
+                                                <option value="1">Fevereiro</option>
+                                                <option value="2">Março</option>
+                                                <option value="3">Abril</option>
+                                                <option value="4">Maio</option>
+                                                <option value="5">Junho</option>
+                                                <option value="6">Julho</option>
+                                                <option value="7">Agosto</option>
+                                                <option value="8">Setembro</option>
+                                                <option value="9">Outubro</option>
+                                                <option value="10">Novembro</option>
+                                                <option value="11">Dezembro</option>
+                                            </select>
+                                            <input type="number" id="year" min="2023" value="2023"
+                                                onchange="generateCalendar()" class="Ano1">
+                                        </div>
+                                        <div class="weekdays">
+                                            <div>S</div>
+                                            <div>T</div>
+                                            <div>Q</div>
+                                            <div>Q</div>
+                                            <div>S</div>
+                                            <div>S</div>
+                                            <div>D</div>
+                                        </div>
+                                        <div class="days" id="days"></div>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <input id="Endereco" type="endereco" placeholder="Endereço">
+                                            <br><br>
+                                        </label>
+                                    </div>
+                                </div>
+                                <button onclick="rescheduleService()" class="confirmar1">Confirmar</button>
+                            </div>
                         </div>
                     </div>
                 </div>

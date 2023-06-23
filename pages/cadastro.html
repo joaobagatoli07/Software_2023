@@ -12,11 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
     <style>
-
-        html{
+        html {
             scroll-behavior: smooth;
         }
-        
+
         .geral {
             margin-top: 10px;
             display: flex;
@@ -117,93 +116,91 @@
             cursor: pointer;
         }
 
-        .titulo{
+        .titulo {
             font-family: 'Poppins', sans-serif;
         }
 
-        .descricao{
+        .descricao {
             font-family: 'Poppins', sans-serif;
         }
 
-        #botao-cadastrar{
+        #botao-cadastrar {
             font-family: 'Poppins', sans-serif;
         }
 
-        .titulo{
+        .titulo {
             font-size: 45px;
             margin-left: 35px;
         }
 
-        .descricao{
+        .descricao {
             margin-left: 30px;
             margin-top: -25px;
             font-style: italic;
             font-size: 18px;
         }
 
-        .espaco{
+        .espaco {
             margin-top: 10px;
         }
 
-        .modal{
-        position: fixed;
-        padding: 0;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(0, 0, 0, 0.5);
-        transform: scale(1.5);
-        opacity: 0;
-        visibility: hidden;
-        transition: visibility 0.25s ease-in-out, transform 0.25s
-        ease-in-out, opacity 0.25s ease-in-out; 
-    }
+        .modal {
+            position: fixed;
+            padding: 0;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: scale(1.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: visibility 0.25s ease-in-out, transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+        }
 
-    
-        .modal-content{
-        background-color: white;
-        padding: 16px 24px;
-        width: 384px;
-        border-radius: 0.5rem;
-    }
 
-        span{
-        float: right;
-        width: 24px;
-        cursor: pointer;
-        background-color: black;
-        text-align: center;
-        line-height: 24px;
-        border-radius: 15px;
-    }
+        .modal-content {
+            background-color: white;
+            padding: 16px 24px;
+            width: 384px;
+            border-radius: 0.5rem;
+        }
 
-        span:hover{
-        background-color: red;
-    }
+        span {
+            float: right;
+            width: 24px;
+            cursor: pointer;
+            background-color: black;
+            text-align: center;
+            line-height: 24px;
+            border-radius: 15px;
+        }
 
-        .show-modal{
-        opacity: 1;
-        visibility: visible;
-        transform: scale(1.5s);
-    }
+        span:hover {
+            background-color: red;
+        }
 
-    .corh1{
-        color: rgb(0, 0, 0);
-        font-size: 20px;
-        font-family: 'Poppins', sans-serif;
-        text-align: center;
-        margin-top: -5px;
-    }
+        .show-modal {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1.5s);
+        }
 
-    .imagemmodal{
-        margin-left: 168px;
-        opacity: 90%;
-    }
+        .corh1 {
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin-top: -5px;
+        }
 
+        .imagemmodal {
+            margin-left: 168px;
+            opacity: 90%;
+        }
     </style>
 </head>
 
@@ -216,63 +213,64 @@
         </div>
 
         <div class="login">
-        <div class="espaco">
-            <form action="">
+            <div class="espaco">
+                <form action="">
 
 
-            <input id="Nome" type="text" placeholder="Nome">
-            <br><br>
-            
-             <label>
-                <input id="Telefone" type="tel" placeholder="Telefone">
-                <br><br>
-             </label>
-             
-            <input id="Rua" type="text" placeholder="Rua">
-            <br><br>
+                    <input id="Nome" type="text" placeholder="Nome">
+                    <br><br>
 
-            <input id="Bairro" type="text" placeholder="Bairro">
-            <br><br>
-        
-            <input type="text" id="Numero" placeholder="Número">
-                <br><br>
+                    <label>
+                        <input id="Telefone" type="tel" placeholder="Telefone">
+                        <br><br>
+                    </label>
 
-            
-                <input type="text" id="CPF"  placeholder="CPF">
-                <br><br>
-            
-                <input id="Email" type="Email" placeholder="Email">
-                <br><br>
+                    <input id="Rua" type="text" placeholder="Rua">
+                    <br><br>
 
-                <input id="Senha" type="password" placeholder="Senha">
-                <br><br>
-                
-                <script src="./main.js"></script>
-            </form>
+                    <input id="Bairro" type="text" placeholder="Bairro">
+                    <br><br>
+
+                    <input type="text" id="Numero" placeholder="Número">
+                    <br><br>
+
+
+                    <input type="text" id="CPF" placeholder="CPF">
+                    <br><br>
+
+                    <input id="Email" type="Email" placeholder="Email">
+                    <br><br>
+
+                    <input id="Senha" type="password" placeholder="Senha">
+                    <br><br>
+
+                    <script src="./main.js"></script>
+                </form>
             </div>
-            
-            <script>
-               function showModal(){
-                var element = document.getElementById("modal");
-                element.classList.add("show-modal");
-               } 
 
-               function hideModal(){
-                var element = document.getElementById("modal");
-                element.classList.remove("show-modal")
-                window.location.href= "home_page.html"
-               }
+            <script>
+                function showModal() {
+                    var element = document.getElementById("modal");
+                    element.classList.add("show-modal");
+                }
+
+                function hideModal() {
+                    var element = document.getElementById("modal");
+                    element.classList.remove("show-modal")
+                    window.location.href = "home_page.html"
+                }
             </script>
-            
-            <button  onclick="showModal()" id="botao-cadastrar" disabled>Cadastre-se</button>
+
+            <button onclick="showModal()" id="botao-cadastrar" disabled>Cadastre-se</button>
             <div class="modal" id="modal">
                 <div class="modal-content">
-                    <span onclick="hideModal()" >&times;</span>
+                    <span onclick="hideModal()">&times;</span>
                     <h1 class="corh1">Seu cadastro foi concluido com sucesso</h1>
-                    <img src="https://cdn.discordapp.com/attachments/1045805391746973727/1111302167530311742/check-icone-1-scaled.png" width="50px" class="imagemmodal">
+                    <img src="https://cdn.discordapp.com/attachments/1045805391746973727/1111302167530311742/check-icone-1-scaled.png"
+                        width="50px" class="imagemmodal">
                 </div>
             </div>
-            
+
 
         </div>
     </div>
@@ -281,48 +279,49 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     <script>
         var cleave = new Cleave('#CPF', {
-    delimiters: ['.', '.', '-'],
-    blocks: [3, 3, 3, 2],
-    numericOnly: true
-});
+            delimiters: ['.', '.', '-'],
+            blocks: [3, 3, 3, 2],
+            numericOnly: true
+        });
     </script>
     <script>
         $('#Telefone').mask('(00) 9 0000-0000');
     </script>
 
     <script>
-// Obtém referências aos elementos do formulário
-    const nomeInput = document.getElementById('Nome');
-    const telefoneInput = document.getElementById('Telefone');
-    const ruaInput = document.getElementById('Rua');
-    const bairroInput = document.getElementById('Bairro');
-    const numeroInput = document.getElementById('Numero');
-    const cpfInput = document.getElementById ('CPF');
-    const emailInput = document.getElementById('Email');
-    const senhaInput = document.getElementById('Senha');
-    const botaoCadastrar = document.getElementById('botao-cadastrar');
+        // Obtém referências aos elementos do formulário
+        const nomeInput = document.getElementById('Nome');
+        const telefoneInput = document.getElementById('Telefone');
+        const ruaInput = document.getElementById('Rua');
+        const bairroInput = document.getElementById('Bairro');
+        const numeroInput = document.getElementById('Numero');
+        const cpfInput = document.getElementById('CPF');
+        const emailInput = document.getElementById('Email');
+        const senhaInput = document.getElementById('Senha');
+        const botaoCadastrar = document.getElementById('botao-cadastrar');
 
-// Adiciona um evento de input aos campos
-    nomeInput.addEventListener('input', verificarCamposPreenchidos);
-    telefoneInput.addEventListener('input', verificarCamposPreenchidos);
-    ruaInput.addEventListener('input', verificarCamposPreenchidos);
-    bairroInput.addEventListener('input', verificarCamposPreenchidos);
-    numeroInput.addEventListener('input', verificarCamposPreenchidos);
-    cpfInput.addEventListener('input', verificarCamposPreenchidos);
-    emailInput.addEventListener('input', verificarCamposPreenchidos);
-    senhaInput.addEventListener('input', verificarCamposPreenchidos);
+        // Adiciona um evento de input aos campos
+        nomeInput.addEventListener('input', verificarCamposPreenchidos);
+        telefoneInput.addEventListener('input', verificarCamposPreenchidos);
+        ruaInput.addEventListener('input', verificarCamposPreenchidos);
+        bairroInput.addEventListener('input', verificarCamposPreenchidos);
+        numeroInput.addEventListener('input', verificarCamposPreenchidos);
+        cpfInput.addEventListener('input', verificarCamposPreenchidos);
+        emailInput.addEventListener('input', verificarCamposPreenchidos);
+        senhaInput.addEventListener('input', verificarCamposPreenchidos);
 
 
-// Função para verificar se todos os campos estão preenchidos
-function verificarCamposPreenchidos() {
-    if (nomeInput.value !== '' && telefoneInput.value !== '' && ruaInput.value !== '' && bairroInput.value !== '' && numeroInput.value !== '' && cpfInput.value !== '' && emailInput.value !== '' && senhaInput.value !== '') {
-    botaoCadastrar.disabled = false; // Habilita o botão de cadastrar
-    } else {
-    botaoCadastrar.disabled = true; // Desabilita o botão de cadastrar
-  }
-}
+        // Função para verificar se todos os campos estão preenchidos
+        function verificarCamposPreenchidos() {
+            if (nomeInput.value !== '' && telefoneInput.value !== '' && ruaInput.value !== '' && bairroInput.value !== '' && numeroInput.value !== '' && cpfInput.value !== '' && emailInput.value !== '' && senhaInput.value !== '') {
+                botaoCadastrar.disabled = false; // Habilita o botão de cadastrar
+            } else {
+                botaoCadastrar.disabled = true; // Desabilita o botão de cadastrar
+            }
+        }
 
     </script>
 
 </body>
+
 </html>

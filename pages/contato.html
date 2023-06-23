@@ -10,14 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    
-    <style>
 
-        html{
+    <style>
+        html {
             scroll-behavior: smooth;
         }
-        
-        .geral{
+
+        .geral {
             margin: 0;
             margin-top: 8%;
             display: flex;
@@ -26,18 +25,18 @@
             align-items: center;
         }
 
-        body{
+        body {
             width: 99%;
             background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        .mensagem{
+        .mensagem {
             color: white;
             text-align: center;
         }
 
-        .login{
+        .login {
             top: 70%;
             left: 50%;
             color: white;
@@ -45,12 +44,12 @@
             align-items: center;
         }
 
-        .campo::placeholder{
+        .campo::placeholder {
             color: black;
             font-family: 'Poppins', sans-serif;
         }
 
-        #Mensagem{
+        #Mensagem {
             font-family: 'Poppins', sans-serif;
             border-radius: 15px;
             resize: none;
@@ -62,7 +61,7 @@
             height: 100px;
         }
 
-        input{
+        input {
             background: transparent;
             padding: 15px;
             border: 1px solid white;
@@ -73,7 +72,7 @@
             background-color: white;
         }
 
-        .enviar{
+        .enviar {
             background-color: rgb(58, 4, 102);
             border: none;
             padding: 15px;
@@ -85,21 +84,21 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        button:hover{
+        button:hover {
             background-color: rgb(82, 3, 82);
             cursor: pointer;
         }
 
-        .imagem{
+        .imagem {
             margin-left: 260px;
             margin-top: 20px;
         }
 
-        .navegacao{
+        .navegacao {
             font-family: 'Poppins', sans-serif;
             position: fixed;
             height: 680px;
-            background:rgb(104, 49, 149);
+            background: rgb(104, 49, 149);
             width: 70px;
             box-shadow: 10px 0 0 rgb(56, 0, 128);
             border-left: 10px solid rgb(104, 49, 149);
@@ -109,17 +108,17 @@
             margin-left: -10px;
         }
 
-        .navegacao:hover{
+        .navegacao:hover {
             width: 300px;
         }
 
-        a:hover{
+        a:hover {
             background-color: rgb(56, 0, 128);
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
         }
 
-        .navegacao ul{
+        .navegacao ul {
             position: absolute;
             top: 30px;
             left: 0;
@@ -128,7 +127,7 @@
             padding-top: 135px;
         }
 
-        .navegacao ul li{
+        .navegacao ul li {
             position: relative;
             list-style: none;
             width: 100%;
@@ -136,7 +135,7 @@
             border-bottom-left-radius: 20px;
         }
 
-        .navegacao ul li a{
+        .navegacao ul li a {
             position: relative;
             display: flex;
             width: 100%;
@@ -144,7 +143,7 @@
             color: white;
         }
 
-        .navegacao ul li a .icon{
+        .navegacao ul li a .icon {
             position: relative;
             display: block;
             min-width: 60px;
@@ -153,13 +152,13 @@
             line-height: 70px;
         }
 
-        .navegacao ul li a .icon ion-icon{
+        .navegacao ul li a .icon ion-icon {
             position: relative;
             font-size: 1.5rem;
             z-index: 1;
         }
 
-        .navegacao ul li a .title{
+        .navegacao ul li a .title {
             position: relative;
             display: block;
             padding-left: 10px;
@@ -168,27 +167,27 @@
             white-space: nowrap;
         }
 
-        .navegacao ul li.active{
-            background:rgb(56, 0, 128);
+        .navegacao ul li.active {
+            background: rgb(56, 0, 128);
         }
-       
-        .navegacao ul li.active a::after{
+
+        .navegacao ul li.active a::after {
             content: '';
             position: absolute;
             bottom: -30px;
             right: 0;
             width: 30px;
             height: 30px;
-            background:rgb(104, 49, 149);
+            background: rgb(104, 49, 149);
             border-radius: 50%;
             box-shadow: 15px -15px 0 rgb(56, 0, 128);
         }
 
-        .imagem2{
-            margin-top: 10px; 
+        .imagem2 {
+            margin-top: 10px;
         }
 
-        .inicial{
+        .inicial {
             background-color: transparent;
             border-color: transparent;
             width: 200px;
@@ -198,7 +197,7 @@
             margin-left: 30px;
         }
 
-        .inicial2{
+        .inicial2 {
             background-color: transparent;
             border-color: transparent;
             width: 300px;
@@ -207,7 +206,7 @@
             font-size: 20px;
         }
 
-        .incial4{
+        .incial4 {
             background-color: transparent;
             border-color: transparent;
             width: 180px;
@@ -216,19 +215,18 @@
             font-size: 20px;
         }
 
-        .titulo{
+        .titulo {
             font-family: 'Poppins', sans-serif;
             font-size: 40px;
             margin-top: -80px;
         }
 
-        .descricao{
+        .descricao {
             font-family: 'Poppins', sans-serif;
             font-size: 18px;
             font-weight: bold;
             margin-top: -10px;
         }
-        
     </style>
 </head>
 
@@ -256,68 +254,69 @@
             <button class="enviar">Enviar</button>
 
             <div class="imagem">
-            <img src="https://cdn.discordapp.com/attachments/1069135222173601863/1090596615284330568/Pagina_de_Contato-removebg-preview.png">
+                <img
+                    src="https://cdn.discordapp.com/attachments/1069135222173601863/1090596615284330568/Pagina_de_Contato-removebg-preview.png">
             </div>
         </div>
 
     </div>
     <div class="navegacao">
-        
+
         <div class="imagem2">
             <img src="https://cdn.discordapp.com/attachments/1069135222173601863/1089886762639298580/logo2.png"
-            width="67px">
-            </div>
+                width="67px">
+        </div>
         <ul>
             <li class="list active">
-                 <a href="#">
-                     <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
-                     <span class="title">Inicio</span>
-                 </a>
+                <a href="#">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="title">Inicio</span>
+                </a>
             </li>
             <li class="list">
                 <a href="#">
                     <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
                     <span class="title">Agendamento</span>
                 </a>
-           </li>
-           <li class="list">
-            <a href="#">
-                <span class="icon"><ion-icon name="calendar-number-outline"></ion-icon></ion-icon></span>
-                <span class="title">Meus Agendamentos</span>
-            </a>
-       </li>
+            </li>
             <li class="list">
-                 <a href="#">
-                     <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
-                     <span class="title">Contato</span>
-                 </a>
+                <a href="#">
+                    <span class="icon"><ion-icon name="calendar-number-outline"></ion-icon></ion-icon></span>
+                    <span class="title">Meus Agendamentos</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                    <span class="title">Contato</span>
+                </a>
             </li>
             <li class="list">
                 <a href="#">
                     <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
                     <span class="title">Perfil</span>
                 </a>
-           </li>
-           <li class="list">
-            <a href="#">
-                 <span class="icon"><ion-icon name="ribbon-outline"></ion-icon></ion-icon></span>
-                 <span class="title">Quem Somos</span>
-            </a>
-       </li>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="ribbon-outline"></ion-icon></ion-icon></span>
+                    <span class="title">Quem Somos</span>
+                </a>
+            </li>
         </ul>
-     </div>
+    </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script>
-    const list = document.querySelectorAll('.list');
-    function activeLink(){
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink() {
+            list.forEach((item) =>
+                item.classList.remove('active'));
+            this.classList.add('active');
+        }
         list.forEach((item) =>
-        item.classList.remove('active'));
-        this.classList.add('active');
-    }
-        list.forEach((item) =>
-        item.addEventListener('click', activeLink));
-</script>
+            item.addEventListener('click', activeLink));
+    </script>
 </body>
 
 </html>

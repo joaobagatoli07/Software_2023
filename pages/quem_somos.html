@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,18 +9,17 @@
     <title>Quem Somos</title>
 
     <style>
-
-        html{
+        html {
             scroll-behavior: smooth;
         }
-        
-        *{
+
+        * {
             margin: 0;
             box-sizing: border-box;
             padding: 0;
-         }
+        }
 
-        body{
+        body {
             width: 99%;
             height: 170vh;
             background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
@@ -28,11 +28,11 @@
             flex-direction: column;
         }
 
-        .navegacao{
+        .navegacao {
             font-family: 'Poppins', sans-serif;
             position: fixed;
             height: 100vh;
-            background:rgb(104, 49, 149);
+            background: rgb(104, 49, 149);
             width: 70px;
             box-shadow: 10px 0 0 rgb(56, 0, 128);
             border-left: 10px solid rgb(104, 49, 149);
@@ -41,17 +41,17 @@
             margin-left: -10px;
         }
 
-        .navegacao:hover{
+        .navegacao:hover {
             width: 300px;
         }
 
-        a:hover{
+        a:hover {
             background-color: rgb(56, 0, 128);
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
         }
 
-        .navegacao ul{
+        .navegacao ul {
             position: absolute;
             top: 30px;
             left: 0;
@@ -60,7 +60,7 @@
             padding-top: 135px;
         }
 
-        .navegacao ul li{
+        .navegacao ul li {
             position: relative;
             list-style: none;
             width: 100%;
@@ -68,7 +68,7 @@
             border-bottom-left-radius: 20px;
         }
 
-        .navegacao ul li a{
+        .navegacao ul li a {
             position: relative;
             display: flex;
             width: 100%;
@@ -76,7 +76,7 @@
             color: white;
         }
 
-        .navegacao ul li a .icon{
+        .navegacao ul li a .icon {
             position: relative;
             display: block;
             min-width: 60px;
@@ -85,13 +85,13 @@
             line-height: 70px;
         }
 
-        .navegacao ul li a .icon ion-icon{
+        .navegacao ul li a .icon ion-icon {
             position: relative;
             font-size: 1.5rem;
             z-index: 1;
         }
 
-        .navegacao ul li a .title{
+        .navegacao ul li a .title {
             position: relative;
             display: block;
             padding-left: 10px;
@@ -100,46 +100,46 @@
             white-space: nowrap;
         }
 
-        .navegacao ul li.active{
-            background:rgb(56, 0, 128);
+        .navegacao ul li.active {
+            background: rgb(56, 0, 128);
         }
 
-        .navegacao ul li.active a::after{
+        .navegacao ul li.active a::after {
             content: '';
             position: absolute;
             bottom: -30px;
             right: 0;
             width: 30px;
             height: 30px;
-            background:rgb(104, 49, 149);
+            background: rgb(104, 49, 149);
             border-radius: 50%;
             box-shadow: 15px -15px 0 rgb(56, 0, 128);
         }
 
-        .imagem2{
+        .imagem2 {
             margin-top: 10px;
         }
 
-        .intro{
+        .intro {
             padding-top: 80px;
             display: flex;
         }
 
-        .intro-text{
+        .intro-text {
             font-family: 'Poppins', sans-serif;
             color: white;
             margin-left: 130px;
             width: 50%;
         }
 
-        .intro-text h1{
+        .intro-text h1 {
             font-size: 1.4rem;
             letter-spacing: 4px;
             text-transform: uppercase;
             font-weight: 400;
         }
 
-        .intro-text h2{
+        .intro-text h2 {
             font-size: 3.5rem;
             font-weight: 500;
             margin-top: 5px;
@@ -148,23 +148,23 @@
             line-height: 75px;
         }
 
-        .intro-text p{
+        .intro-text p {
             font-size: 1.1rem;
             line-height: 1.5;
             margin-top: 10px;
             text-align: justify;
         }
 
-        .intro-text a{
+        .intro-text a {
             text-decoration: none;
             color: white;
         }
 
-        .intro-text a:hover{
+        .intro-text a:hover {
             background-color: transparent;
         }
 
-        .intro-text button{
+        .intro-text button {
             background-color: rgb(58, 4, 102);
             border: none;
             padding: 15px;
@@ -174,15 +174,15 @@
             cursor: pointer;
         }
 
-        .intro-img{
+        .intro-img {
             margin-left: 30px;
         }
 
-        .intro-img img{
+        .intro-img img {
             margin-top: -70px;
         }
 
-        .middle{
+        .middle {
             font-family: 'Poppins', sans-serif;
             color: white;
             margin-left: 80px;
@@ -193,24 +193,24 @@
         }
 
         .middle-title,
-        .middle-text{
+        .middle-text {
             width: 40%;
             box-sizing: border-box;
         }
 
-        .middle-title p{
+        .middle-title p {
             font-size: 1.8rem;
             font-weight: bold;
             text-align: center;
         }
 
-        .middle-text p{
+        .middle-text p {
             font-size: 1rem;
             text-align: justify;
             text-indent: 5%;
-        }  
+        }
 
-        .under-middle{
+        .under-middle {
             display: flex;
             justify-content: center;
             margin-left: 100px;
@@ -218,21 +218,21 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        .under-middle h1{
+        .under-middle h1 {
             color: rgb(58, 4, 102);
             font-size: 4.8rem;
             font-weight: bold;
         }
 
-        .under-middle p{
+        .under-middle p {
             color: #5b627d;
             font-size: 16px;
         }
 
-        .under-middle-whitecard{
+        .under-middle-whitecard {
             display: flex;
             justify-content: space-between;
-            background-color: rgb(245,249,255);
+            background-color: rgb(245, 249, 255);
             height: 200px;
             width: 80%;
             box-shadow: 0 5px 14px rgb(104, 49, 149), 0 0 3px rgb(104, 49, 149);
@@ -241,7 +241,7 @@
 
         .under-middle-whitecard .card1,
         .under-middle-whitecard .card2,
-        .under-middle-whitecard .card3{
+        .under-middle-whitecard .card3 {
             height: 100%;
             width: 31%;
             padding: 10px;
@@ -249,30 +249,30 @@
 
         .under-middle-whitecard .card1:hover,
         .under-middle-whitecard .card2:hover,
-        .under-middle-whitecard .card3:hover{
+        .under-middle-whitecard .card3:hover {
             border: 3px solid rgb(58, 4, 102);
             border-radius: 10px;
             background-color: white;
         }
 
-        #almost-end{
+        #almost-end {
             display: flex;
             justify-content: center;
             margin-left: 100px;
             padding-top: 80px;
         }
 
-        video{
+        video {
             width: 800px;
             border-radius: 10px;
         }
 
-        .flexbox{
+        .flexbox {
             display: flex;
             justify-content: center;
         }
 
-        .end{
+        .end {
             font-family: 'Poppins', sans-serif;
             color: white;
             margin-left: 80px;
@@ -283,21 +283,21 @@
             width: 80%;
         }
 
-        .end .end-text{
+        .end .end-text {
             width: 100%;
         }
 
-        .end .end-button{
+        .end .end-button {
             width: 100%;
         }
 
-        .end .end-text p{
+        .end .end-text p {
             text-align: center;
             font-size: 1.2rem;
             line-height: 1.5;
         }
 
-        .end .end-text p span{
+        .end .end-text p span {
             color: rgb(58, 4, 102);
             font-weight: bold;
         }
@@ -314,7 +314,7 @@
             margin-bottom: 50px;
         }
 
-        .end-button .button{
+        .end-button .button {
             display: flex;
             justify-content: center;
         }
@@ -323,9 +323,9 @@
             background-color: rgb(82, 3, 82);
             cursor: pointer;
         }
-
-</style>
+    </style>
 </head>
+
 <body>
 
     <section class="intro">
@@ -334,9 +334,10 @@
 
             <h1>Sobre nós</h1>
             <h2>Revolucionando o mercado e a sua rotina</h2>
-            <p>Imagine a conveniência de ter suas roupas lavadas e limpas enquanto você está no trabalho, 
-                em casa ou até mesmo durante uma viagem. Você pode agendar um horário e então nossa equipe irá até você para buscar suas roupas.
-                Tudo com o máximo conforto e qualidade. 
+            <p>Imagine a conveniência de ter suas roupas lavadas e limpas enquanto você está no trabalho,
+                em casa ou até mesmo durante uma viagem. Você pode agendar um horário e então nossa equipe irá até você
+                para buscar suas roupas.
+                Tudo com o máximo conforto e qualidade.
             </p>
 
             <button><a href="#almost-end">Nossas tecnologias</a></button>
@@ -345,7 +346,7 @@
 
         <div class="intro-img">
             <img src="https://cdn.discordapp.com/attachments/1031736165017071657/1116802435655151676/istockphoto-538121201-612x612-removebg-preview.png"
-            height="440px" width="580px">
+                height="440px" width="580px">
         </div>
 
     </section>
@@ -353,21 +354,23 @@
     <section class="middle">
 
         <div class="middle-title">
-            <p>A qualidade e a conveniência oferecida conquistaram a confiança de muitos clientes, 
+            <p>A qualidade e a conveniência oferecida conquistaram a confiança de muitos clientes,
                 que se tornaram fiéis e indicam a All Clean para amigos e familiares.</p>
         </div>
 
         <div class="middle-text">
-            <p> Temos profissionais altamente treinados e equipados com uma van especializada, 
+            <p> Temos profissionais altamente treinados e equipados com uma van especializada,
                 que contém todos os equipamentos necessários para realizar uma limpeza eficiente.<br>
             </p>
 
-            <p>Somos uma lavanderia competente, pronta para atender as necessidades dos clientes onde quer que eles estejam.</p><br>
+            <p>Somos uma lavanderia competente, pronta para atender as necessidades dos clientes onde quer que eles
+                estejam.</p><br>
 
-            <p>A All Clean é reconhecida por seu compromisso com a sustentabilidade. Utilizamos produtos de limpeza ecológicos 
+            <p>A All Clean é reconhecida por seu compromisso com a sustentabilidade. Utilizamos produtos de limpeza
+                ecológicos
                 e adotamos práticas que reduzem o consumo de água e energia, sem comprometer a qualidade do serviço.</p>
         </div>
-    
+
     </section>
 
     <section class="under-middle">
@@ -396,86 +399,90 @@
     <section id="almost-end">
 
         <div>
-        <video src="video.mp4" controls></video>
+            <video src="video.mp4" controls></video>
         </div>
 
     </section>
 
     <div class="flexbox">
-    <section class="end">
+        <section class="end">
 
-        <div class="end-text">
-            <p>À medida que a empresa cresce, nosso objetivo é expandir nossa equipe e frota de vans para atender a uma demanda 
-                cada vez maior. A All Clean deseja se tornar uma referência no setor de lavagem de roupas móvel, combinando 
-                <span>praticidade</span>, <span>qualidade</span> e <span>responsabilidade ambiental</span>.</p>
-        </div>
-
-        <div class="end-button">
-            <div class="button">
-            <button>Fazer agendamento</button>
+            <div class="end-text">
+                <p>À medida que a empresa cresce, nosso objetivo é expandir nossa equipe e frota de vans para atender a
+                    uma demanda
+                    cada vez maior. A All Clean deseja se tornar uma referência no setor de lavagem de roupas móvel,
+                    combinando
+                    <span>praticidade</span>, <span>qualidade</span> e <span>responsabilidade ambiental</span>.
+                </p>
             </div>
-        </div>
 
-    </section>
+            <div class="end-button">
+                <div class="button">
+                    <button>Fazer agendamento</button>
+                </div>
+            </div>
+
+        </section>
     </div>
 
     <div class="navegacao">
-        
+
         <div class="imagem2">
             <img src="https://cdn.discordapp.com/attachments/1069135222173601863/1089886762639298580/logo2.png"
-            width="67px">
-            </div>
+                width="67px">
+        </div>
         <ul>
             <li class="list active">
-                 <a href="#">
-                     <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
-                     <span class="title">Inicio</span>
-                 </a>
+                <a href="#">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="title">Inicio</span>
+                </a>
             </li>
             <li class="list">
                 <a href="#">
                     <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
                     <span class="title">Agendamento</span>
                 </a>
-           </li>
-           <li class="list">
-            <a href="#">
-                <span class="icon"><ion-icon name="calendar-number-outline"></ion-icon></ion-icon></span>
-                <span class="title">Meus Agendamentos</span>
-            </a>
-       </li>
+            </li>
             <li class="list">
-                 <a href="#">
-                     <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
-                     <span class="title">Contato</span>
-                 </a>
+                <a href="#">
+                    <span class="icon"><ion-icon name="calendar-number-outline"></ion-icon></ion-icon></span>
+                    <span class="title">Meus Agendamentos</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                    <span class="title">Contato</span>
+                </a>
             </li>
             <li class="list">
                 <a href="#">
                     <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
                     <span class="title">Perfil</span>
                 </a>
-           </li>
-           <li class="list">
-            <a href="#">
-                 <span class="icon"><ion-icon name="ribbon-outline"></ion-icon></ion-icon></span>
-                 <span class="title">Quem Somos</span>
-            </a>
-       </li>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="ribbon-outline"></ion-icon></ion-icon></span>
+                    <span class="title">Quem Somos</span>
+                </a>
+            </li>
         </ul>
-     </div>
+    </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script>
-    const list = document.querySelectorAll('.list');
-    function activeLink(){
+        const list = document.querySelectorAll('.list');
+        function activeLink() {
+            list.forEach((item) =>
+                item.classList.remove('active'));
+            this.classList.add('active');
+        }
         list.forEach((item) =>
-        item.classList.remove('active'));
-        this.classList.add('active');
-    }
-        list.forEach((item) =>
-        item.addEventListener('click', activeLink));
+            item.addEventListener('click', activeLink));
     </script>
 
 </body>
+
 </html>

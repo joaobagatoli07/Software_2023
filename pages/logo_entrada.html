@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ept">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,25 @@
     <title>All Clean</title>
 
     <style>
-
-        *{
+        * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
         }
-        body{
+
+        body {
             width: 100%;
             min-height: 100vh;
             background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
             display: grid;
             place-items: center;
-        }  
-        
-        .imagem{
+        }
+
+        .imagem {
             margin-top: 50px;
         }
-        .loading{
+
+        .loading {
             position: relative;
             display: grid;
             /* place-items: center; */
@@ -32,25 +34,42 @@
             width: 7%;
             animation: loading 1s infinite;
         }
-        @keyframes loading{
-            0%   {rotate: 360deg;}
-            25%  {rotate: 270deg;}
-            50%  {rotate: 180deg;}
-            75%  {rotate: 90deg;}
-            100% {rotate: 0deg;}
+
+        @keyframes loading {
+            0% {
+                rotate: 360deg;
+            }
+
+            25% {
+                rotate: 270deg;
+            }
+
+            50% {
+                rotate: 180deg;
+            }
+
+            75% {
+                rotate: 90deg;
+            }
+
+            100% {
+                rotate: 0deg;
+            }
         }
-        
     </style>
 </head>
+
 <body>
 
     <div class="imagem">
-    <center>
-    <img src="https://cdn.discordapp.com/attachments/1031736165017071657/1119623602426351636/Logofundo.png" 
-    width="500px" height="600px">
-    </center>
+        <center>
+            <img src="https://cdn.discordapp.com/attachments/1031736165017071657/1119623602426351636/Logofundo.png"
+                width="500px" height="600px">
+        </center>
     </div>
-    <img src="https://cdn.discordapp.com/attachments/1031736165017071657/1109079119532138587/Novo_Projeto2-removebg-preview_1.png" class="loading">
+    <img src="https://cdn.discordapp.com/attachments/1031736165017071657/1109079119532138587/Novo_Projeto2-removebg-preview_1.png"
+        class="loading">
 
 </body>
+
 </html>
