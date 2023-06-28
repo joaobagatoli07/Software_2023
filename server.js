@@ -32,16 +32,19 @@ app.get('/', (req, res) => {
 
 
 app.post('/login', (req, res) => {
+
   let email = req.body.email;
   let senha = req.body.senha;
 
   connection.query("SELECT * FROM usuario where email_usuario = '" + email + "'" , function (err, rows, fields) {
-    console.log("Results:", rows);
+    // console.log("Results:", rows);
     if (!err) {
       if (rows.length > 0) {
 
         if ( rows[0].senha_usuario  === senha) {
-            res.send('Login com Sucesso!!!');
+            // res.send('Login com Sucesso!!!-teste');
+            res.redirect('/pages/home_page.html');
+
             } else {
              res.send('Senha incorreta');
             }
@@ -73,7 +76,7 @@ app.post('/cadastro', (req, res) => {
 
         if ( rows[0].senha_usuario  === senha) {
             res.send('Login com Sucesso!!!');
-
+            
 
 
             
@@ -84,10 +87,13 @@ app.post('/cadastro', (req, res) => {
       } else {
         res.send('Login Falhou - Email não cadastrado');
       }
+
+
     } else {
       console.log("Erro: Consulta não realizada", err);
       res.send('Login failed');
     }
+      
   });
 });
 
