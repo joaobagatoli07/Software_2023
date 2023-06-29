@@ -150,6 +150,12 @@
             background-color: white;
             border-radius: 50%;
             overflow: hidden;
+            will-change: transform;
+            transition: transform 450ms;
+        }
+        .imagem_redonda:hover{
+            transition: transform 125ms;
+            transform: translateY(-10px);
         }
         .imagem_redonda img{
             width: 100%;
@@ -450,6 +456,8 @@
             font-family: 'Poppins', sans-serif;
             width: 38%;
             height: 12%;
+            will-change: transform;
+            transition: transform 450ms;
         }
 
         .novo {
@@ -674,6 +682,15 @@
             display: flex;
             justify-content: center;
         }
+        .background {
+            will-change: transform;
+            transition: transform 450ms;
+        }
+  
+         .imagem_redonda:hover .background {
+            transition: transform 150ms;
+            transform: translateY(-10px);
+        }
 
     </style>
 </head>
@@ -738,7 +755,9 @@
     </script>
 
     <div class="imagem_redonda">
-        <img src="logo_pagamento.png">
+        <span class="background">
+            <img src="logo_pagamento.png">
+        </span>
     </div>
     
     <div class="primary">
