@@ -35,6 +35,7 @@
             transition: 0.5s;
             margin-top: -20px;
             margin-left: -10px;
+            z-index: 10;
         }
 
         .navegacao:hover {
@@ -117,8 +118,7 @@
         }
 
         .slider{
-            margin: 0 auto;
-            width: 800px;
+            width: 100%;
             height: 400px;
             overflow: hidden;
         }
@@ -136,18 +136,41 @@
         .slide{
             width: 25%;
             position: relative;
+            transition: 2s;
         }
 
         .slide img{
-            width: 800px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .overlay{
+            width: inherit;
+            height: inherit;
+            /* background-color: rgba(0, 0, 0, 0.7); */
+            background-color: rgba(104, 49, 149,0.7);
+            z-index: 1;
+            position: absolute;
+            display: grid;
+            align-items: center;
+            /* backdrop-filter: blur(2px); desfocado */
+        }
+
+        .overlay h1{
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
         }
 
         .manual-navigation{
             position: absolute;
-            width: 800px;
+            width: 100%;
             margin-top: -40px;
             display: flex;
             justify-content: center;
+            z-index: 3;
         }
 
         .manual-btn{
@@ -192,15 +215,37 @@
 
         .navigation-auto{
             position: absolute;
-            width: 800px;
-            
+            width: 100%;
+            margin-top: 360px;
+            display: flex;
+            justify-content: center;
+            z-index: 3;
         }
 
+        .navigation-auto div:not(:last-child){
+            margin-right: 40px;
+        }
 
+        #radio1:checked ~ .navigation-auto .auto-btn1{
+            background-color: white;
+        }
+
+        #radio2:checked ~ .navigation-auto .auto-btn2{
+            background-color: white;
+        }
+
+        #radio3:checked ~ .navigation-auto .auto-btn3{
+            background-color: white;
+        }
+
+        #radio4:checked ~ .navigation-auto .auto-btn4{
+            background-color: white;
+        }
 
 </style>
 <body>
 
+    <!-- Menu -->
     <div class="navegacao">
 
         <div class="imagem2">
@@ -258,29 +303,33 @@
         list.forEach((item) =>
             item.addEventListener('click', activeLink));
     </script>
-    
+
+    <!-- Slider -->
     <div class="slider">
 
+    <div class="overlay">
+        <h1>Texto</h1>
+    </div>
         <div class="slides">
             <input type="radio" name="radio-btn" id="radio1">
             <input type="radio" name="radio-btn" id="radio2">
             <input type="radio" name="radio-btn" id="radio3">
             <input type="radio" name="radio-btn" id="radio4">
 
-            <div class="slide first">
-                <img src="">
-            </div>
-
-            <div class="slide ">
-                <img src="">
+            <div class="slide first"> 
+                <img src="https://images.ctfassets.net/ajjw8wywicb3/1cEx3Lk5lJHyMYOljWvUtG/921e6a144d56d65c0bd779221ba57862/ALP_header_1_How_to_remove_stains_1437x400.jpg?fm=webp">
             </div>
 
             <div class="slide">
-                <img src="">
+                <img src="https://www.swisshandgolaundry.com/media/1227/hero-orange-white-laundromat.jpg">
             </div>
 
             <div class="slide">
-                <img src="">
+                <img src="https://images.ctfassets.net/ajjw8wywicb3/1xjwAwXeEeHrN2DeGVCVkg/406ea0af3053d36e8c439366ac6ffa35/Dirty-Color-Towels-White-Basket_Tide-Life-Objects_SIDE-ANGLE-132_1440x812.jpg?fm=webp">
+            </div>
+
+            <div class="slide">
+                <img src="https://cdn.shopify.com/s/files/1/0497/1809/files/Luxury_Detergent_Round_Up_Comparing_the_6_Best_Detergents_for_Washing_Your_Luxury_Clothes_and_Fine_Fabrics.jpg?v=1657652679">
             </div>
 
             <div class="navigation-auto">
@@ -299,6 +348,24 @@
             <label for="radio4" class="manual-btn"></label>
         </div>
     </div>
+
+    <script>
+        let count = 1;
+        document.getElementById("radio1").checked = true;
+
+        setInterval(function(){
+            nextImage();
+        }, 5000)
+
+        function nextImage(){
+            count++;
+            if(count>4){
+                count = 1;
+            }
+
+            document.getElementById("radio"+count).checked = true;
+        }
+    </script>
 
 </body>
 </html>
