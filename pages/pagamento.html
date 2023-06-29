@@ -24,6 +24,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            justify-content: space-evenly;
         }
 
 
@@ -143,22 +144,28 @@
             background-color: tomato;
         }
 
-        .primary {
-            width: 77%;
-            height: 95%;
+        .imagem_redonda {
+            width: 400px;
+            height: 400px;
             background-color: white;
-            display: flex;
-            border-radius: 15px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .imagem_redonda img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover ;
         }
 
-        .secondary {
+        .primary {
             background-color: white;
-            width: 50%;
-            height: 100%;
+            width: 40%;
+            height: 91%;
             border-right: 1px solid gray;
-            align-items: center;
+            /* align-items: center; */
             display: flex;
             border-radius: 15px;
+            justify-content: center;
         }
 
         .tertiary {
@@ -173,19 +180,22 @@
 
         form {
             width: 500px;
-            /* height: 300px; */
+            height: 300px;
             display: flex;
             flex-wrap: wrap;
+            position: relative;
+            left: 40px;
+            top: 20px;
         }
 
         .form_agend>div {
             width: 499px;
-            height: 154px;
+            height: 146px;
             display: flex;
             flex-wrap: wrap;
             align-self: center;
-            position: relative;
-            top: 14px;
+            /* position: relative; */
+            top: 20px;
             gap: 20px;
         }
 
@@ -202,14 +212,17 @@
         .data_hora {
             display: flex;
             height: 60%;
-            position: relative;
+            /* position: relative; */
             width: 100%;
             gap: 52px;
         }
 
         .data {
-            height: 57%;
+            height: 6%;
             width: 22%;
+            position: relative;
+            top: 90px;
+            right: 112px;
         }
 
         #data {
@@ -281,35 +294,27 @@
         input {
             width: 200px;
             height: 25px;
-            background: rgb(189, 186, 186);
-            border-radius: 15px;
+            background: rgb(235, 233, 233);
+            border-radius: 8px;
             border: 1px solid;
         }
 
-        .quaternary {
-            background-color: white;
-            width: 100%;
-            height: 62%;
-            position: relative;
-            top: 82px;
-            border-top: 1px solid gray;
-            border-radius: 15px;
-        }
 
         .forma {
             position: relative;
             left: 20px;
-            top: 10px;
+            top: 53px;
         }
 
         .campo {
             margin-left: 25px;
             height: 280px;
+            position: relative;
         }
 
         .f1 {
             position: relative;
-            top: 10px;
+            top: 34px;
         }
 
         #cartao {
@@ -415,6 +420,8 @@
         #pix {
             display: flex;
             flex-direction: row;
+            position: relative;
+            top: 167px;
         }
 
         .pix2 {
@@ -429,12 +436,12 @@
 
         .finalizar {
             position: relative;
-            left: 16%;
-            top: -41px;
-            background-color: gray;
+            left: 58%;
+            /* top: -41px; */
+            background-color: rgb(23, 107, 235);
             border: none;
             padding: 7px;
-            border-radius: 10px;
+            border-radius: 8px;
             color: white;
             font-size: 15px;
             font-family: 'Poppins', sans-serif;
@@ -444,12 +451,12 @@
 
         .novo {
             position: relative;
-            left: 334px;
-            top: -26px;
+            left: 129px;
+            top: 51px;
             background-color: rgb(58, 4, 102);
             border: none;
             padding: 6px;
-            border-radius: 18px;
+            border-radius: 8px;
             color: white;
             font-size: 15px;
             font-family: 'Poppins', sans-serif;
@@ -647,8 +654,16 @@
         }
 
         #parcelas2{
-            background-color: gray;
+            background-color: rgb(23, 107, 235);
             border-color: black;
+        }
+        .botao_reagendar{
+            background-color: rgb(58, 4, 102);
+            color: white;
+            border-radius: 8px;
+            width: 170%;
+            height: 100%;
+            font-size: 15px;
         }
     </style>
 </head>
@@ -712,85 +727,33 @@
             item.addEventListener('click', activeLink));
     </script>
 
+    <div class="imagem_redonda">
+        <img src="logo_pagamento.png">
+    </div>
+    
     <div class="primary">
-        <div class="secondary">
-            <img src="logo_pagamento.png" style="width: 541px;">
-        </div>
+        <form class="form_agend">
+            <div>
+                <label class="endereco1" for="endereco">Endereço<input
+                        value="Rua XV de Novembro 2345, Glória, Joiville - SC" id="endereco"></label>
+                <div class="data_hora">
+                    <div class="p1">
 
-        <div class="tertiary">
-            <form class="form_agend">
-                <div>
-                    <label class="endereco1" for="endereco">Endereço<input
-                            value="Rua XV de Novembro 2345, Glória, Joiville - SC" id="endereco"></label>
-                    <div class="data_hora">
-                        <div class="p1">
-
-                            <div style="margin-top: 2px; margin-left: 6px; font-size: 15px;">
-                                <p>Selecione o horário desejado</p>
-                            </div>
-                            <div class="horario2">
-                                <select id="">
-                                    <option>15:30</option>
-                                    <option>16:30</option>
-                                </select>
-                            </div>
+                        <div style="margin-top: 2px; margin-left: 6px; font-size: 15px;">
+                            <p>Selecione o horário desejado</p>
                         </div>
-                        <div class="data">
-                            <!-- Botão para abrir a modal -->
-                            <button onclick="openModal()">Reagendar Serviço</button>
-
-                            <!-- Modal -->
-                            <div id="rescheduleModal" class="modal">
-                                <div class="modal-content">
-                                    <span class="close" onclick="closeModal()">&times;</span>
-                                    <div class="calendar">
-                                        <h2>Selecione uma Data</h2>
-                                        <div class="month">
-                                            <select id="month" onchange="generateCalendar()">
-                                                <option value="0">Janeiro</option>
-                                                <option value="1">Fevereiro</option>
-                                                <option value="2">Março</option>
-                                                <option value="3">Abril</option>
-                                                <option value="4">Maio</option>
-                                                <option value="5">Junho</option>
-                                                <option value="6">Julho</option>
-                                                <option value="7">Agosto</option>
-                                                <option value="8">Setembro</option>
-                                                <option value="9">Outubro</option>
-                                                <option value="10">Novembro</option>
-                                                <option value="11">Dezembro</option>
-                                            </select>
-                                            <input type="number" id="year" min="2023" value="2023"
-                                                onchange="generateCalendar()" class="Ano1">
-                                        </div>
-                                        <div class="weekdays">
-                                            <div>S</div>
-                                            <div>T</div>
-                                            <div>Q</div>
-                                            <div>Q</div>
-                                            <div>S</div>
-                                            <div>S</div>
-                                            <div>D</div>
-                                        </div>
-                                        <div class="days" id="days"></div>
-                                    </div>
-                                    <div>
-                                        <label>
-                                            <input id="Endereco" type="endereco" placeholder="Endereço">
-                                            <br><br>
-                                        </label>
-                                    </div>
-                                </div>
-                                <button onclick="rescheduleService()" class="confirmar1">Confirmar</button>
-                            </div>
+                        <div class="horario2">
+                            <select id="">
+                                <option>15:30</option>
+                                <option>16:30</option>
+                            </select>
                         </div>
                     </div>
+                    
                 </div>
-            </form>
+            </div>
+            <p class="forma"><b>Forma de Pagamento</b></p>
 
-            <div class="quaternary">
-                <p class="forma"><b>Forma de Pagamento</b></p>
-                <form action="">
                     <div class="campo">
                         <div class="f1">
                             <label class="l1" for="cartao"><input type="radio" id="cartao" name="fav_language"
@@ -838,14 +801,61 @@
                     </div>
                     <button class="finalizar"><b>Finalizar Agendamento</b></button>
                     <button class="novo"><b>Escolher novo plano</b></button>
-                </form>
-            </div>
-        </div>
+                
+        </form>
+        <div class="data">
+            <!-- Botão para abrir a modal -->
+             <button onclick="openModal()" class="botao_reagendar">Reagendar Serviço</button>
 
+             <!-- Modal -->
+             <div id="rescheduleModal" class="modal">
+                 <div class="modal-content">
+                     <span class="close" onclick="closeModal()">&times;</span>
+                     <div class="calendar">
+                         <h2>Selecione uma Data</h2>
+                         <div class="month">
+                             <select id="month" onchange="generateCalendar()">
+                                 <option value="0">Janeiro</option>
+                                 <option value="1">Fevereiro</option>
+                                 <option value="2">Março</option>
+                                 <option value="3">Abril</option>
+                                 <option value="4">Maio</option>
+                                 <option value="5">Junho</option>
+                                 <option value="6">Julho</option>
+                                 <option value="7">Agosto</option>
+                                 <option value="8">Setembro</option>
+                                 <option value="9">Outubro</option>
+                                 <option value="10">Novembro</option>
+                                 <option value="11">Dezembro</option>
+                             </select>
+                             <input type="number" id="year" min="2023" value="2023"
+                                 onchange="generateCalendar()" class="Ano1">
+                         </div>
+                         <div class="weekdays">
+                             <div>S</div>
+                             <div>T</div>
+                             <div>Q</div>
+                             <div>Q</div>
+                             <div>S</div>
+                             <div>S</div>
+                             <div>D</div>
+                         </div>
+                         <div class="days" id="days"></div>
+                     </div>
+                     <div>
+                         <label>
+                             <input id="Endereco" type="endereco" placeholder="Endereço">
+                             <br><br>
+                         </label>
+                     </div>
+                 </div>
+                 <button onclick="rescheduleService()" class="confirmar1">Confirmar</button>
+             </div>
+         </div>
     </div>
     <script>
 
-        var opcao = document.querySelector(".quaternary, .primary");
+        var opcao = document.querySelector(".primary");
         opcao.addEventListener("click", function () {
 
             var radiopix = document.getElementById("radiopix");
@@ -857,54 +867,6 @@
             }
         })
     </script>
-
-    <!-- Botão para abrir a modal
-    <button onclick="openModal()">Reagendar Serviço</button>
-
-    <!-- Modal -->
-    <!-- <div id="rescheduleModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div class="calendar">
-                <h2>Selecione uma Data</h2>
-                <div class="month">
-                    <select id="month" onchange="generateCalendar()">
-                        <option value="0">Janeiro</option>
-                        <option value="1">Fevereiro</option>
-                        <option value="2">Março</option>
-                        <option value="3">Abril</option>
-                        <option value="4">Maio</option>
-                        <option value="5">Junho</option>
-                        <option value="6">Julho</option>
-                        <option value="7">Agosto</option>
-                        <option value="8">Setembro</option>
-                        <option value="9">Outubro</option>
-                        <option value="10">Novembro</option>
-                        <option value="11">Dezembro</option>
-                    </select>
-                    <input type="number" id="year" min="2023" value="2023" onchange="generateCalendar()" class="Ano1">
-                </div>
-                <div class="weekdays">
-                    <div>S</div>
-                    <div>T</div>
-                    <div>Q</div>
-                    <div>Q</div>
-                    <div>S</div>
-                    <div>S</div>
-                    <div>D</div>
-                </div>
-                <div class="days" id="days"></div>
-            </div>
-            <div>
-                <label>
-                    <input id="Endereco" type="endereco" placeholder="Endereço">
-                    <br><br>
-                 </label>
-                </div>
-    </div>
-            <button onclick="rescheduleService()" class="confirmar1">Confirmar</button>
-        </div> -->
-    </div>
 
     <script>
         // Função para abrir a modal
