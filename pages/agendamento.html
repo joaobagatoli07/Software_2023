@@ -403,34 +403,37 @@
             justify-content: center;
         }
 
-        .flexbox{
+        .flexbox {
             display: flex;
             justify-content: center;
             position: absolute;
             width: 100%;
-            margin-top: 330px;
+            transform: translateY(50%);
         }
 
-        .methods{
+        .methods {
             height: 600px;
             width: 100%;
             margin-left: 82px;
             display: flex;
             flex-wrap: wrap;
-            position: relative; 
+            position: relative;
+            margin-top: -30px;
         }
 
-        .methods-card{
-           height: 300px;
-           width: 33%;
-           border: 3px solid white;
-           background-repeat: no-repeat;
-           background-size: cover;
-           transition: transform 0.5s; /*teste*/
+        .methods-card {
+            height: 300px;
+            width: 33%;
+            border: 3px solid white;
+            background-repeat: no-repeat;
+            background-size: cover;
+            bottom: 0;
+            transition: transform 0.5s;
         }
 
-        .methods-card.show{
-            transform: translateY(-100%); /*teste*/
+        .methods-card.show {
+            transform: translateY(-70%);
+            transition: transform .5s;
         }
 
         #one,
@@ -468,7 +471,7 @@
             font-family: 'Poppins', sans-serif;
             text-align: center;
             font-size: 30px;
-            margin-top: 50px;
+            margin-top: 60px;
             color: white;
         }
 
