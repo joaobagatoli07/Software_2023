@@ -151,10 +151,11 @@
             border-radius: 50%;
             overflow: hidden;
         }
-        .imagem_redonda img{
+
+        .imagem_redonda img {
             width: 100%;
             height: 100%;
-            object-fit: cover ;
+            object-fit: cover;
         }
 
         .primary {
@@ -333,19 +334,19 @@
             left: 20px;
         }
 
-        #numero{
+        #numero {
             color: white;
         }
 
-        #Nome{
+        #Nome {
             color: white;
         }
 
-        #codigo{
+        #codigo {
             color: white;
         }
 
-        #Validade{
+        #Validade {
             color: white;
         }
 
@@ -368,15 +369,19 @@
             color: gray;
             font-family: 'Poppins', sans-serif;
         }
-        #finalizar:hover{
+
+        #openModalBtn1:hover {
             background-color: #0008ffde;
         }
-        #novo:hover{
+
+        #novo:hover {
             background-color: rgb(82, 3, 82);
         }
-        #agendar:hover{
+
+        #agendar:hover {
             background-color: rgb(82, 3, 82);
         }
+
         .n,
         .c,
         .n1,
@@ -652,17 +657,18 @@
             color: white;
         }
 
-        #radiopix{
+        #radiopix {
             accent-color: rgb(56, 0, 128);
             position: relative;
             top: 6px;
         }
 
-        #parcelas2{
+        #parcelas2 {
             background-color: rgb(23, 107, 235);
             border-color: black;
         }
-        .agendar{
+
+        .agendar {
             background-color: rgb(58, 4, 102);
             color: white;
             border-radius: 8px;
@@ -670,11 +676,67 @@
             height: 100%;
             font-size: 15px;
         }
-        .center{
+
+        .center {
             display: flex;
             justify-content: center;
         }
 
+        .modal1 {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content1 {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 45%;
+            border-radius: 15px;
+        }
+
+        .close1 {
+            color: #000000;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close1:hover,
+        .close1:focus {
+            color: #da1616;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .aviso_previo {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+
+        #okBtn1 {
+            border-radius: 15px;
+            margin-left: 290px;
+            margin-top: 10px;
+            padding: 5px;
+            width: 50px;
+            font-family: 'Poppins', sans-serif;
+            border: transparent;
+            background-color: rgb(56, 0, 128);
+            color: white;
+        }
+
+        #okBtn1:hover {
+            background-color: rgb(2, 58, 16);
+        }
     </style>
 </head>
 
@@ -740,7 +802,7 @@
     <div class="imagem_redonda">
         <img src="logo_pagamento.png">
     </div>
-    
+
     <div class="primary">
         <form class="form_agend">
             <div>
@@ -759,168 +821,247 @@
                             </select>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
             <p class="forma"><b>Forma de Pagamento</b></p>
 
-                    <div class="campo">
-                        <div class="f1">
-                            <label class="l1" for="cartao"><input type="radio" id="cartao" name="fav_language"
-                                    value="HTML" style="width: 15px;">
-                                Cartão de Crédito</label>
-                        </div>
-                        <div class="f2">
-                            <label class="n" for="numero">
-                                <p>Número do Cartão</p>
-                                <input id="numero" type="text">
-                            </label>
-                            <label class="c" for="codigo">
-                                <p>Código de Segurança</p>
-                                <input id="codigo" type="text">
-                            </label>
-                            <label class="n1" for="Nome">
-                                <p>Nome do Cartão</p>
-                                <input id="Nome" type="text">
-                            </label>
-                            <label class="v" for="text">
-                                <p>Validade do Cartão</p>
-                                <input id="Validade" type="text">
-                            </label>
-                        </div>
-                        <fieldset>
-                            <legend>Nº de Parcelas</legend>
-                            <div class="parcelas">
-                                <select id="parcelas2">
-                                    <option>1x de R$200,00</option>
-                                    <option>2x de R$100,00</option>
-                                    <option>3x de R$70,00</option>
-                                    <option>4x de R$40,00</option>
-                                </select>
-                            </div>
-                        </fieldset>
-
+            <div class="campo">
+                <div class="f1">
+                    <label class="l1" for="cartao"><input type="radio" id="cartao" name="fav_language" value="HTML"
+                            style="width: 15px;">
+                        Cartão de Crédito</label>
+                </div>
+                <div class="f2">
+                    <label class="n" for="numero">
+                        <p>Número do Cartão</p>
+                        <input id="numero" type="text">
+                    </label>
+                    <label class="c" for="codigo">
+                        <p>Código de Segurança</p>
+                        <input id="codigo" type="text">
+                    </label>
+                    <label class="n1" for="Nome">
+                        <p>Nome do Cartão</p>
+                        <input id="Nome" type="text">
+                    </label>
+                    <label class="v" for="text">
+                        <p>Validade do Cartão</p>
+                        <input id="Validade" type="text">
+                    </label>
+                </div>
+                <fieldset>
+                    <legend>Nº de Parcelas</legend>
+                    <div class="parcelas">
+                        <select id="parcelas2">
+                            <option>1x de R$200,00</option>
+                            <option>2x de R$100,00</option>
+                            <option>3x de R$70,00</option>
+                            <option>4x de R$40,00</option>
+                        </select>
                     </div>
+                </fieldset>
 
-                    <div class="pix2" id="pix">
-                        <div>
-                            <input id="radiopix" type="radio" name="fav_language" value="HTML" style="width: 15px;">
-                            <label class="l2" for="html">PIX</label>
-                        </div>
-                        <div id="qrcode"></div>
-                    </div>
-                    <button class="finalizar" id="finalizar"><b>Finalizar Agendamento</b></button>
-                    <button class="novo" id="novo"><b>Escolher novo plano</b></button>
-                
+            </div>
+
+            <div class="pix2" id="pix">
+                <div>
+                    <input id="radiopix" type="radio" name="fav_language" value="HTML" style="width: 15px;">
+                    <label class="l2" for="html">PIX</label>
+                </div>
+                <div id="qrcode"></div>
+            </div>
+            <button class="finalizar" id="openModalBtn1"><b>Finalizar Agendamento</b></button>
+            <button class="novo" id="novo"><b>Escolher novo plano</b></button>
+
+
         </form>
         <div class="data">
             <!-- Botão para abrir a modal -->
-             <button onclick="openModal()" class="agendar" id="agendar">Escolher Data</button>
+            <button onclick="openModal()" class="agendar" id="agendar">Escolher Data</button>
 
-             <!-- Modal -->
-             <div id="rescheduleModal" class="modal">
-                 <div class="modal-content">
-                     <span class="close" onclick="closeModal()">&times;</span>
-                     <div class="calendar">
-                         <h2>Selecione uma Data</h2>
-                         <div class="month">
-                             <select id="month" onchange="generateCalendar()">
-                                 <option value="0">Janeiro</option>
-                                 <option value="1">Fevereiro</option>
-                                 <option value="2">Março</option>
-                                 <option value="3">Abril</option>
-                                 <option value="4">Maio</option>
-                                 <option value="5">Junho</option>
-                                 <option value="6">Julho</option>
-                                 <option value="7">Agosto</option>
-                                 <option value="8">Setembro</option>
-                                 <option value="9">Outubro</option>
-                                 <option value="10">Novembro</option>
-                                 <option value="11">Dezembro</option>
-                             </select>
-                             <input type="number" id="year" min="2023" value="2023"
-                                 onchange="generateCalendar()" class="Ano1">
-                         </div>
-                         <div class="weekdays">
-                             <div>S</div>
-                             <div>T</div>
-                             <div>Q</div>
-                             <div>Q</div>
-                             <div>S</div>
-                             <div>S</div>
-                             <div>D</div>
-                         </div>
-                         <div class="days" id="days"></div>
-                     </div>
-                     <div class="center">
-                         <label>
-                             <input id="Endereco" type="endereco" placeholder="Endereço">
-                             <br><br>
-                         </label>
-                     </div>
-                     <button onclick="rescheduleService()" class="confirmar1">Confirmar</button>  
-                 </div>
-                 
-             </div>
-         </div>
-    </div>
-    <script>
+            <!-- Modal -->
+            <div id="rescheduleModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <div class="calendar">
+                        <h2>Selecione uma Data</h2>
+                        <div class="month">
+                            <select id="month" onchange="generateCalendar()">
+                                <option value="0">Janeiro</option>
+                                <option value="1">Fevereiro</option>
+                                <option value="2">Março</option>
+                                <option value="3">Abril</option>
+                                <option value="4">Maio</option>
+                                <option value="5">Junho</option>
+                                <option value="6">Julho</option>
+                                <option value="7">Agosto</option>
+                                <option value="8">Setembro</option>
+                                <option value="9">Outubro</option>
+                                <option value="10">Novembro</option>
+                                <option value="11">Dezembro</option>
+                            </select>
+                            <input type="number" id="year" min="2023" value="2023" onchange="generateCalendar()"
+                                class="Ano1">
+                        </div>
+                        <div class="weekdays">
+                            <div>S</div>
+                            <div>T</div>
+                            <div>Q</div>
+                            <div>Q</div>
+                            <div>S</div>
+                            <div>S</div>
+                            <div>D</div>
+                        </div>
+                        <div class="days" id="days"></div>
+                    </div>
+                    <div class="center">
+                        <label>
+                            <input id="Endereco" type="endereco" placeholder="Endereço">
+                            <br><br>
+                        </label>
+                    </div>
+                    <button onclick="rescheduleService()" class="confirmar1">Confirmar</button>
+                </div>
 
-        var opcao = document.querySelector(".primary");
-        opcao.addEventListener("click", function () {
+            </div>
+        </div>
+        <div id="myModal1" class="modal1">
+            <div class="modal-content1">
+                <span class="close1">&times;</span>
+                <p class="aviso_previo">Não será disponibilizado reembolso sem aviso prévio de ausência</p>
+                <button id="okBtn1" onclick="window.location.href = 'confirm_pedido.html'">Ok</button>
+            </div>
+        </div>
 
-            var radiopix = document.getElementById("radiopix");
-            if (radiopix.checked) {
-                document.getElementById("qrcode").innerHTML = '<img id="qrimagem" src="code.png" width="200px">'
-                opcao.style.height="700px"
-            }
-            else if (document.getElementById("qrimagem")) {
-                document.getElementById("qrimagem").remove()
-                opcao.style.height="91%"
-            }
-        })
-    </script>
 
-    <script>
-        // Função para abrir a modal
-        function openModal() {
-            var modal = document.getElementById("rescheduleModal");
-            modal.style.display = "block";
-        }
 
-        // Função para fechar a modal
-        function closeModal() {
-            var modal = document.getElementById("rescheduleModal");
-            modal.style.display = "none";
-        }
+        <script>
 
-        // Função para gerar o calendário com base no mês e ano selecionados
-        function generateCalendar() {
-            var monthSelect = document.getElementById("month");
-            var yearInput = document.getElementById("year");
-            var daysContainer = document.getElementById("days");
+            var opcao = document.querySelector(".primary");
+            opcao.addEventListener("click", function () {
 
-            var monthIndex = monthSelect.value;
-            var year = yearInput.value;
+                var radiopix = document.getElementById("radiopix");
+                if (radiopix.checked) {
+                    document.getElementById("qrcode").innerHTML = '<img id="qrimagem" src="code.png" width="200px">'
+                    opcao.style.height = "700px"
+                }
+                else if (document.getElementById("qrimagem")) {
+                    document.getElementById("qrimagem").remove()
+                    opcao.style.height = "91%"
+                }
+            })
+        </script>
 
-            // Lógica para gerar os dias do calendário (simplificada para exemplo)
-            var daysHtml = "";
-            for (var i = 1; i <= 31; i++) {
-                daysHtml += "<div>" + i + "</div>";
+        <script>
+            // Função para abrir a modal
+            function openModal() {
+                var modal = document.getElementById("rescheduleModal");
+                modal.style.display = "block";
             }
 
-            daysContainer.innerHTML = daysHtml;
-        }
+            // Função para fechar a modal
+            function closeModal() {
+                var modal = document.getElementById("rescheduleModal");
+                modal.style.display = "none";
+            }
 
-        // Função para reagendar o serviço (exemplo)
-        function rescheduleService() {
-            // Lógica para reagendar o serviço (pode ser personalizada conforme suas necessidades)
-            alert("Serviço reagendado com sucesso!");
+            // Função para gerar o calendário com base no mês e ano selecionados
+            function generateCalendar() {
+                var monthSelect = document.getElementById("month");
+                var yearInput = document.getElementById("year");
+                var daysContainer = document.getElementById("days");
 
-            // Fechar a modal após reagendar o serviço
-            closeModal();
-        }
-    </script>
+                var monthIndex = monthSelect.value;
+                var year = yearInput.value;
+
+                // Lógica para gerar os dias do calendário (simplificada para exemplo)
+                var daysHtml = "";
+                for (var i = 1; i <= 31; i++) {
+                    daysHtml += "<div>" + i + "</div>";
+                }
+
+                daysContainer.innerHTML = daysHtml;
+            }
+
+            // Função para reagendar o serviço (exemplo)
+            function rescheduleService() {
+                // Lógica para reagendar o serviço (pode ser personalizada conforme suas necessidades)
+                alert("Serviço reagendado com sucesso!");
+
+                // Fechar a modal após reagendar o serviço
+                closeModal();
+            }
+        </script>
 </body>
+
+<script>
+    // Abrir o modal quando o botão é clicado
+    document.getElementById("openModalBtn1").addEventListener("click", function () {
+        event.preventDefault();
+        document.getElementById("myModal1").style.display = "block";
+    });
+
+    // Fechar o modal quando o botão "Ok" ou o ícone de fechar são clicados
+    document.getElementById("okBtn1").addEventListener("click", function () {
+        document.getElementById("myModal1").style.display = "none";
+    });
+
+    document.getElementsByClassName("close1")[0].addEventListener("click", function () {
+        document.getElementById("myModal1").style.display = "none";
+    });
+
+    // Fechar o modal quando o usuário clica fora do modal
+    window.addEventListener("click", function (event) {
+        if (event.target == document.getElementById("myModal1")) {
+            document.getElementById("myModal1").style.display = "none";
+        }
+    });
+</script>
+
+<script>
+
+    // Obtém referências aos elementos do formulário
+    const numeroInput = document.getElementById('numero');
+    const codigoInput = document.getElementById('codigo');
+    const nomeInput = document.getElementById('Nome');
+    const validadeInput = document.getElementById('Validade');
+    const enderecoInput = document.getElementById('endereco');
+    const botaoCadastrar = document.getElementById('openModalBtn1');
+    const pixInput = document.getElementById('radiopix');
+    const cartaoInput = document.getElementById('cartao');
+
+    // Adiciona um evento de input aos campos
+    numeroInput.addEventListener('input', verificarCamposPreenchidos);
+    codigoInput.addEventListener('input', verificarCamposPreenchidos);
+    nomeInput.addEventListener('input', verificarCamposPreenchidos);
+    validadeInput.addEventListener('input', verificarCamposPreenchidos);
+    enderecoInput.addEventListener('input', verificarCamposPreenchidos);
+    pixInput.addEventListener('input', verificarCamposPreenchidos);
+    cartaoInput.addEventListener('input', verificarCamposPreenchidos);
+
+    // Função para verificar se todos os campos estão preenchidos
+    function verificarCamposPreenchidos() {
+        if (cartaoInput.checked) {
+            // Verifica se a opção "Cartão de crédito" está selecionada
+            if (
+                numeroInput.value !== '' &&
+                codigoInput.value !== '' &&
+                nomeInput.value !== '' &&
+                validadeInput.value !== '' &&
+                enderecoInput.value !== ''
+            ) {
+                botaoCadastrar.disabled = false; // Habilita o botão de cadastrar
+            } else {
+                botaoCadastrar.disabled = true; // Desabilita o botão de cadastrar
+            }
+        } else if (pixInput.checked) {
+            // Verifica se a opção "Pix" está selecionada
+            botaoCadastrar.disabled = false; // Habilita o botão de cadastrar
+        } else {
+            botaoCadastrar.disabled = true; // Desabilita o botão de cadastrar
+        }
+    }
+</script>
 
 </html>
