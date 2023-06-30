@@ -100,7 +100,7 @@
             text-align: center;
         }
 
-        /* button {
+        .button1 {
             background-color: rgb(58, 4, 102);
             border: none;
             padding: 15px;
@@ -111,10 +111,10 @@
             margin-left: 35%;
         } */
 
-        /* button:hover {
+        .button1:hover {
             background-color: rgb(82, 3, 82);
             cursor: pointer;
-        } */
+        }
 
         .titulo {
             font-family: 'Poppins', sans-serif;
@@ -143,51 +143,6 @@
         .espaco {
             margin-top: 10px;
         }
-
-        /* .modal {
-            position: fixed;
-            padding: 0;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(0, 0, 0, 0.5);
-            transform: scale(1.5);
-            opacity: 0;
-            visibility: hidden;
-            transition: visibility 0.25s ease-in-out, transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
-        }
-
-
-        .modal-content {
-            background-color: white;
-            padding: 16px 24px;
-            width: 384px;
-            border-radius: 0.5rem;
-        }
-
-        span {
-            float: right;
-            width: 24px;
-            cursor: pointer;
-            background-color: black;
-            text-align: center;
-            line-height: 24px;
-            border-radius: 15px;
-        }
-
-        span:hover {
-            background-color: red;
-        }
-
-        .show-modal {
-            opacity: 1;
-            visibility: visible;
-            transform: scale(1.5s);
-        } */
 
         .corh1 {
             color: rgb(0, 0, 0);
@@ -245,7 +200,7 @@
                     <script src="./main.js"></script>
 
                     <div>
-                        <button type="submit">Cadastre-se</button>
+                        <button type="submit" class="button1" id="botao-cadastrar">Cadastre-se</button>
                     </div>
 
                 </form>
@@ -263,19 +218,6 @@
                     window.location.href = "home_page.html"
                 }
             </script>
-
-
-
-
-            <!-- <button onclick="showModal()" id="botao-cadastrar" type="submit" >Cadastre-se</button> -->
-            <div class="modal" id="modal">
-                <div class="modal-content">
-                    <span onclick="hideModal()">&times;</span>
-                    <h1 class="corh1">Seu cadastro foi concluido com sucesso</h1>
-                    <img src="https://cdn.discordapp.com/attachments/1045805391746973727/1111302167530311742/check-icone-1-scaled.png"
-                        width="50px" class="imagemmodal">
-                </div>
-            </div>
 
 
         </div>

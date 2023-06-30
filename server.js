@@ -42,8 +42,7 @@ app.post('/login', (req, res) => {
       if (rows.length > 0) {
 
         if ( rows[0].senha_usuario  === senha) {
-            res.send('Login com Sucesso!!!-teste');
-            // res.redirect('/pages/home_page.html');
+            res.redirect('/pages/home_page.html');
 
             } else {
              res.send('Senha incorreta');
