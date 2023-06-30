@@ -100,7 +100,7 @@
             text-align: center;
         }
 
-        button {
+        /* button {
             background-color: rgb(58, 4, 102);
             border: none;
             padding: 15px;
@@ -109,12 +109,12 @@
             color: white;
             font-size: 15px;
             margin-left: 35%;
-        }
+        } */
 
-        button:hover {
+        /* button:hover {
             background-color: rgb(82, 3, 82);
             cursor: pointer;
-        }
+        } */
 
         .titulo {
             font-family: 'Poppins', sans-serif;
@@ -144,7 +144,7 @@
             margin-top: 10px;
         }
 
-        .modal {
+        /* .modal {
             position: fixed;
             padding: 0;
             left: 0;
@@ -187,7 +187,7 @@
             opacity: 1;
             visibility: visible;
             transform: scale(1.5s);
-        }
+        } */
 
         .corh1 {
             color: rgb(0, 0, 0);
@@ -214,37 +214,40 @@
 
         <div class="login">
             <div class="espaco">
-                <form action="">
-
-
-                    <input id="Nome" type="text" placeholder="Nome">
+                <form action="/cadastro" method="post">
+                    <input id="Nome" type="text" placeholder="Nome" name="nome" >
                     <br><br>
 
                     <label>
-                        <input id="Telefone" type="tel" placeholder="Telefone">
+                        <input id="Telefone" type="tel" placeholder="Telefone" name="telefone">
                         <br><br>
                     </label>
 
-                    <input id="Rua" type="text" placeholder="Rua">
+                    <input id="Rua" type="text" placeholder="Rua" name="rua">
                     <br><br>
 
-                    <input id="Bairro" type="text" placeholder="Bairro">
+                    <input id="Bairro" type="text" placeholder="Bairro" name="bairro">
                     <br><br>
 
-                    <input type="text" id="Numero" placeholder="Número">
+                    <input type="text" id="Numero" placeholder="Número" name="numero">
                     <br><br>
 
 
-                    <input type="text" id="CPF" placeholder="CPF">
+                    <input type="text" id="CPF" placeholder="CPF" name="cpf">
                     <br><br>
 
-                    <input id="Email" type="Email" placeholder="Email">
+                    <input id="Email" type="Email" placeholder="Email" name="email">
                     <br><br>
 
-                    <input id="Senha" type="password" placeholder="Senha">
+                    <input id="Senha" type="password" placeholder="Senha" name="password">
                     <br><br>
 
                     <script src="./main.js"></script>
+
+                    <div>
+                        <button type="submit">Cadastre-se</button>
+                    </div>
+
                 </form>
             </div>
 
@@ -261,7 +264,10 @@
                 }
             </script>
 
-            <button onclick="showModal()" id="botao-cadastrar" disabled>Cadastre-se</button>
+
+
+
+            <!-- <button onclick="showModal()" id="botao-cadastrar" type="submit" >Cadastre-se</button> -->
             <div class="modal" id="modal">
                 <div class="modal-content">
                     <span onclick="hideModal()">&times;</span>
