@@ -153,7 +153,8 @@
             will-change: transform;
             transition: transform 450ms;
         }
-        .imagem_redonda:hover{
+
+        .imagem_redonda:hover {
             transition: transform 125ms;
             transform: translateY(-10px);
         }
@@ -689,12 +690,13 @@
             display: flex;
             justify-content: center;
         }
+
         .background {
             will-change: transform;
             transition: transform 450ms;
         }
-  
-         .imagem_redonda:hover .background {
+
+        .imagem_redonda:hover .background {
             transition: transform 150ms;
             transform: translateY(-10px);
         }
@@ -1081,6 +1083,9 @@
             botaoCadastrar.disabled = true; // Desabilita o botão de cadastrar
         }
     }
+
+    // Verifica o estado inicial ao carregar a página
+    verificarCamposPreenchidos();
 </script>
 
 </html>
