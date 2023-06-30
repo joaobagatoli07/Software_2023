@@ -55,6 +55,7 @@
             transition: 0.5s;
             top: 0px;
             left: 0px;
+            z-index: 2;
         }
 
         .navegacao:hover {
@@ -152,6 +153,7 @@
             overflow: hidden;
             will-change: transform;
             transition: transform 450ms;
+            z-index: 1;
         }
 
         .imagem_redonda:hover {
@@ -893,10 +895,11 @@
                 <div id="qrcode"></div>
             </div>
             <button class="finalizar" id="openModalBtn1"><b>Finalizar Agendamento</b></button>
-            <button class="novo" id="novo"><b>Escolher novo plano</b></button>
+            
 
 
         </form>
+        <button class="novo" id="novo" onclick="window.location.href = 'agenda.html'"><b>Escolher novo plano</b></button>
         <div class="data">
             <!-- Botão para abrir a modal -->
             <button onclick="openModal()" class="agendar" id="agendar">Escolher Data</button>
