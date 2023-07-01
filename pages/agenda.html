@@ -16,7 +16,8 @@
         html {
             scroll-behavior: smooth;
         }
-/* Aqui é o css da página geral */
+
+        /* Aqui é o css da página geral */
         .geral {
             display: flex;
             justify-content: center;
@@ -24,36 +25,41 @@
             flex-direction: column;
             margin-left: 235px;
         }
-/* Aqui também é o css da página geral */
+
+        /* Aqui também é o css da página geral */
         body {
             background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
             font-family: Arial, Helvetica, sans-serif;
             font-family: Arial, Helvetica, sans-serif;
         }
-/* Mensagem do "Minha Agenda em cima da página" */
+
+        /* Mensagem do "Minha Agenda em cima da página" */
         .mensagem {
             font-family: 'Poppins', sans-serif;
             color: white;
             text-align: center;
         }
-/* Tamanho da letra do minha agenda */
+
+        /* Tamanho da letra do minha agenda */
         .tema {
             font-size: 40px;
         }
-/* Subtitulo do minha agenda */
+
+        /* Subtitulo do minha agenda */
         .subtitulo {
             font-size: 18px;
             margin-top: -10px;
             font-weight: bold;
         }
-/* Margem dos planos */
+
+        /* Margem dos planos */
         .Planos {
             font-family: 'Poppins', sans-serif;
             color: white;
             margin-left: 10%;
         }
 
-/* Classe dos horários */
+        /* Classe dos horários */
         .B1 {
             background: rgb(89, 12, 190);
             border: 2px solid rgb(56, 0, 128);
@@ -63,7 +69,8 @@
             font-size: 17px;
             color: white;
         }
-/* Classe dos botões cancelar e reagendar */
+
+        /* Classe dos botões cancelar e reagendar */
         #B2_2 {
             background: transparent;
             border: 2px solid rgb(56, 0, 128);
@@ -127,14 +134,15 @@
             background-color: rgb(182, 111, 81);
             border-radius: 15px;
         }
-/* Término da estilização dos botões */
 
-/* Título do plano básico */
+        /* Término da estilização dos botões */
+
+        /* Título do plano básico */
         .titulo1 {
             margin-top: -10px;
         }
 
-/* Menu */
+        /* Menu */
         .navegacao {
             font-family: 'Poppins', sans-serif;
             position: fixed;
@@ -223,32 +231,33 @@
             border-radius: 50%;
             box-shadow: 15px -15px 0 rgb(56, 0, 128);
         }
-/* Término da estilização do menu */
 
-/* Estilização das imagens */
+        /* Término da estilização do menu */
+
+        /* Estilização das imagens */
         .imagem2 {
             margin-top: 10px;
         }
 
-/* Mensagem do rodapé */
+        /* Mensagem do rodapé */
         .rodape {
             margin-top: 80px;
             text-align: center;
         }
 
-/* Imagens da página */
+        /* Imagens da página */
         .image1 {
             margin-top: -635px;
             margin-left: 600px;
         }
 
-/* Imagem 2 */
+        /* Imagem 2 */
         .image2 {
             margin-top: 25px;
             margin-left: 600px;
         }
 
-/* Estilização das imagens */
+        /* Estilização das imagens */
         .img1 {
             border-radius: 10px;
             border: 2px solid white;
@@ -262,7 +271,7 @@
             opacity: 75%;
         }
 
-/* Modal do cancelar */
+        /* Modal do cancelar */
         #modal {
             display: none;
             position: fixed;
@@ -324,9 +333,9 @@
             background-color: red;
         }
 
-/* Término do modal Cancelar */
+        /* Término do modal Cancelar */
 
-/* Estilização do modal reagendar */
+        /* Estilização do modal reagendar */
         .calendar {
             font-family: 'Poppins', sans-serif;
             max-width: 400px;
@@ -497,8 +506,10 @@
             margin-top: -20px;
         }
 
-/* Término da estilização do modal do reagendar */
-
+        .selecionado{
+            background-color: rgb(46, 206, 46);
+        }
+        /* Término da estilização do modal do reagendar */
     </style>
 </head>
 
@@ -563,15 +574,15 @@
             item.addEventListener('click', activeLink));
     </script>
 
-<!-- Mensagem do minha agenda -->
+    <!-- Mensagem do minha agenda -->
     <div class="mensagem">
         <h1 class="tema">Minha Agenda</h1>
 
-<!-- Subtitulo do roupa lavada -->
+        <!-- Subtitulo do roupa lavada -->
         <p class="subtitulo">Que tal aquele cheirinho de roupa lavada?</p>
     </div>
 
-<!-- HTML dos planos -->
+    <!-- HTML dos planos -->
     <div class="Planos">
 
         <div class="Plano1">
@@ -632,7 +643,7 @@
             <button id="B2_2" onclick="openModal()">Reagendar</button>
         </div>
 
-<!-- Imagens linkadas -->
+        <!-- Imagens linkadas -->
         <div class="image1">
             <img class="img1" src="https://lavemcasa.com.br/wp-content/uploads/2020/11/roupas-lavadas-1.jpg"
                 width="420px" height="280px">
@@ -644,14 +655,14 @@
                 width="420px" height="280px">
         </div>
 
-<!-- Mensagem do rodapé -->
+        <!-- Mensagem do rodapé -->
         <div>
             <p class="rodape">Lembre-se de sempre estar em casa no horário e dia marcados.
                 Não será disponibilizado reembolso sem aviso prévio de ausência.</p>
         </div>
     </div>
 
-<!-- HTML do modal de cancelar -->
+    <!-- HTML do modal de cancelar -->
     <div id="modal">
         <div id="modal-content">
             <h2>Tem certeza que deseja cancelar?</h2>
@@ -732,10 +743,6 @@
     noButton4.addEventListener('click', () => {
         modal.style.display = 'none';
     });
-
-    cancelButton5.addEventListener('click', () => {
-        modal.style.display = 'block';
-    })
 
     yesButton5.addEventListener('click', () => {
         modal.style.display = 'none';
@@ -841,11 +848,25 @@
         // Lógica para gerar os dias do calendário (simplificada para exemplo)
         var daysHtml = "";
         for (var i = 1; i <= 31; i++) {
-            daysHtml += "<div>" + i + "</div>";
+            daysHtml += '<div id=' + i + ' class="dias" onclick="destacar_dias(' + i + ')">' + i + '</div>';
         }
 
         daysContainer.innerHTML = daysHtml;
     }
+
+    function destacar_dias(id) {
+        var dia = document.getElementById(id);
+        var dias = document.getElementsByClassName("dias");
+        var pai = document.getElementById("days");
+        for (var i = 1; i < pai.children.length+1; i++){
+            var atual = document.getElementById(i);
+            if(atual.classList.contains('selecionado')){
+                atual.classList.remove('selecionado');
+            }
+        }
+        dia.classList.add('selecionado');
+    }
+
 
     // Função para reagendar o serviço (exemplo)
     function rescheduleService() {
