@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloundflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+
     <style>
         * {
             margin: 0;
@@ -154,6 +157,8 @@
             will-change: transform;
             transition: transform 450ms;
             z-index: 1;
+            position: relative;
+            left: 38px;
         }
 
         .imagem_redonda:hover {
@@ -173,9 +178,9 @@
             height: 91%;
             border-right: 1px solid gray;
             /* align-items: center; */
-            display: flex;
+            /* display: flex; */
             border-radius: 15px;
-            justify-content: center;
+            /* justify-content: center; */
         }
 
         .tertiary {
@@ -194,8 +199,8 @@
             display: flex;
             flex-wrap: wrap;
             position: relative;
-            left: 40px;
-            top: 20px;
+            left: 22px;
+            /* top: 20px; */
         }
 
         .form_agend>div {
@@ -204,7 +209,7 @@
             display: flex;
             flex-wrap: wrap;
             align-self: center;
-            /* position: relative; */
+            position: relative;
             top: 20px;
             gap: 20px;
         }
@@ -228,11 +233,11 @@
         }
 
         .data {
-            height: 6%;
-            width: 22%;
+            height: 5%;
+            width: 13%;
             position: relative;
-            top: 110px;
-            right: 112px;
+            top: -220px;
+            left: 64%;
         }
 
         #data {
@@ -344,19 +349,19 @@
         }
 
         #numero {
-            color: white;
+            color: black;
         }
 
         #Nome {
-            color: white;
+            color: black;
         }
 
         #codigo {
-            color: white;
+            color: black;
         }
 
         #Validade {
-            color: white;
+            color: black;
         }
 
         #numero::placeholder {
@@ -470,8 +475,8 @@
 
         .novo {
             position: relative;
-            left: 129px;
-            top: 51px;
+            left: 338px;
+            top: 207px;
             background-color: rgb(58, 4, 102);
             border: none;
             padding: 6px;
@@ -827,6 +832,7 @@
     </div>
 
     <div class="primary">
+        
         <form class="form_agend">
             <div>
                 <label class="endereco1" for="endereco">Endereço<input
@@ -865,7 +871,7 @@
                         <input id="codigo" type="text">
                     </label>
                     <label class="n1" for="Nome">
-                        <p>Nome do Cartão</p>
+                        <p>Nome do Titular</p>
                         <input id="Nome" type="text">
                     </label>
                     <label class="v" for="text">
@@ -957,7 +963,7 @@
                 <button id="okBtn1" onclick="window.location.href = 'confirm_pedido.html'">Ok</button>
             </div>
         </div>
-
+    </div>
 
 
         <script>
@@ -1016,6 +1022,9 @@
                 // Fechar a modal após reagendar o serviço
                 closeModal();
             }
+        </script>
+        <script>
+            $("#numero").mask("(00) 9 0000-0000");
         </script>
 </body>
 
@@ -1090,5 +1099,4 @@
     // Verifica o estado inicial ao carregar a página
     verificarCamposPreenchidos();
 </script>
-
 </html>
