@@ -12,10 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
     <style>
+/* CSS para deixar mais suave a decida da página */
         html {
             scroll-behavior: smooth;
         }
 
+/* CSS da página geral */
         .geral {
             margin-top: 10px;
             display: flex;
@@ -26,16 +28,19 @@
             margin-bottom: 50px;
         }
 
+/* CSS da página geral */
         body {
             background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
             font-family: Arial, Helvetica, sans-serif;
         }
 
+/* CSS da mensagem ALL CLEAN */
         .mensagem {
             color: white;
             text-align: center;
         }
 
+/* CSS dos campos de texto */
         .login {
             top: 70%;
             left: 50%;
@@ -44,6 +49,7 @@
             align-items: center;
         }
 
+/* Começo da estilização dos campos de texto */
         #Nome::placeholder {
             color: white;
             font-family: 'Poppins', sans-serif;
@@ -89,6 +95,9 @@
             font-family: 'Poppins', sans-serif;
         }
 
+/* Término da estilização dos campos de texto */
+
+/* CSS geral dos campos de texto */
         input {
             background: transparent;
             padding: 15px;
@@ -100,6 +109,7 @@
             text-align: center;
         }
 
+/* CSS do botão cadastre-se */
         .button1 {
             background-color: rgb(58, 4, 102);
             border: none;
@@ -112,27 +122,33 @@
             cursor: pointer;
         } 
 
+/* Hover do botão cadastre-se */
         .button1:hover {
             background-color: rgb(82, 3, 82);
         }
 
+/* CSS do título ALL CLEAN */
         .titulo {
             font-family: 'Poppins', sans-serif;
         }
 
+/* CSS da descrição embaixo do ALL CLEAN */
         .descricao {
             font-family: 'Poppins', sans-serif;
         }
 
+/* CSS do botão de cadastre-se */
         #botao-cadastrar {
             font-family: 'Poppins', sans-serif;
         }
 
+/* CSS do título ALL CLEAN */
         .titulo {
             font-size: 45px;
             margin-left: 35px;
         }
 
+/* CSS da descrição do ALL CLEAN */
         .descricao {
             margin-left: 30px;
             margin-top: -25px;
@@ -140,33 +156,24 @@
             font-size: 18px;
         }
 
+/* CSS para dar espaço entre os campos e o título */
         .espaco {
             margin-top: 10px;
         }
 
-        .corh1 {
-            color: rgb(0, 0, 0);
-            font-size: 20px;
-            font-family: 'Poppins', sans-serif;
-            text-align: center;
-            margin-top: -5px;
-        }
-
-        .imagemmodal {
-            margin-left: 168px;
-            opacity: 90%;
-        }
     </style>
 </head>
 
 <body>
     <div class="geral">
+<!-- HTML do título e da descrição -->
         <div class="mensagem">
             <h1 class="titulo">All Clean</h1>
 
             <p class="descricao">A melhor maneira de lavar suas roupas<br> e economizar. Tudo ao mesmo tempo!</p>
         </div>
 
+<!-- HTML dos campos de texto -->
         <div class="login">
             <div class="espaco">
                 <form action="/cadastro" method="post">
@@ -199,32 +206,19 @@
 
                     <script src="./main.js"></script>
 
+<!-- HTML do botão cadastre-se -->
                     <div>
                         <button type="submit" class="button1" id="botao-cadastrar">Cadastre-se</button>
                     </div>
 
                 </form>
             </div>
-
-            <script>
-                function showModal() {
-                    var element = document.getElementById("modal");
-                    element.classList.add("show-modal");
-                }
-
-                function hideModal() {
-                    var element = document.getElementById("modal");
-                    element.classList.remove("show-modal")
-                    window.location.href = "home_page.html"
-                }
-            </script>
-
-
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <!-- Script para fazer a máscara do cpf -->
     <script>
         var cleave = new Cleave('#CPF', {
             delimiters: ['.', '.', '-'],
@@ -232,6 +226,8 @@
             numericOnly: true
         });
     </script>
+
+    <!-- Script para fazer a máscara do telefone -->
     <script>
         $('#Telefone').mask('(00) 9 0000-0000');
     </script>
