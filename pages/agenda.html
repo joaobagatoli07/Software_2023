@@ -142,7 +142,7 @@
             margin-top: -10px;
         }
 
-        /* Menu */
+        /* Inicio da estilização do menu, definindo tamanho, cor, posicionamento e funcionalidades */
         .navegacao {
             font-family: 'Poppins', sans-serif;
             position: fixed;
@@ -157,16 +157,19 @@
             margin-left: -10px;
         }
 
+        /* Tamanho que o menu irá expandir */
         .navegacao:hover {
             width: 300px;
         }
 
+        /* Animação dos campos do menu */
         a:hover {
             background-color: rgb(56, 0, 128);
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
         }
 
+        /* Posicionamento de uma lista não ordenada */
         .navegacao ul {
             position: absolute;
             top: 30px;
@@ -176,6 +179,7 @@
             padding-top: 135px;
         }
 
+        /* Posicionamento de um item da lista dentro de uma lista não ordenada */
         .navegacao ul li {
             position: relative;
             list-style: none;
@@ -184,6 +188,7 @@
             border-bottom-left-radius: 20px;
         }
 
+        /* Estilização e posicionamento do link de outra página dentro de um item da lista */
         .navegacao ul li a {
             position: relative;
             display: flex;
@@ -192,6 +197,7 @@
             color: white;
         }
 
+        /* Posicionamento dos icones junto com o link das páginas */
         .navegacao ul li a .icon {
             position: relative;
             display: block;
@@ -201,12 +207,14 @@
             line-height: 70px;
         }
 
+        /* Posicionamento dos icones do menu */
         .navegacao ul li a .icon ion-icon {
             position: relative;
             font-size: 1.5rem;
             z-index: 1;
         }
 
+        /* Posicionamento das legendas dos itens da lista */
         .navegacao ul li a .title {
             position: relative;
             display: block;
@@ -216,10 +224,12 @@
             white-space: nowrap;
         }
 
+        /* Estilização dos itens da lista selecionados */
         .navegacao ul li.active {
             background: rgb(56, 0, 128);
         }
 
+        /* Estilização da parte de trás dos campos selecionados  */
         .navegacao ul li.active a::after {
             content: '';
             position: absolute;
@@ -447,6 +457,7 @@
             font-family: 'Poppins', sans-serif;
         }
 
+        /* Estilização do endereço dentro do modal */
         #Endereco {
             background-color: rgb(56, 0, 128);
             border-radius: 10px;
@@ -456,6 +467,7 @@
             margin-top: 10px;
         }
 
+        /* Cor do texto do campo endereço */
         #Endereco::placeholder {
             color: white;
         }
@@ -506,63 +518,88 @@
             margin-top: -20px;
         }
 
-        .selecionado{
+        .selecionado {
             background-color: rgb(46, 206, 46);
         }
+
         /* Término da estilização do modal do reagendar */
     </style>
 </head>
 
 <body>
 
-    <!-- HTML do menu -->
+    <!-- Div principal do menu expansivel -->
     <div class="navegacao">
-
+        <!-- Div que guarda a logo dentro do menu -->
         <div class="imagem2">
             <img src="https://cdn.discordapp.com/attachments/1069135222173601863/1089886762639298580/logo2.png"
                 width="67px">
         </div>
+
+        <!-- Inicio da lista não ordenada do menu expansivel -->
         <ul>
+            <!-- Primeiro item de uma lista -->
             <li class="list active">
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'home_page.html'">Inicio</span>
                 </a>
             </li>
             <li class="list">
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'agendamento.html'">Agendamento</span>
                 </a>
             </li>
             <li class="list">
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="calendar-number-outline"></ion-icon></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'agenda.html'">Meus Agendamentos</span>
                 </a>
             </li>
             <li class="list">
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'contato.html'">Contato</span>
                 </a>
             </li>
             <li class="list">
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'perfil.html'">Perfil</span>
                 </a>
             </li>
             <li class="list">
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="ribbon-outline"></ion-icon></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'quem_somos.html'">Quem Somos</span>
                 </a>
             </li>
         </ul>
     </div>
+    <!-- Fontes de onde foram tirados os icones  -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+     <!-- Script que permite o click e direcionamento da página -->
     <script>
         const list = document.querySelectorAll('.list');
         function activeLink() {
@@ -649,6 +686,7 @@
                 width="420px" height="280px">
         </div>
 
+        <!-- Div que guarda a imagem -->
         <div class="image2">
             <img class="img2"
                 src="https://img.freepik.com/fotos-gratis/natureza-morta-diga-nao-ao-fast-fashion_23-2149669580.jpg"
@@ -858,9 +896,9 @@
         var dia = document.getElementById(id);
         var dias = document.getElementsByClassName("dias");
         var pai = document.getElementById("days");
-        for (var i = 1; i < pai.children.length+1; i++){
+        for (var i = 1; i < pai.children.length + 1; i++) {
             var atual = document.getElementById(i);
-            if(atual.classList.contains('selecionado')){
+            if (atual.classList.contains('selecionado')) {
                 atual.classList.remove('selecionado');
             }
         }
