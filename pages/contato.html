@@ -7,48 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
 
+    <!-- Link das fontes que foram usadas nos textos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
     <style>
+
         html {
             scroll-behavior: smooth;
         }
-
+        /* Posiciona outras duas divs */
         .geral {
             margin: 0;
             margin-top: 8%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
         }
-
+         /* CSS da página principal, define o tamanho, cor e funcionamento dela */
         body {
             width: 99%;
             background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
             font-family: Arial, Helvetica, sans-serif;
         }
-
+        /* Posiciona e estiliza o subtitulo e titulo */
         .mensagem {
             color: white;
             text-align: center;
         }
-
+        /* Posiciona e define o tamanho dos campos */
         .login {
-            top: 70%;
-            left: 50%;
             color: white;
             width: 60%;
             align-items: center;
         }
-
+        /* Estiliza a mensagem dentro dos campos */
         .campo::placeholder {
-            color: black;
+            color: rgb(0, 0, 0);
             font-family: 'Poppins', sans-serif;
         }
-
+        /* Mexe no campo "Mensagem" que é o maior campo */
         #Mensagem {
             font-family: 'Poppins', sans-serif;
             border-radius: 15px;
@@ -60,7 +59,7 @@
             padding-top: 10px;
             height: 100px;
         }
-
+        /* Estiliza todos os inputs */
         input {
             background: transparent;
             padding: 15px;
@@ -71,7 +70,7 @@
             width: 100%;
             background-color: white;
         }
-
+        /* Estiliza o botão de enviar */
         .enviar {
             background-color: rgb(58, 4, 102);
             border: none;
@@ -83,17 +82,17 @@
             margin-left: 35%;
             font-family: 'Poppins', sans-serif;
         }
-
+        /* Animação do botão "enviar" */
         button:hover {
             background-color: rgb(82, 3, 82);
             cursor: pointer;
         }
-
+        /* Posiciona a imagem que está debixo do botão "enviar" */
         .imagem {
             margin-left: 260px;
             margin-top: 20px;
         }
-
+        /* Inicio da estilização do menu, definindo tamanho, cor, posicionamento e funcionalidades */
         .navegacao {
             font-family: 'Poppins', sans-serif;
             position: fixed;
@@ -107,17 +106,17 @@
             margin-top: -56%;
             margin-left: -10px;
         }
-
+        /* Tamanho que o menu irá expandir */
         .navegacao:hover {
             width: 300px;
         }
-
+        /* Animação dos campos do menu */
         a:hover {
             background-color: rgb(56, 0, 128);
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
         }
-
+        /* Posicionamento de uma lista não ordenada */
         .navegacao ul {
             position: absolute;
             top: 30px;
@@ -126,23 +125,23 @@
             padding-left: 5px;
             padding-top: 135px;
         }
-
+        /* Posicionamento de um item da lista dentro de uma lista não ordenada */
         .navegacao ul li {
             position: relative;
             list-style: none;
-            width: 100%;
+            width: 400%;
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
         }
-
+        /* Estilização e posicionamento do link de outra página dentro de um item da lista */
         .navegacao ul li a {
             position: relative;
             display: flex;
-            width: 100%;
+            width: 400%;
             text-decoration: none;
             color: white;
         }
-
+        /* Posicionamento dos icones junto com o link das páginas */
         .navegacao ul li a .icon {
             position: relative;
             display: block;
@@ -151,13 +150,13 @@
             text-align: center;
             line-height: 70px;
         }
-
+        /* Posicionamento dos icones do menu */
         .navegacao ul li a .icon ion-icon {
             position: relative;
             font-size: 1.5rem;
             z-index: 1;
         }
-
+        /* Posicionamento das legendas dos itens da lista */
         .navegacao ul li a .title {
             position: relative;
             display: block;
@@ -166,11 +165,11 @@
             line-height: 60px;
             white-space: nowrap;
         }
-
+        /* Estilização dos itens da lista selecionados */
         .navegacao ul li.active {
             background: rgb(56, 0, 128);
         }
-
+        /* Estilização da parte de trás dos campos selecionados  */
         .navegacao ul li.active a::after {
             content: '';
             position: absolute;
@@ -182,45 +181,17 @@
             border-radius: 50%;
             box-shadow: 15px -15px 0 rgb(56, 0, 128);
         }
-
+        /* Posicionamento da logo dentro do menu */
         .imagem2 {
             margin-top: 10px;
         }
-
-        .inicial {
-            background-color: transparent;
-            border-color: transparent;
-            width: 200px;
-            font-family: 'Poppins', sans-serif;
-            color: white;
-            font-size: 20px;
-            margin-left: 30px;
-        }
-
-        .inicial2 {
-            background-color: transparent;
-            border-color: transparent;
-            width: 300px;
-            font-family: 'Poppins', sans-serif;
-            color: white;
-            font-size: 20px;
-        }
-
-        .incial4 {
-            background-color: transparent;
-            border-color: transparent;
-            width: 180px;
-            font-family: 'Poppins', sans-serif;
-            color: white;
-            font-size: 20px;
-        }
-
+        /* Estilização do titulo */
         .titulo {
             font-family: 'Poppins', sans-serif;
             font-size: 40px;
             margin-top: -80px;
         }
-
+        /* Estilização do subtitulo */
         .descricao {
             font-family: 'Poppins', sans-serif;
             font-size: 18px;
@@ -231,16 +202,21 @@
 </head>
 
 <body>
+    <!-- Está div abrange os campos do contato -->
     <div class="geral">
+        <!-- Div do do titulo e subtitulo -->
         <div class="mensagem">
             <h1 class="titulo">Fale conosco</h1>
 
             <p class="descricao">Faça suas perguntas, deixe sugestões!</p>
         </div>
 
+        <!-- Div com os input do contato -->
         <div class="login">
 
+            <!-- Form pra enviar os dados para o banco de dados  -->
             <form action="">
+                <!-- Inputs do contato -->
                 <input class="campo" type="text" placeholder="Nome Completo">
                 <br><br>
 
@@ -250,63 +226,92 @@
                 <textarea class="campo" id="Mensagem" cols="30" rows="10" placeholder="Mensagem"></textarea>
                 <br><br>
             </form>
-
+            <!-- Botão de enviar a mensagem e dados para entrar em contato -->
             <button class="enviar">Enviar</button>
 
+            <!-- Div que guarda a imagem -->
             <div class="imagem">
-                <img
-                    src="https://cdn.discordapp.com/attachments/1069135222173601863/1090596615284330568/Pagina_de_Contato-removebg-preview.png">
+                <img src="https://cdn.discordapp.com/attachments/1069135222173601863/1090596615284330568/Pagina_de_Contato-removebg-preview.png">
             </div>
-        </div>
-
+        </div>   
     </div>
-    <div class="navegacao">
 
+    <!-- Div principal do menu expansivel -->
+    <div class="navegacao">
+        <!-- Div que guarda a logo dentro do menu -->
         <div class="imagem2">
-            <img src="https://cdn.discordapp.com/attachments/1069135222173601863/1089886762639298580/logo2.png"
-                width="67px">
+            <img src="https://cdn.discordapp.com/attachments/1069135222173601863/1089886762639298580/logo2.png" width="67px">
         </div>
+        <!-- Inicio da lista não ordenada do menu expansivel -->
         <ul>
+            <!-- Primeiro item de uma lista -->
             <li class="list active">
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'home_page.html'">Inicio</span>
                 </a>
             </li>
+            <!-- Segundo item de uma lista -->
             <li class="list">
+                 <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                        <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'agendamento.html'">Agendamento</span>
                 </a>
             </li>
+            <!-- Terceiro item de uma lista -->
             <li class="list">
+                 <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="calendar-number-outline"></ion-icon></ion-icon></span>
+                        <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'agenda.html'">Meus Agendamentos</span>
                 </a>
             </li>
+            <!-- Quarto item de uma lista -->
             <li class="list">
+                 <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                        <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'contato.html'">Contato</span>
                 </a>
             </li>
+            <!-- Quinto item de uma lista -->
             <li class="list">
+                 <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                        <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'perfil.html'">Perfil</span>
                 </a>
             </li>
+            <!-- Sexto item de uma lista -->
             <li class="list">
+                 <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="ribbon-outline"></ion-icon></ion-icon></span>
+                        <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'quem_somos.html'">Quem Somos</span>
                 </a>
             </li>
         </ul>
     </div>
+
+    <!-- Fontes de onde foram tirados os icones  -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Script que permite o click e direcionamento da página -->
     <script>
         const list = document.querySelectorAll('.list');
         function activeLink() {
@@ -318,5 +323,5 @@
             item.addEventListener('click', activeLink));
     </script>
 </body>
-
 </html>
+<!-- Fim do código -->
