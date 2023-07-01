@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
 </head>
 
 <style>
@@ -21,19 +26,19 @@
     body{
         height: 100vh;
         background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
+        font-family: Arial, Helvetica, sans-serif;
     }
 
     .navegacao {
             font-family: 'Poppins', sans-serif;
             position: fixed;
-            height: 690px;
+            height: 100vh;
             background: rgb(104, 49, 149);
             width: 70px;
             box-shadow: 10px 0 0 rgb(56, 0, 128);
             border-left: 10px solid rgb(104, 49, 149);
             overflow-x: hidden;
             transition: 0.5s;
-            margin-top: -20px;
             margin-left: -10px;
             z-index: 10;
         }
@@ -147,21 +152,14 @@
         .overlay{
             width: inherit;
             height: inherit;
-            /* background-color: rgba(0, 0, 0, 0.7); */
-            background-color: rgba(104, 49, 149,0.7);
+            /* background-color: rgba(0, 0, 0, 0.9); */
+            background-color: rgba(104, 49, 149,0.9);
+            /* background-color: rgba(56, 0, 128, 0.9); */
             z-index: 1;
             position: absolute;
             display: grid;
             align-items: center;
-            /* backdrop-filter: blur(2px); desfocado */
-        }
-
-        .overlay h1{
-            font-family: 'Poppins', sans-serif;
-            color: white;
-            text-align: center;
-            font-size: 50px;
-            font-weight: bold;
+            backdrop-filter: blur(2px); 
         }
 
         .manual-navigation{
@@ -242,6 +240,88 @@
             background-color: white;
         }
 
+        .overlay h1{
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: 70px;
+            transform: scale(0.94);
+            animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+            text-shadow: 3px 3px 3px rgb(56, 0, 128);
+        }
+
+        @keyframes scale{
+        100% {
+            transform: scale(1);
+        }
+        }
+
+        .overlay span{
+            display: inline-block;
+            opacity: 0;
+            filter: blur(4px);
+        }
+
+        .overlay span:nth-child(1) {
+        animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+
+        .overlay span:nth-child(2) {
+        animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+
+        .overlay span:nth-child(3) {
+        animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+
+        .overlay span:nth-child(4) {
+        animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+
+        .overlay span:nth-child(5) {
+        animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+
+        .overlay span:nth-child(6) {
+        animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+
+        .overlay span:nth-child(7) {
+        animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+
+        @keyframes fade-in {
+        100% {
+            opacity: 1;
+            filter: blur(0);
+        }
+        }
+
+        .overlay button{
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(58, 4, 102);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+            transform: scale(0.94);
+            animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+        }
+
+        button:hover{
+            background-color: rgb(82, 3, 82);
+        }
+
+        .flexbox{
+            display: flex;
+            justify-content: center;
+            margin-top: -180px;
+        }
 </style>
 <body>
 
@@ -308,7 +388,21 @@
     <div class="slider">
 
     <div class="overlay">
-        <h1>Texto</h1>
+        <h1>
+            <span>Uma</span>
+            <span>nova</span>
+            <span>maneira</span>
+            <span>de</span>
+            <span>lavar</span>
+            <span>suas</span>
+            <span>roupas</span>
+        </h1>
+
+        <div class="flexbox">
+            <div class="flexbox-btn">
+                <button>Agende um horário</button>
+            </div>
+        </div>
     </div>
         <div class="slides">
             <input type="radio" name="radio-btn" id="radio1">
