@@ -16,7 +16,7 @@
 
 <body>
     <style>
-
+/* CSS da página geral */
         html{
             scroll-behavior: smooth;
         }
@@ -34,6 +34,9 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+/* Término do CSS da página geral */
+
+/* Palavra agendamento */
         .agendamento {
             font-family: 'Poppins', sans-serif;
             text-align: center;
@@ -42,6 +45,7 @@
             color: white;
         }
 
+/* Subtitulo agendamento */
         .escolha {
             font-family: 'Poppins', sans-serif;
             text-align: center;
@@ -50,6 +54,7 @@
             color: white;
         }
 
+/* Botão dos Planos intermediário, básico e avançado */
         .divplanos {
             margin: auto;
             background-color: rgb(58, 4, 102);
@@ -59,7 +64,8 @@
             justify-content: space-around;
             border-radius: 15px;
         }
-        
+
+/* Estilização dos botões dos planos */
         .planos {
             background-color: rgb(58, 4, 102);
             border-radius: 10px;
@@ -108,9 +114,12 @@
             cursor: pointer;
         }
 
+/* Término da estilização dos botões */
+
+/* Estilização do quadrado com degradê */
         .box-degrade {
-            width: 40%;
-            height: 54%;
+            width: 35%;
+            height: 50%;
             border: 3px solid white;
             box-shadow: 20px 20px 20px rgb(77, 77, 77);
             margin: auto;
@@ -125,6 +134,7 @@
             animation: degrade-animado 3s infinite alternate;
         }
 
+/* Quadrado animado */
         @keyframes degrade-animado{
             0% {
                 background-position-x: 0%;
@@ -135,34 +145,36 @@
             }
         }
 
+/* Estilização dos planos */
         #plano{
-            font-size: 40px;
+            font-size: 30px;
             font-family: 'Poppins', sans-serif;
             color: rgb(58, 4, 102);
             font-weight: bold;
         }
 
+/* Estilização dos preços */
         #preco{
-            font-size: 16px;
             font-family: 'Poppins', sans-serif;
-            font-size: 63px;
+            font-size: 60px;
             color: white;
             margin-top: -20px;
             font-style: italic;
         }
 
+/* Texto do praticidade */
         .praticidade {
             font-family: 'Poppins', sans-serif;
             color: white;
             width: 80%;
             text-align: center;
-            margin-top: 10px;
         }
 
+/* Botão do escolher plano */
         .escolherplano {
             background-color: rgb(58, 4, 102);
-            width: 80%;
-            height: 50px;
+            width: 70%;
+            height: 45px;
             border-radius: 15px;
             border: transparent;
             font-family: 'Poppins', sans-serif;
@@ -172,6 +184,7 @@
             cursor: pointer;
         }
 
+/* Hover dos botões dos planos */
         #planos1:hover {
             background-color: rgb(82, 3, 82);
         }
@@ -184,10 +197,14 @@
             background-color: rgb(82, 3, 82);
         }
 
+/* Término dos hovers */
+
+/* Hover do botão escolher plano */
         .escolherplano:hover {
             background-color: rgb(82, 3, 82);
         }
 
+/* Menu */
         .navegacao{
             font-family: 'Poppins', sans-serif;
             position: fixed;
@@ -198,7 +215,7 @@
             border-left: 10px solid rgb(104, 49, 149);
             overflow-x: hidden;
             transition: 0.5s;
-            margin-top: -580px;
+            margin-top: -555px;
             margin-left: -10px;
             z-index: 2;
         }
@@ -278,64 +295,23 @@
             box-shadow: 15px -15px 0 rgb(56, 0, 128);
         }
 
+/* Termino da estilização do menu */
+
+/* Logo do menu */
         .imagem2{
             margin-top: 7px;
         }
 
-        .comparar{
-            width: 100px;
-            font-size: 10px;
-            height: 20px;
-            background-color: rgb(58, 4, 102);
-            border-radius: 15px;
-            border: transparent;
-            font-family: 'Poppins', sans-serif;
-            color: white;
-            cursor: pointer;
-
-        }
-
-        .comparar:hover{
-            background-color: rgb(82, 3, 82);
-        }
-
-        .comparar2{
-            margin-top: -45px;
-            display: flex;   
-            justify-content: center; 
-        }
-
-        .pesos{
-            display: flex;
-            margin-left: 340px;
-            margin-top: 50px;
-            color: white;
-            display: none;
-        }
-
-        .pesos h2{
-            margin-right: 240px;
-        }
-
-        .span2{
-            margin-left: 7px;
-        }
-
-        ul{
-            text-align: justify;
-        }
-
-        .peso2{
-            color: white;
-            margin-top: -10px;
-        }
-
+/* Estilização dos pesos */
         #plano2{
             color: white;
             text-align: center;
             font-style: italic;
+            font-size: 20px;
+            margin-top: 10px;
         }
 
+/* Estilização do botão para abrir o modal */
         #openModalBtn{
             background-color: rgb(58, 4, 102);
             width: 100%;
@@ -350,10 +326,12 @@
             padding: 10px;
         }
 
+/* Hover do botão para abrir o modal */
         #openModalBtn:hover{
             background-color: rgb(82, 3, 82);
         }
-        
+
+/* Estilização do modal */
         .modal {
             display: none;
             position: fixed;
@@ -394,15 +372,20 @@
         cursor: pointer;
         }
 
+/* Término da estilização do modal */
+
+/* Estilização da lista dentro do modal */
         li{
             list-style-type: none;
         }
 
+/* Estilização do título do modal */
         .titulo10{
             display: flex;
             justify-content: center;
         }
 
+/* Estilização das imagens */
         .flexbox {
             display: flex;
             justify-content: center;
@@ -475,41 +458,52 @@
             color: white;
         }
 
+/* Término da estilização das imagens */
     </style>
 
+<!-- HTML do agendamento e escolher pacote -->
     <h1 class="agendamento">Agendamento</h1>
     <h2 class="escolha">Escolha o pacote desejado</h2>
 
+<!-- HTML dos botões de escolher plano -->
     <div class="divplanos">
         <button id="planos1">Básico</button>
         <button id="planos2">Intermediário</button>
         <button id="planos3">Avançado</button>
     </div>
 
+<!-- HTML do preço, peso e o plano -->
     <div class="box-degrade">
         
             <h2 id="plano2">5KG</h2>
             <h2 id="plano">Básico</h2>
             <h2 id="preco">R$80</h2>
 
+<!-- HTML do texto da praticidade -->
         <div class="praticidade">
             <p>A praticidade está apenas a alguns cliques de você</p>
         </div>
+
+<!-- HTML do botão de escolher pacote -->
         <button class="escolherplano" onclick="window.location.href = 'pagamento.html'">Escolher Pacote</button>
 
+<!-- HTML do botão que roupa lavamos -->
         <div class="queroupas">
             <button id="openModalBtn">Que roupas lavamos?</button>
         </div>
 
     </div>
 
+<!-- HTML do menu -->
     <div class="navegacao">
-        
+
+<!-- Logo que fica no menu -->
         <div class="imagem2">
             <img src="https://cdn.discordapp.com/attachments/1069135222173601863/1089886762639298580/logo2.png"
             width="67px">
             </div>
         <ul>
+            <!-- HTML do menu -->
             <li class="list active">
                  <a href="#">
                      <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
@@ -560,8 +554,10 @@
         list.forEach((item) =>
         item.addEventListener('click', activeLink));
 </script>
+<!-- Término do html do menu -->
 
 <script>
+
    // Função para exibir o valor do botão 1
    function exibirValorBotao1() {
       document.getElementById("preco").textContent = "R$80";
@@ -619,10 +615,12 @@
 
 </script>
 
+<!-- HTML do subtitulo lavagem -->
     <h1 class="subtitulo">Descubra nossos métodos de lavagem</h1>
 <div class="flexbox">
 <section class="methods">
 
+<!-- HTML das imagens -->
     <div class="methods-card" id="one"  style="background-image: url('https://hips.hearstapps.com/hmg-prod/images/shirts-of-office-workers-in-dry-cleaning-royalty-free-image-1644345565.jpg');">
         <div class="overlay" onmouseenter="exibirDetalhes(this)" onmouseleave="ocultarDetalhes(this)">
             <div class="content">
@@ -693,7 +691,9 @@
     </div>
  </section>
 </div>
+<!-- Término do html das imagens -->
 
+<!-- HTML do modal -->
 <div id="myModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -769,7 +769,7 @@ function showImages() {
     }
   }
 }
-
+// Término do html e java script do modal
 </script>
 </body>
 </html>
