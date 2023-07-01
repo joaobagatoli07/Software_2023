@@ -8,12 +8,14 @@
     <title>All Clean</title>
 
     <style>
+/* CSS página geral */
         * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
         }
 
+/* CSS página geral */
         body {
             width: 100%;
             min-height: 100vh;
@@ -22,10 +24,12 @@
             place-items: center;
         }
 
+/* CSS da imagem (logo) */
         .imagem {
             margin-top: 50px;
         }
 
+/* CSS da animação da imagem */
         .loading {
             position: relative;
             display: grid;
@@ -56,17 +60,19 @@
                 rotate: 0deg;
             }
         }
+/* Término da animação da imagem */
     </style>
 </head>
 
 <body>
-
+<!-- HTML da imagem linkada -->
     <div class="imagem">
         <center>
             <img src="https://cdn.discordapp.com/attachments/1031736165017071657/1119623602426351636/Logofundo.png"
                 width="500px" height="600px">
         </center>
     </div>
+<!-- HTML do simbolo para fazer girar dentro da imagem (Imagem linkada) -->
     <img src="https://cdn.discordapp.com/attachments/1031736165017071657/1109079119532138587/Novo_Projeto2-removebg-preview_1.png"
         class="loading">
 
