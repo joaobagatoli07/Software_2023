@@ -152,9 +152,9 @@
         .overlay{
             width: inherit;
             height: inherit;
-            /* background-color: rgba(0, 0, 0, 0.9); */
-            background-color: rgba(104, 49, 149,0.9);
-            /* background-color: rgba(56, 0, 128, 0.9); */
+            /* background-color: rgba(0, 0, 0, 0.8); */
+            /* background-color: rgba(104, 49, 149,0.8); */
+            background-color: rgba(56, 0, 128, 0.7);
             z-index: 1;
             position: absolute;
             display: grid;
@@ -309,12 +309,23 @@
             font-size: 18px;
             cursor: pointer;
             width: 100%;
-            transform: scale(0.94);
-            animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+            opacity: 0;
+            animation: fade-in-2 0.5s forwards;
         }
 
         button:hover{
             background-color: rgb(82, 3, 82);
+        }
+
+        @keyframes fade-in-2 {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .flexbox{
@@ -389,18 +400,18 @@
 
     <div class="overlay">
         <h1>
-            <span>Uma</span>
-            <span>nova</span>
-            <span>maneira</span>
-            <span>de</span>
-            <span>lavar</span>
-            <span>suas</span>
-            <span>roupas</span>
+            <span>Faça</span>
+            <span>sua</span>
+            <span>roupa</span>
+            <span>brilhar</span>
+            <span>com</span>
+            <span>a</span>
+            <span>All Clean</span>
         </h1>
 
         <div class="flexbox">
             <div class="flexbox-btn">
-                <button>Agende um horário</button>
+                <button onclick="window.location.href = 'agendamento.html'">Agende um horário</button>
             </div>
         </div>
     </div>
@@ -411,7 +422,7 @@
             <input type="radio" name="radio-btn" id="radio4">
 
             <div class="slide first"> 
-                <img src="https://images.ctfassets.net/ajjw8wywicb3/1cEx3Lk5lJHyMYOljWvUtG/921e6a144d56d65c0bd779221ba57862/ALP_header_1_How_to_remove_stains_1437x400.jpg?fm=webp">
+                <img src="https://images.ctfassets.net/ajjw8wywicb3/lDF9X6JH6QIjwrPQV7S6x/d3c637b767fa73d9ba714467390ea404/aws_ty_tide_cleaners_0200-V02-571x212_0730.png">
             </div>
 
             <div class="slide">
@@ -419,11 +430,11 @@
             </div>
 
             <div class="slide">
-                <img src="https://images.ctfassets.net/ajjw8wywicb3/1xjwAwXeEeHrN2DeGVCVkg/406ea0af3053d36e8c439366ac6ffa35/Dirty-Color-Towels-White-Basket_Tide-Life-Objects_SIDE-ANGLE-132_1440x812.jpg?fm=webp">
+                <img src="https://images.ctfassets.net/ajjw8wywicb3/1cEx3Lk5lJHyMYOljWvUtG/921e6a144d56d65c0bd779221ba57862/ALP_header_1_How_to_remove_stains_1437x400.jpg?fm=webp">
             </div>
 
             <div class="slide">
-                <img src="https://cdn.shopify.com/s/files/1/0497/1809/files/Luxury_Detergent_Round_Up_Comparing_the_6_Best_Detergents_for_Washing_Your_Luxury_Clothes_and_Fine_Fabrics.jpg?v=1657652679">
+                <img src="https://www.halfpricelaundry.com/media/buuabmbh/dry-cleaning-vs-laundry.jpeg?cc=0,0.07641789985266942,0,0.41564261527611285&width=1920&height=650&rnd=133302481111370000&format=webp&quality=80">
             </div>
 
             <div class="navigation-auto">
