@@ -35,7 +35,7 @@
         }
 /* Término do css da página geral */
 
-/* CSS do menu */
+ /* Inicio da estilização do menu, definindo tamanho, cor, posicionamento e funcionalidades */
         .navegacao {
             font-family: 'Poppins', sans-serif;
             position: fixed;
@@ -50,16 +50,19 @@
             margin-left: -10px;
         }
 
+/* Tamanho que o menu irá expandir */
         .navegacao:hover {
             width: 300px;
         }
 
+/* Animação dos campos do menu */
         a:hover {
             background-color: rgb(56, 0, 128);
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
         }
 
+ /* Posicionamento de uma lista não ordenada */
         .navegacao ul {
             position: absolute;
             top: 30px;
@@ -69,6 +72,7 @@
             padding-top: 135px;
         }
 
+ /* Posicionamento de um item da lista dentro de uma lista não ordenada */
         .navegacao ul li {
             position: relative;
             list-style: none;
@@ -77,6 +81,7 @@
             border-bottom-left-radius: 20px;
         }
 
+/* Estilização e posicionamento do link de outra página dentro de um item da lista */
         .navegacao ul li a {
             position: relative;
             display: flex;
@@ -85,6 +90,7 @@
             color: white;
         }
 
+/* Posicionamento dos icones junto com o link das páginas */
         .navegacao ul li a .icon {
             position: relative;
             display: block;
@@ -94,12 +100,14 @@
             line-height: 70px;
         }
 
+/* Posicionamento dos icones do menu */
         .navegacao ul li a .icon ion-icon {
             position: relative;
             font-size: 1.5rem;
             z-index: 1;
         }
 
+/* Posicionamento das legendas dos itens da lista */
         .navegacao ul li a .title {
             position: relative;
             display: block;
@@ -109,10 +117,12 @@
             white-space: nowrap;
         }
 
+/* Estilização dos itens da lista selecionados */
         .navegacao ul li.active {
             background: rgb(56, 0, 128);
         }
 
+ /* Estilização da parte de trás dos campos selecionados  */
         .navegacao ul li.active a::after {
             content: '';
             position: absolute;
@@ -143,8 +153,8 @@
 /* CSS do quadrado branco com os campos */
         .bloco {
             background-color: rgb(233, 233, 233);
-            width: 60%;
-            height: 50%;
+            width: 53%;
+            height: 56%;
             display: flex;
             border-radius: 10px;
             border-top-left-radius: 0px;
@@ -152,23 +162,6 @@
             font-family: 'Poppins', sans-serif;
             color: rgb(0, 45, 112);
 
-        }
-
-/* CSS dos icones */
-        .icon2 ion-icon {
-            font-size: 2.0rem;
-            margin-left: 20px;
-            margin-top: 30px;
-        }
-
-/* CSS dos títulos de cada campo */
-        .title2 {
-            display: block;
-            padding-left: 10px;
-            height: 60px;
-            line-height: 65px;
-            white-space: nowrap;
-            font-size: 15px;
         }
 
 /* CSS dos campos para preencher */
@@ -180,123 +173,61 @@
 
 /* CSS para ajeitar os campos dentro do quadrado branco */
         .um {
-            margin-top: 45px;
-            margin-left: -43px;
-            width: 0;
-            height: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-
-        .dois {
-            margin-top: -35px;
-            margin-left: 41px;
+        .icon2, .icon3, .icon4, .icon5, .icon6, .icon7, .icon8{
+            display: flex;
+            font-size: 13px;
+            gap: 5px;
+            align-items: flex-end;
         }
-
-        .tres {
-            margin-top: -30px;
-            margin-left: 41px;
-        }
-
-        .quatro {
-            margin-top: -35px;
-            margin-left: 41px;
-        }
-
-        .quinta {
-            margin-top: 14px;
-            margin-left: 41px;
-        }
-
-        .sexta {
-            margin-top: 16px;
-            margin-left: 41px;
-        }
-
-        .sete {
-            margin-top: -31px;
-        }
-
+   
 /* Término do css para ajeitar os campos */
 
-/* CSS dos que tá escrito nos campos */
-        .title3 {
-            display: block;
-            height: 60px;
-            white-space: nowrap;
-            font-size: 15px;
-            margin-top: -48px;
-        }
 
 /* CSS dos icones */
+        .phone,  .email, .senha{
+            font-size: 13px;
+        }
+
+/* CSS Icones */
+        .icon2 ion-icon {
+            font-size: 2.0rem;
+            display: flex;
+        }
+
         .icon3 ion-icon {
             font-size: 2.0rem;
-            margin-top: 90px;
-        }
-
-        .phone {
-            margin-left: -42px;
-            width: 50px;
-            height: 50px;
-        }
-
-        .email {
-            margin-top: 150px;
-            margin-left: -48px;
-        }
-
-        .senha {
-            margin-top: 212px;
-            margin-left: -207px;
-            display: block;
         }
 
         .icon4 ion-icon {
             font-size: 2.0rem;
         }
-/* Término do css dos icones */
 
-        .title4 {
-            display: block;
-            padding-left: 41px;
-            height: 60px;
-            white-space: nowrap;
-            font-size: 15px;
-            margin-top: -48px;
-        }
-
-/* CSS Icones */
         .icon5 ion-icon {
             font-size: 2.0rem;
         }
 
         .icon6 ion-icon {
             font-size: 2.0rem;
-            margin-left: -42px;
+        }
+        .icon7 img {
+            font-size: 2.0rem;
         }
 /* Término CSS Icones */
 
 /* CSS do campo home */
         .home {
-            margin-left: 150px;
-            margin-top: 30px;
-        }
-
-/* CSS do campo casa */
-        .title5 {
-            display: block;
-            padding-left: 41px;
-            height: 60px;
-            white-space: nowrap;
-            font-size: 15px;
-            margin-top: -46px;
-        }
-
-/* CSS do campo de senha */
-        .title6 {
-            display: block;
-            height: 60px;
-            white-space: nowrap;
-            font-size: 15px;
-            margin-top: -48px;
+            display: flex;
+            flex-direction: column;
+            height: 54%;
+            justify-content: space-evenly;
+            position: relative;
+            top: 6px;
         }
 
 /* CSS do campo lá em cima do bloco branco */
@@ -310,12 +241,13 @@
             border-top-right-radius: 10px;
             border-top-left-radius: 10px;
             margin-top: 50px;
-            margin-right: 40%;
+            margin-right: 33%;
         }
 
 /* CSS Escrita do campo em cima do bloco branco */
         .pessoais {
             margin-left: 20px;
+            margin-top: 10px;
         }
 
 
@@ -330,86 +262,118 @@
             background: rgb(58, 4, 102);
             border: none;
             border-radius: 15px;
-            margin-top: 90px;
-            padding: 10px 30px;
+            position: relative;
+            padding: 12px 0px;
             font-size: 17px;
-            margin-left: -100px;
+            top: 80%;
             color: white;
+            width: 25%;
+            height: 11%;
         }
 
-/* CSS campo casa */
-        .casa {
-            font-size: 15px;
-        }
-
-/* CSS campo bairro */
-        .bairro {
-            font-size: 15px;
-        }
 
 /* CSS imagem do cabeçalho */
         .imgcabecalho{
             margin-top: 10px;
         }
+        .flex-direction{
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            top: 25px;
+        }
     </style>
 </head>
 
 <body>
+
 <!-- HTML da imagem do cabeçalho -->
     <div class="cabecalho">
         <img class="imgcabecalho" src="https://cdn.discordapp.com/attachments/1114641391272853640/1121764946624131205/download-removebg-preview.png" height="170px"></img>
     </div>
+
+<!-- HTML que posisiona o bloco branco do perfil -->
     <div class="geral">
-        <div class="dados">
+
 <!-- HTML do título dados pessoais -->
+        <div class="dados">
             <h1 class="pessoais">Dados Pessoais</h1>
         </div>
+
 <!-- HTML do bloco branco com os campos-->
         <div class="bloco">
-            <span class="icon2"><ion-icon name="person-circle-outline"></ion-icon></ion-icon></ion-icon></span>
-            <span class="title2">Nome</span>
-            <form class="um">
-                <input value="Robson Leones Tavares" style="width: 200px; height: 20px;">
-            </form>
-            <div class="phone">
-                <span class="icon3"><ion-icon name="call-outline"></ion-icon></ion-icon></ion-icon></span>
-                <span class="title3">Telefone</span>
-                <form class="dois">
-                    <input value="teste" style="width: 200px;">
-                </form>
-            </div>
-            <div class="email">
-                <span class="icon4"><ion-icon name="mail-outline"></ion-icon></ion-icon></ion-icon></span>
-                <span class="title4">Email</span>
-                <form class="tres">
-                    <input value="robsonleonestavares@gmai.com" style="width: 200px;">
-                </form>
-            </div>
-            <div class="senha">
-                <span class="icon6"><ion-icon name="key-outline"></ion-icon></ion-icon></ion-icon></span>
-                <span class="title6">Senha</span>
-                <form class="sete">
-                    <input value="1234567" type="password" style="width: 200px;">
-                </form>
-            </div>
+            <!-- Icones dos campos -->
+            <form class="um" action="">
+                <div class="flex-direction">
+                    <span class="icon2"><ion-icon name="person-circle-outline"></ion-icon></ion-icon></ion-icon> 
+                        
+                        <label for="Nome">
+                            <p>Nome</p>
+                            <input id="Nome"  value="Robson Leones Tavares" style="width: 200px; height: 20px;">
+                        </label>
+                    </span>
+                    
+                    <div class="phone">
+                        <span class="icon3"><ion-icon name="call-outline"></ion-icon></ion-icon></ion-icon>
+                        
+                            <label for="telefone">
+                                <p>Telefone</p>
+                                <input id="telefone" value="teste" style="width: 200px;">
+                            </label>
+                        </span>
+                    </div>
+                    <div class="email">
+                        <span class="icon4"><ion-icon name="mail-outline"></ion-icon></ion-icon></ion-icon>
+                   
+                            <label for="email">
+                                <p>Email</p>
+                                <input id="email" value="robsonleonestavares@gmai.com" style="width: 200px;">
+                            </label>
+                        </span>
+                        
+                    </div>
+                    <div class="senha">
+                        <span class="icon6"><ion-icon name="key-outline"></ion-icon></ion-icon></ion-icon>
+
+                            <label for="senha">
+                                <p>Senha</p>
+                                <input id="senha" value="1234567" type="password" style="width: 200px;">
+                            </label>
+                        </span>
+                    
+                    </div>
+                </div>
+                <button class="atualizar">Atualizar Cadastro</button>
+
+
             <div class="home">
-                <span class="icon5"><ion-icon name="home-outline"></ion-icon></ion-icon></ion-icon></span>
-                <span class="title5">Rua</span>
-                <form class="quatro">
-                    <input value="Rua Grão-Pará" style="width: 200px;">
-                </form>
-                <form class="quinta">
-                    <label class="bairro" for="Itaum">Bairro</label><br>
-                    <input value="Itaum" style="width: 200px;">
+                <span class="icon5"><ion-icon name="home-outline"></ion-icon></ion-icon></ion-icon>
+               
+                    <label for="rua">
+                        <p>Rua</p>
+                          <input id="rua" value="Rua Grão-Pará" style="width: 200px;">
+                    </label>
+                </span>
+              
+                <span class="icon7">
+                    <img width="32" height="32" src="https://img.icons8.com/windows/32/002D70/real-estate.png" alt="real-estate"/>
+                    <label for="bairro">
+                        <p>Bairro</p>
+                        <input id="bairro" value="Itaum" style="width: 200px;">
+                    </label>
+                </span>
 
-                </form>
-                <form class="sexta">
-                    <label class="casa" for="89">Nº da casa</label><br>
-                    <input value="89" style="width: 200px;">
-                </form>
-
-                <form action="">
-                    <button class="atualizar">Atualizar Cadastro</button>
+                <span class="icon8">
+                    <img width="37" height="37" src="https://img.icons8.com/ios/50/002D70/numbers-input-form.png" alt="numbers-input-form"/>
+                    <label for="num">
+                        <p>Nº da casa</p>
+                        <input id="num" value="89" style="width: 200px;">
+                    </label>
+                </span>
+                </div>
+                    
                 </form>
             </div>
         </div>
@@ -464,6 +428,8 @@
     </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <a  href="https://icons8.com/icon/19993/imóveis">Imóveis</a> icon by <a href="https://icons8.com">Icons8</a>
+    <a  href="https://icons8.com/icon/123395/formulário-de-entrada-de-números">Formulário de entrada de números</a> icon by <a href="https://icons8.com">Icons8</a>
     <script>
         const list = document.querySelectorAll('.list');
         function activeLink() {
