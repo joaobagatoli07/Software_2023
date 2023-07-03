@@ -763,6 +763,10 @@
         #okBtn1:hover {
             background-color: rgb(2, 58, 16);
         }
+
+        .selecionado {
+            background-color: rgb(46, 206, 46);
+        }
     </style>
 </head>
 
@@ -832,7 +836,7 @@
     </div>
 
     <div class="primary">
-        
+
         <form class="form_agend">
             <div>
                 <label class="endereco1" for="endereco">Endereço<input
@@ -845,8 +849,15 @@
                         </div>
                         <div class="horario2">
                             <select id="">
+                                <option>13:30</option>
+                                <option>14:00</option>
+                                <option>14:30</option>
+                                <option>15:00</option>
                                 <option>15:30</option>
+                                <option>16:00</option>
                                 <option>16:30</option>
+                                <option>17:00</option>
+
                             </select>
                         </div>
                     </div>
@@ -883,10 +894,10 @@
                     <legend>Nº de Parcelas</legend>
                     <div class="parcelas">
                         <select id="parcelas2">
-                            <option>1x de R$200,00</option>
-                            <option>2x de R$100,00</option>
-                            <option>3x de R$70,00</option>
-                            <option>4x de R$40,00</option>
+                            <option>1x de R$220,00</option>
+                            <option>2x de R$110,00</option>
+                            <option>3x de R$73,33</option>
+                            <option>4x de R$55,00</option>
                         </select>
                     </div>
                 </fieldset>
@@ -901,11 +912,12 @@
                 <div id="qrcode"></div>
             </div>
             <button class="finalizar" id="openModalBtn1"><b>Finalizar Agendamento</b></button>
-            
+
 
 
         </form>
-        <button class="novo" id="novo" onclick="window.location.href = 'agenda.html'"><b>Escolher novo plano</b></button>
+        <button class="novo" id="novo" onclick="window.location.href = 'agenda.html'"><b>Escolher novo
+                plano</b></button>
         <div class="data">
             <!-- Botão para abrir a modal -->
             <button onclick="openModal()" class="agendar" id="agendar">Escolher Data</button>
@@ -946,10 +958,6 @@
                         <div class="days" id="days"></div>
                     </div>
                     <div class="center">
-                        <label>
-                            <input id="Endereco" type="endereco" placeholder="Endereço">
-                            <br><br>
-                        </label>
                     </div>
                     <button onclick="rescheduleService()" class="confirmar1">Confirmar</button>
                 </div>
@@ -966,66 +974,79 @@
     </div>
 
 
-        <script>
+    <script>
 
-            var opcao = document.querySelector(".primary");
-            opcao.addEventListener("click", function () {
+        var opcao = document.querySelector(".primary");
+        opcao.addEventListener("click", function () {
 
-                var radiopix = document.getElementById("radiopix");
-                if (radiopix.checked) {
-                    document.getElementById("qrcode").innerHTML = '<img id="qrimagem" src="code.png" width="200px">'
-                    opcao.style.height = "700px"
+            var radiopix = document.getElementById("radiopix");
+            if (radiopix.checked) {
+                document.getElementById("qrcode").innerHTML = '<img id="qrimagem" src="code.png" width="200px">'
+                opcao.style.height = "700px"
+            }
+            else if (document.getElementById("qrimagem")) {
+                document.getElementById("qrimagem").remove()
+                opcao.style.height = "91%"
+            }
+        })
+    </script>
+
+    <script>
+        // Função para abrir a modal
+        function openModal() {
+            var modal = document.getElementById("rescheduleModal");
+            modal.style.display = "block";
+        }
+
+        // Função para fechar a modal
+        function closeModal() {
+            var modal = document.getElementById("rescheduleModal");
+            modal.style.display = "none";
+        }
+
+        // Função para gerar o calendário com base no mês e ano selecionados
+        function generateCalendar() {
+            var monthSelect = document.getElementById("month");
+            var yearInput = document.getElementById("year");
+            var daysContainer = document.getElementById("days");
+
+            var monthIndex = monthSelect.value;
+            var year = yearInput.value;
+
+            // Lógica para gerar os dias do calendário (simplificada para exemplo)
+            var daysHtml = "";
+            for (var i = 1; i <= 31; i++) {
+                daysHtml += '<div id=' + i + ' class="dias" onclick="destacar_dias(' + i + ')">' + i + '</div>';
+            }
+
+            daysContainer.innerHTML = daysHtml;
+        }
+
+        function destacar_dias(id) {
+            var dia = document.getElementById(id);
+            var dias = document.getElementsByClassName("dias");
+            var pai = document.getElementById("days");
+            for (var i = 1; i < pai.children.length + 1; i++) {
+                var atual = document.getElementById(i);
+                if (atual.classList.contains('selecionado')) {
+                    atual.classList.remove('selecionado');
                 }
-                else if (document.getElementById("qrimagem")) {
-                    document.getElementById("qrimagem").remove()
-                    opcao.style.height = "91%"
-                }
-            })
-        </script>
-
-        <script>
-            // Função para abrir a modal
-            function openModal() {
-                var modal = document.getElementById("rescheduleModal");
-                modal.style.display = "block";
             }
+            dia.classList.add('selecionado');
+        }
 
-            // Função para fechar a modal
-            function closeModal() {
-                var modal = document.getElementById("rescheduleModal");
-                modal.style.display = "none";
-            }
+        // Função para reagendar o serviço (exemplo)
+        function rescheduleService() {
+            // Lógica para reagendar o serviço (pode ser personalizada conforme suas necessidades)
+            alert("Dia selecionado com sucesso!");
 
-            // Função para gerar o calendário com base no mês e ano selecionados
-            function generateCalendar() {
-                var monthSelect = document.getElementById("month");
-                var yearInput = document.getElementById("year");
-                var daysContainer = document.getElementById("days");
-
-                var monthIndex = monthSelect.value;
-                var year = yearInput.value;
-
-                // Lógica para gerar os dias do calendário (simplificada para exemplo)
-                var daysHtml = "";
-                for (var i = 1; i <= 31; i++) {
-                    daysHtml += "<div>" + i + "</div>";
-                }
-
-                daysContainer.innerHTML = daysHtml;
-            }
-
-            // Função para reagendar o serviço (exemplo)
-            function rescheduleService() {
-                // Lógica para reagendar o serviço (pode ser personalizada conforme suas necessidades)
-                alert("Serviço reagendado com sucesso!");
-
-                // Fechar a modal após reagendar o serviço
-                closeModal();
-            }
-        </script>
-        <script>
-            $("#numero").mask("(00) 9 0000-0000");
-        </script>
+            // Fechar a modal após reagendar o serviço
+            closeModal();
+        }
+    </script>
+    <script>
+        $("#numero").mask("(00) 9 0000-0000");
+    </script>
 </body>
 
 <script>
@@ -1099,4 +1120,5 @@
     // Verifica o estado inicial ao carregar a página
     verificarCamposPreenchidos();
 </script>
+
 </html>
