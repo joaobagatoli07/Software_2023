@@ -9,27 +9,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
+    <a  href="https://icons8.com/icon/549/máquina-de-lavar-roupa"></a><a href="https://icons8.com"></a>
+    <a  href="https://icons8.com/icon/63080/tábuas-de-passar-roupa"></a><a href="https://icons8.com"></a>
+    <a  href="https://icons8.com/icon/GSLuIZKlTpHQ/clothes-line"></a><a href="https://icons8.com"></a>
+
 </head>
 
 <style>
 
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    html{
-        scroll-behavior: smooth;
-    }
+        html{
+            scroll-behavior: smooth;
+        }
 
-    body{
-        height: 100vh;
-        background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
-        font-family: Arial, Helvetica, sans-serif;
-    }
+        body{
+            height: 100vh;
+            background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-    .navegacao {
+        .navegacao {
             font-family: 'Poppins', sans-serif;
             position: fixed;
             height: 100vh;
@@ -152,8 +156,6 @@
         .overlay{
             width: inherit;
             height: inherit;
-            /* background-color: rgba(0, 0, 0, 0.8); */
-            /* background-color: rgba(104, 49, 149,0.8); */
             background-color: rgba(56, 0, 128, 0.7);
             z-index: 1;
             position: absolute;
@@ -333,7 +335,132 @@
             justify-content: center;
             margin-top: -180px;
         }
+
+        .mission{
+            height: 280px;
+            width: 100%;
+            display: flex;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .mission-text{
+            width: 60%;
+        }
+
+        .mission-text .title, .text{
+            margin-left: 100px;
+            text-align: justify;
+        }
+
+        .mission-text .title{
+            font-size: 2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .mission-text .text{
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .mission-image{
+            width: 40%;
+        }
+
+        .footer{
+            height: 50px;
+            width: 100%;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            background-color: rgb(104, 49, 149);
+        }
+
+        .footer .link{
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer .link:hover{
+            text-decoration: underline;
+            background-color: transparent;
+        }
+
+        .services{
+            height: 500px;
+            background-color: rgb(58, 4, 102);
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .services .image{
+            width: 40%;
+            display: flex; 
+            justify-content: flex-end;
+        }
+
+        .services .image img{
+            margin-top: -100px;
+        }
+
+        .services .content{
+            width: 60%;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            align-self: center;
+        }
+
+        .services .content h1{
+            font-size: 2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .services .content .subtitulo{
+            font-size: 1rem;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .icons{
+            height: 250px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .icon1,
+        .icon2,
+        .icon3{
+            background-color: rgb(56, 0, 128);
+            height: 250px;
+            width: 250px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon1:hover,
+        .icon2:hover,
+        .icon3:hover{
+            border: 3px solid white;
+        }
+
 </style>
+
 <body>
 
     <!-- Menu -->
@@ -472,5 +599,53 @@
         }
     </script>
 
+    <div class="mission">
+        <div class="mission-text">
+            <h1 class="title">Nossa Missão</h1>
+            
+            <p class="text">Seu dia a dia já é corrido demais não é verdade? Além disso, as máquinas de lavar roupas estão com um preço bastante elevado. Então, nós da All Clean, 
+                decidimos deixar sua vida mais prática e te dar a oportunidade de economizar. Fizemos isso criando um serviço de lavanderia móvel. Marque um horário e iremos até sua residência.
+                Tudo com qualidade máxima e preço justo!</p>
+        </div>
+
+        <div class="mission-image">
+            <img src="https://cdn.discordapp.com/attachments/1031736165017071657/1125207934595514388/HOW_TO_WASH_CLOTES_How_to_do_Laundry_570x310-removebg-preview.png">
+        </div>
+    </div>
+
+    <div class="footer">
+        <div><a class="link" target="_blank" href="https://docs.google.com/document/d/1IKWVo4PE-KhODODtlJ68IAIGU5LYinAFXpOqpCSWLEQ/edit#heading=h.nj23sjpj5u97">Consulte nossos Termos de Uso e Política de Privacidade</a></div>
+    </div>
+
+    <div class="services">
+        <div class="image">
+            <div>
+                <img src="https://cdn.discordapp.com/attachments/1031736165017071657/1125212704957812768/Shirts-removebg-preview.png">
+            </div>
+        </div>
+
+        <div class="content">
+            <h1>Nossos Serviços</h1>
+            <p class="subtitulo">Qualidade impecável, somada a conveniência e perfeição</p>
+
+            <div class="icons">
+
+                <div class="icon1">
+                    <div class="icon1-link"><img width="60" height="60" src="https://img.icons8.com/ios/50/FFFFFF/washing-machine.png"/></div>
+                    <div class="icon1-text">Lavagem</div>
+                </div>
+
+                <div class="icon2">
+                    <div class="icon2-link"><img width="60" height="60" src="https://img.icons8.com/ios/50/FFFFFF/clothesline.png"/></div>
+                    <div class="icon2-text">Secagem</div>
+                </div>
+
+                <div class="icon3">
+                    <div class="icon3-link"><img width="60" height="60" src="https://img.icons8.com/ios/100/FFFFFF/ironing.png"/></div>
+                    <div class="icon3-text">Roupa Passada</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
