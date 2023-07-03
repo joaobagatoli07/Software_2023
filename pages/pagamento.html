@@ -19,6 +19,7 @@
             margin: 0;
         }
 
+          /* CSS da página principal, define o tamanho, cor e funcionamento dela */
         body {
             background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
             font-family: Arial, Helvetica, sans-serif;
@@ -46,6 +47,7 @@
             width: 70%;
         }
 
+        /* Inicio da estilização do menu, definindo tamanho, cor, posicionamento e funcionalidades */
         .navegacao {
             font-family: 'Poppins', sans-serif;
             position: fixed;
@@ -61,16 +63,19 @@
             z-index: 2;
         }
 
+         /* Tamanho que o menu irá expandir */
         .navegacao:hover {
             width: 300px;
         }
 
+        /* Animação dos campos do menu */
         a:hover {
             background-color: rgb(56, 0, 128);
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
         }
 
+        /* Posicionamento de uma lista não ordenada */
         .navegacao ul {
             position: absolute;
             top: 30px;
@@ -80,6 +85,7 @@
             padding-top: 135px;
         }
 
+         /* Posicionamento de um item da lista dentro de uma lista não ordenada */
         .navegacao ul li {
             position: relative;
             list-style: none;
@@ -88,6 +94,7 @@
             border-bottom-left-radius: 20px;
         }
 
+        /* Estilização e posicionamento do link de outra página dentro de um item da lista */
         .navegacao ul li a {
             position: relative;
             display: flex;
@@ -96,6 +103,7 @@
             color: white;
         }
 
+         /* Posicionamento dos icones junto com o link das páginas */
         .navegacao ul li a .icon {
             position: relative;
             display: block;
@@ -105,12 +113,14 @@
             line-height: 70px;
         }
 
+        /* Posicionamento dos icones do menu */
         .navegacao ul li a .icon ion-icon {
             position: relative;
             font-size: 1.5rem;
             z-index: 1;
         }
 
+        /* Posicionamento das legendas dos itens da lista */
         .navegacao ul li a .title {
             position: relative;
             display: block;
@@ -120,10 +130,12 @@
             white-space: nowrap;
         }
 
+         /* Estilização dos itens da lista selecionados */
         .navegacao ul li.active {
             background: rgb(56, 0, 128);
         }
 
+        /* Estilização da parte de trás dos campos selecionados  */
         .navegacao ul li.active a::after {
             content: '';
             position: absolute;
@@ -136,19 +148,22 @@
             box-shadow: 15px -15px 0 rgb(56, 0, 128);
         }
 
+         /* Posicionamento da logo dentro do menu */
         .imagem2 {
             margin-top: 10px;
         }
- 
-         ::-webkit-scrollbar {
+
+        /* Barra de Scroll personalizada */
+        ::-webkit-scrollbar {
             width: 7px;
         }
 
         ::-webkit-scrollbar-thumb {
             background-color: tomato;
-        } 
+        }
 
-         .imagem_redonda {
+        /* Circulo que guarda a imagem */
+        .imagem_redonda {
             width: 400px;
             height: 400px;
             background-color: white;
@@ -161,38 +176,29 @@
             left: 38px;
         }
 
+        /* Animação da imagem */
         .imagem_redonda:hover {
             transition: transform 125ms;
             transform: translateY(-10px);
         }
 
+        /* CSS da imagem */
         .imagem_redonda img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-        } 
+        }
 
+        /* Define o tamanho da div com os campos do pagamento */
         .primary {
             background-color: white;
             width: 40%;
             height: 91%;
             border-right: 1px solid gray;
-            /* align-items: center; */
-            /* display: flex; */
-            border-radius: 15px;
-            /* justify-content: center; */
-        }
-
-        .tertiary {
-            background-color: white;
-            width: 50%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             border-radius: 15px;
         }
 
+        /* Tamanho e posicionamento do form */
         form {
             width: 500px;
             height: 300px;
@@ -200,9 +206,9 @@
             flex-wrap: wrap;
             position: relative;
             left: 22px;
-            /* top: 20px; */
         }
 
+        /* Estilização de um form dentro de uma div */
         .form_agend>div {
             width: 499px;
             height: 146px;
@@ -214,6 +220,7 @@
             gap: 20px;
         }
 
+        /* CSS da label e do input do endereço */
         .endereco1 {
             font-family: 'Poppins', sans-serif;
             font-size: 15px;
@@ -224,14 +231,15 @@
             width: 100%;
         }
 
+        /* CSS da data e horario  */
         .data_hora {
             display: flex;
             height: 60%;
-            /* position: relative; */
             width: 100%;
             gap: 52px;
         }
 
+        /* Define o tamanho e posicionamento da div do botão de selecionar data */
         .data {
             height: 5%;
             width: 13%;
@@ -240,15 +248,7 @@
             left: 64%;
         }
 
-        #data {
-            width: 90%;
-        }
-
-        .date {
-            font-family: 'Poppins', sans-serif;
-            font-size: 15px;
-        }
-
+        /* Define o tamanho e posicionamento do seletor de hora */
         .p1 {
             width: 49%;
             font-family: 'Poppins', sans-serif;
@@ -270,6 +270,7 @@
             height: 79%;
         }
 
+        /* Ponteiro do seletor */
         .horario2::after {
             content: '\25BC';
             position: absolute;
@@ -306,6 +307,7 @@
             display: none;
         }
 
+        /* CSS dos input */
         input {
             width: 200px;
             height: 25px;
@@ -314,30 +316,19 @@
             border: 1px solid blueviolet;
         }
 
-
+        /* CSS da mensagem "Forma de pagamento" */
         .forma {
             position: relative;
-            left: 20px;
             top: 53px;
         }
 
-        .campo {
-            margin-left: 25px;
-            height: 280px;
-            position: relative;
-        }
-
+        /* CSS do input tipo radio do cartão  */
         .f1 {
             position: relative;
             top: 34px;
         }
 
-        #cartao {
-            position: relative;
-            accent-color: rgb(56, 0, 128);
-            top: 6px;
-        }
-
+        /* Posiciona os campo do cartão  */
         .f2 {
             display: flex;
             flex-wrap: wrap;
@@ -346,6 +337,13 @@
             position: relative;
             top: 29px;
             left: 20px;
+        }
+
+        /* Inicio do CSS dos inputs do cartão */
+        #cartao {
+            position: relative;
+            accent-color: rgb(56, 0, 128);
+            top: 6px;
         }
 
         #numero {
@@ -383,7 +381,9 @@
             color: gray;
             font-family: 'Poppins', sans-serif;
         }
+        /* Fim do CSS dos inputs do cartão */
 
+        /* Inicio da animação do modal */
         #openModalBtn1:hover {
             background-color: #0008ffde;
         }
@@ -395,7 +395,9 @@
         #agendar:hover {
             background-color: rgb(82, 3, 82);
         }
+        /* Fim da animação do modal */
 
+        /* Tamanho das labels com os inputs do cartão */
         .n,
         .c,
         .n1,
@@ -404,6 +406,7 @@
             height: 20px;
         }
 
+        /* CSS da legenda dos inputs do cartão */
         .n,
         .c,
         .n1,
@@ -414,14 +417,7 @@
             height: 20px;
         }
 
-        .codigo {
-            position: relative;
-            left: 124px;
-            top: -166px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 13px;
-        }
-
+        /* Inicio do CSS do numero de parcelas */
         fieldset {
             border: none;
             width: 100px;
@@ -434,12 +430,28 @@
             display: flex;
             height: 2em;
             line-height: 3;
-            /* background: #5c6664; */
             overflow: hidden;
             border-radius: .25em;
             margin-top: 7px;
         }
+        
+        #parcelas2 {
+            background-color: rgb(23, 107, 235);
+            border-color: black;
+        }
+        /* Fim do CSS do numero de parcelas */
 
+
+        /* Inicio do CSS do pix */
+        .codigo {
+            position: relative;
+            left: 124px;
+            top: -166px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+        }
+
+        /* Input do Pix */
         #pix {
             display: flex;
             flex-direction: row;
@@ -456,10 +468,17 @@
             position: relative;
         }
 
-        .finalizar {
+        #radiopix {
+            accent-color: rgb(56, 0, 128);
+            position: relative;
+            top: 6px;
+        }
+        /* Fim do CSS do pix */
+
+        /* Botão finalizar  */
+         .finalizar {
             position: relative;
             left: 58%;
-            /* top: -41px; */
             background-color: rgb(23, 107, 235);
             border: none;
             padding: 7px;
@@ -473,6 +492,7 @@
             transition: transform 450ms;
         }
 
+        /* Botão de escolher novo plano */
         .novo {
             position: relative;
             left: 338px;
@@ -487,6 +507,7 @@
             font-size: 12px;
         }
 
+         /* Inicio do Modal de selecionar o dia */
         #modal {
             display: none;
             position: fixed;
@@ -548,6 +569,7 @@
             background-color: red;
         }
 
+        /*Posicionamento da div que guarda o mês, semana e dias do calendario */
         .calendar {
             font-family: 'Poppins', sans-serif;
             max-width: 400px;
@@ -558,11 +580,13 @@
             text-align: center;
         }
 
+        /* Meses do calendario */
         .calendar .month {
             margin-bottom: 10px;
             margin-left: -5px;
         }
 
+        /* Semanas do calendario */
         .calendar .weekdays {
             display: flex;
             justify-content: center;
@@ -573,6 +597,7 @@
             text-align: center;
         }
 
+        /* Dias do calendario */
         .calendar .days {
             display: flex;
             flex-wrap: wrap;
@@ -616,6 +641,7 @@
             border-radius: 15px;
         }
 
+        /* Botão de fechar do modal */
         .close {
             color: #000000;
             float: right;
@@ -624,10 +650,12 @@
             cursor: pointer;
         }
 
+        /* Animação do botão de fechar */
         .close:hover {
             color: red;
         }
 
+        /* Botão de confirmar do modal */
         .confirmar1 {
             border-color: black;
             border-radius: 10px;
@@ -636,6 +664,7 @@
             margin-top: 20px;
         }
 
+        /* Animação do botão de confirmar */
         .confirmar1:hover {
             background-color: red;
         }
@@ -673,17 +702,7 @@
             color: white;
         }
 
-        #radiopix {
-            accent-color: rgb(56, 0, 128);
-            position: relative;
-            top: 6px;
-        }
-
-        #parcelas2 {
-            background-color: rgb(23, 107, 235);
-            border-color: black;
-        }
-
+        /* CSS do botão de agendar data */
         .agendar {
             background-color: rgb(58, 4, 102);
             color: white;
@@ -696,16 +715,6 @@
         .center {
             display: flex;
             justify-content: center;
-        }
-
-        .background {
-            will-change: transform;
-            transition: transform 450ms;
-        }
-
-        .imagem_redonda:hover .background {
-            transition: transform 150ms;
-            transform: translateY(-10px);
         }
 
         .modal1 {
@@ -762,62 +771,121 @@
 
         #okBtn1:hover {
             background-color: rgb(2, 58, 16);
+        }   
+        /* Término do modal Cancelar */
+
+        /* Distância da sensibilidade da logo  */
+        .background {
+            will-change: transform;
+            transition: transform 450ms;
         }
 
-        .selecionado {
-            background-color: rgb(46, 206, 46);
+        /* Suavidade da animação da imagem redonda */
+        .imagem_redonda:hover .background {
+            transition: transform 150ms;
+            transform: translateY(-10px);
         }
+
     </style>
 </head>
 
 <body>
+    <!-- Div principal do menu expansivel -->
     <div class="navegacao">
 
+         <!-- Div que guarda a logo dentro do menu -->
         <div class="imagem2">
-            <img src="https://cdn.discordapp.com/attachments/1069135222173601863/1089886762639298580/logo2.png"
-                width="67px">
+            <img src="https://cdn.discordapp.com/attachments/1069135222173601863/1089886762639298580/logo2.png" width="67px">
         </div>
+
+         <!-- Inicio da lista não ordenada do menu expansivel -->
         <ul>
-            <li class="list">
+
+            <!-- Primeiro item de uma lista -->
+            <li class="list active">
+
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'home_page.html'">Inicio</span>
                 </a>
+
             </li>
+
+             <!-- Segundo item de uma lista -->
             <li class="list">
+
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'agendamento.html'">Agendamento</span>
                 </a>
+
             </li>
+
+            <!-- Terceiro item de uma lista -->
             <li class="list">
+
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="calendar-number-outline"></ion-icon></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'agenda.html'">Meus Agendamentos</span>
                 </a>
+
             </li>
+
+            <!-- Quarto item de uma lista -->
             <li class="list">
+
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'contato.html'">Contato</span>
                 </a>
+
             </li>
+
+            <!-- Quinto item de uma lista -->
             <li class="list">
+
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'perfil.html'">Perfil</span>
                 </a>
+
             </li>
+
+            <!-- Sexto item de uma lista -->
             <li class="list">
+
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="ribbon-outline"></ion-icon></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'quem_somos.html'">Quem Somos</span>
                 </a>
+
             </li>
         </ul>
     </div>
+
+     <!-- Fontes de onde foram tirados os icones  -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+     <!-- Script que permite o click e direcionamento da página -->
     <script>
         const list = document.querySelectorAll('.list');
         function activeLink() {
@@ -829,95 +897,113 @@
             item.addEventListener('click', activeLink));
     </script>
 
+    <!-- Div redonda que guarda a logo -->
     <div class="imagem_redonda">
         <span class="background">
             <img src="logo_pagamento.png">
         </span>
     </div>
 
+    <!-- Div principal da área de pagamento -->
     <div class="primary">
-
+        
+        <!-- Form que guarda as informações de local, hora e forma de pagamento -->
         <form class="form_agend">
+            <!-- Div pra posicionar os campos de endereço, hora e local -->
             <div>
+                <!-- Campo de endereço -->
                 <label class="endereco1" for="endereco">Endereço<input
-                        value="Rua XV de Novembro 2345, Glória, Joiville - SC" id="endereco"></label>
+                        value="Rua XV de Novembro 2345, Glória, Joiville - SC" id="endereco">
+                </label>
+
+                <!-- Div que da hora e dia -->
                 <div class="data_hora">
+                    <!-- Div do horario -->
                     <div class="p1">
 
                         <div style="margin-top: 2px; margin-left: 6px; font-size: 15px;">
                             <p>Selecione o horário desejado</p>
                         </div>
+                        <!-- Seletor de horas -->
                         <div class="horario2">
                             <select id="">
-                                <option>13:30</option>
-                                <option>14:00</option>
-                                <option>14:30</option>
-                                <option>15:00</option>
                                 <option>15:30</option>
-                                <option>16:00</option>
                                 <option>16:30</option>
-                                <option>17:00</option>
-
                             </select>
                         </div>
                     </div>
 
                 </div>
             </div>
+            <!-- Inicio da forma de pagamento -->
             <p class="forma"><b>Forma de Pagamento</b></p>
 
-            <div class="campo">
+            <!-- Div principal para organizar os inputs -->
+            <div>
+                <!-- Div de selecionar a forma de pagamento -->
                 <div class="f1">
                     <label class="l1" for="cartao"><input type="radio" id="cartao" name="fav_language" value="HTML"
                             style="width: 15px;">
                         Cartão de Crédito</label>
                 </div>
+                <!-- Div dos inputs -->
                 <div class="f2">
+                    <!-- Label para juntar a legenda com o input -->
                     <label class="n" for="numero">
                         <p>Número do Cartão</p>
                         <input id="numero" type="text">
                     </label>
+                    <!-- Label para juntar a legenda com o input -->
                     <label class="c" for="codigo">
                         <p>Código de Segurança</p>
                         <input id="codigo" type="text">
                     </label>
+                    <!-- Label para juntar a legenda com o input -->
                     <label class="n1" for="Nome">
                         <p>Nome do Titular</p>
                         <input id="Nome" type="text">
                     </label>
+                    <!-- Label para juntar a legenda com o input -->
                     <label class="v" for="text">
                         <p>Validade do Cartão</p>
                         <input id="Validade" type="text">
                     </label>
                 </div>
+                <!-- Parcelamento -->
                 <fieldset>
                     <legend>Nº de Parcelas</legend>
                     <div class="parcelas">
+                        <!-- Seletor de horas -->
                         <select id="parcelas2">
-                            <option>1x de R$220,00</option>
-                            <option>2x de R$110,00</option>
-                            <option>3x de R$73,33</option>
-                            <option>4x de R$55,00</option>
+                            <option>1x de R$200,00</option>
+                            <option>2x de R$100,00</option>
+                            <option>3x de R$70,00</option>
+                            <option>4x de R$40,00</option>
                         </select>
                     </div>
                 </fieldset>
 
             </div>
 
+            <!-- Segunda forma de pagamento -->
             <div class="pix2" id="pix">
                 <div>
                     <input id="radiopix" type="radio" name="fav_language" value="HTML" style="width: 15px;">
                     <label class="l2" for="html">PIX</label>
                 </div>
+                <!-- Div pra mostrar a imagem do Qr code -->
                 <div id="qrcode"></div>
             </div>
+
+            <!-- Botão de Finalizar o agendamento -->
             <button class="finalizar" id="openModalBtn1"><b>Finalizar Agendamento</b></button>
-
-
-
+            
         </form>
-        <button class="novo" id="novo" onclick="window.location.href = 'agenda.html'"><b>Escolher novo
-                plano</b></button>
+
+        <!-- Botão de escolher novo plano -->
+        <button class="novo" id="novo" onclick="window.location.href = 'agenda.html'"><b>Escolher novo plano</b></button>
+
+        <!-- Inicio do modal de selecionar o dia -->
         <div class="data">
             <!-- Botão para abrir a modal -->
             <button onclick="openModal()" class="agendar" id="agendar">Escolher Data</button>
@@ -958,6 +1044,10 @@
                         <div class="days" id="days"></div>
                     </div>
                     <div class="center">
+                        <label>
+                            <input id="Endereco" type="endereco" placeholder="Endereço">
+                            <br><br>
+                        </label>
                     </div>
                     <button onclick="rescheduleService()" class="confirmar1">Confirmar</button>
                 </div>
@@ -973,80 +1063,66 @@
         </div>
     </div>
 
+        <!-- Java Script de mostrar e retirar o Qr code -->
+        <script>
 
-    <script>
+            var opcao = document.querySelector(".primary");
+            opcao.addEventListener("click", function () {
 
-        var opcao = document.querySelector(".primary");
-        opcao.addEventListener("click", function () {
-
-            var radiopix = document.getElementById("radiopix");
-            if (radiopix.checked) {
-                document.getElementById("qrcode").innerHTML = '<img id="qrimagem" src="https://cdn.discordapp.com/attachments/1082047840571900024/1125242875551162448/WhatsApp_Image_2023-07-02_at_22.51.50.jpeg" width="180px">'
-                opcao.style.height = "700px"
-            }
-            else if (document.getElementById("qrimagem")) {
-                document.getElementById("qrimagem").remove()
-                opcao.style.height = "91%"
-            }
-        })
-    </script>
-
-    <script>
-        // Função para abrir a modal
-        function openModal() {
-            var modal = document.getElementById("rescheduleModal");
-            modal.style.display = "block";
-        }
-
-        // Função para fechar a modal
-        function closeModal() {
-            var modal = document.getElementById("rescheduleModal");
-            modal.style.display = "none";
-        }
-
-        // Função para gerar o calendário com base no mês e ano selecionados
-        function generateCalendar() {
-            var monthSelect = document.getElementById("month");
-            var yearInput = document.getElementById("year");
-            var daysContainer = document.getElementById("days");
-
-            var monthIndex = monthSelect.value;
-            var year = yearInput.value;
-
-            // Lógica para gerar os dias do calendário (simplificada para exemplo)
-            var daysHtml = "";
-            for (var i = 1; i <= 31; i++) {
-                daysHtml += '<div id=' + i + ' class="dias" onclick="destacar_dias(' + i + ')">' + i + '</div>';
-            }
-
-            daysContainer.innerHTML = daysHtml;
-        }
-
-        function destacar_dias(id) {
-            var dia = document.getElementById(id);
-            var dias = document.getElementsByClassName("dias");
-            var pai = document.getElementById("days");
-            for (var i = 1; i < pai.children.length + 1; i++) {
-                var atual = document.getElementById(i);
-                if (atual.classList.contains('selecionado')) {
-                    atual.classList.remove('selecionado');
+                var radiopix = document.getElementById("radiopix");
+                if (radiopix.checked) {
+                    document.getElementById("qrcode").innerHTML = '<img id="qrimagem" src="code.png" width="200px">'
+                    opcao.style.height = "700px"
                 }
+                else if (document.getElementById("qrimagem")) {
+                    document.getElementById("qrimagem").remove()
+                    opcao.style.height = "91%"
+                }
+            })
+        </script>
+
+        <!-- Java Script do modal -->
+        <script>
+            // Função para abrir a modal
+            function openModal() {
+                var modal = document.getElementById("rescheduleModal");
+                modal.style.display = "block";
             }
-            dia.classList.add('selecionado');
-        }
 
-        // Função para reagendar o serviço (exemplo)
-        function rescheduleService() {
-            // Lógica para reagendar o serviço (pode ser personalizada conforme suas necessidades)
-            alert("Dia selecionado com sucesso!");
+            // Função para fechar a modal
+            function closeModal() {
+                var modal = document.getElementById("rescheduleModal");
+                modal.style.display = "none";
+            }
 
-            // Fechar a modal após reagendar o serviço
-            closeModal();
-        }
-    </script>
-    <script>
-        $("#numero").mask("(00) 9 0000-0000");
-    </script>
+            // Função para gerar o calendário com base no mês e ano selecionados
+            function generateCalendar() {
+                var monthSelect = document.getElementById("month");
+                var yearInput = document.getElementById("year");
+                var daysContainer = document.getElementById("days");
+
+                var monthIndex = monthSelect.value;
+                var year = yearInput.value;
+
+                // Lógica para gerar os dias do calendário (simplificada para exemplo)
+                var daysHtml = "";
+                for (var i = 1; i <= 31; i++) {
+                    daysHtml += "<div>" + i + "</div>";
+                }
+
+                daysContainer.innerHTML = daysHtml;
+            }
+
+            // Função para reagendar o serviço (exemplo)
+            function rescheduleService() {
+                // Lógica para reagendar o serviço (pode ser personalizada conforme suas necessidades)
+                alert("Serviço reagendado com sucesso!");
+
+                // Fechar a modal após reagendar o serviço
+                closeModal();
+            }
+        </script>
+   
 </body>
 
 <script>
@@ -1120,5 +1196,4 @@
     // Verifica o estado inicial ao carregar a página
     verificarCamposPreenchidos();
 </script>
-
 </html>

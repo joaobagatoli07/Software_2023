@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <a  href="https://icons8.com/icon/19993/imóveis"></a> <a href="https://icons8.com"></a>
+    <a  href="https://icons8.com/icon/123395/formulário-de-entrada-de-números"></a> <a href="https://icons8.com"></a>
 
     <style>
 /* CSS da página geral */
@@ -19,13 +21,13 @@
         * {
             margin: 0;
         }
-
+/* CSS da página principal, define o tamanho, cor e funcionamento dela */
         body {
             background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
             font-family: 'Poppins', sans-serif;
             height: 100vh;
         }
-
+/* Ajusta o posicionamento do bloco branco */
         .geral {
             width: 100%;
             height: 700px;
@@ -171,7 +173,7 @@
             height: 20px;
         }
 
-/* CSS para ajeitar os campos dentro do quadrado branco */
+/* CSS do form */
         .um {
             width: 100%;
             height: 100%;
@@ -179,6 +181,8 @@
             flex-wrap: wrap;
             justify-content: center;
         }
+
+/* CSS dos spans e divs*/
         .icon2, .icon3, .icon4, .icon5, .icon6, .icon7, .icon8{
             display: flex;
             font-size: 13px;
@@ -186,13 +190,10 @@
             align-items: flex-end;
         }
    
-/* Término do css para ajeitar os campos */
-
-
-/* CSS dos icones */
         .phone,  .email, .senha{
             font-size: 13px;
         }
+/* Fim do CSS dos spans e divs */
 
 /* CSS Icones */
         .icon2 ion-icon {
@@ -230,7 +231,17 @@
             top: 6px;
         }
 
-/* CSS do campo lá em cima do bloco branco */
+/* CSS do campo flex-direction */
+        .flex-direction{
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            top: 25px;
+        }
+
+/* CSS do campo "dados pessoais*/
         .dados {
             background-color: rgb(233, 233, 233);
             font-family: 'Poppins', sans-serif;
@@ -250,7 +261,7 @@
             margin-top: 10px;
         }
 
-
+/* CSS animação do botão de atualizar */
         .atualizar:hover {
             color: white;
             background-color: rgb(82, 3, 82);
@@ -276,14 +287,7 @@
         .imgcabecalho{
             margin-top: 10px;
         }
-        .flex-direction{
-            height: 60%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            top: 25px;
-        }
+
     </style>
 </head>
 
@@ -304,132 +308,187 @@
 
 <!-- HTML do bloco branco com os campos-->
         <div class="bloco">
-            <!-- Icones dos campos -->
+
+            <!-- Form dos input dentro do campo -->
             <form class="um" action="">
+
+                <!-- Div que guarda uma parte dos input do lado esquerdo do bloco branco -->
                 <div class="flex-direction">
+                    <!-- Icone dos campos -->
                     <span class="icon2"><ion-icon name="person-circle-outline"></ion-icon></ion-icon></ion-icon> 
-                        
+                        <!-- Junção da legenda com o input  -->
                         <label for="Nome">
                             <p>Nome</p>
                             <input id="Nome"  value="Robson Leones Tavares" style="width: 200px; height: 20px;">
                         </label>
                     </span>
                     
-                    <div class="phone">
-                        <span class="icon3"><ion-icon name="call-outline"></ion-icon></ion-icon></ion-icon>
-                        
-                            <label for="telefone">
-                                <p>Telefone</p>
-                                <input id="telefone" value="teste" style="width: 200px;">
-                            </label>
-                        </span>
-                    </div>
-                    <div class="email">
-                        <span class="icon4"><ion-icon name="mail-outline"></ion-icon></ion-icon></ion-icon>
-                   
-                            <label for="email">
-                                <p>Email</p>
-                                <input id="email" value="robsonleonestavares@gmai.com" style="width: 200px;">
-                            </label>
-                        </span>
-                        
-                    </div>
-                    <div class="senha">
-                        <span class="icon6"><ion-icon name="key-outline"></ion-icon></ion-icon></ion-icon>
-
-                            <label for="senha">
-                                <p>Senha</p>
-                                <input id="senha" value="1234567" type="password" style="width: 200px;">
-                            </label>
-                        </span>
+                    <!-- Icone dos campos -->
+                    <span class="icon3"><ion-icon name="call-outline"></ion-icon></ion-icon></ion-icon>
+                        <!-- Junção da legenda com o input  -->
+                        <label for="telefone">
+                            <p>Telefone</p>
+                            <input id="telefone" value="teste" style="width: 200px;">
+                        </label>
+                    </span>
                     
-                    </div>
+                    <!-- Icone dos campos -->
+                    <span class="icon4"><ion-icon name="mail-outline"></ion-icon></ion-icon></ion-icon>
+                        <!-- Junção da legenda com o input  -->
+                        <label for="email">
+                            <p>Email</p>
+                            <input id="email" value="robsonleonestavares@gmai.com" style="width: 200px;">
+                        </label>
+                    </span>
+                        
+                    <!-- Icone dos campos -->
+                    <span class="icon6"><ion-icon name="key-outline"></ion-icon></ion-icon></ion-icon>
+                        <!-- Junção da legenda com o input  -->
+                        <label for="senha">
+                            <p>Senha</p>
+                            <input id="senha" value="1234567" type="password" style="width: 200px;">
+                        </label>
+                    </span>
+                  
                 </div>
+
+                <!-- Botão de atualizar -->
                 <button class="atualizar">Atualizar Cadastro</button>
 
+                <!-- Div que guarda o endereço  -->
+                <div class="home">
+                    <!-- Icone dos campos -->
+                    <span class="icon5"><ion-icon name="home-outline"></ion-icon></ion-icon></ion-icon>
+                         <!-- Junção da legenda com o input  -->
+                        <label for="rua">
+                            <p>Rua</p>
+                            <input id="rua" value="Rua Grão-Pará" style="width: 200px;">
+                        </label>
+                    </span>
+                
+                    <span class="icon7">
+                        <!-- Icone dos campos -->
+                        <img width="32" height="32" src="https://img.icons8.com/windows/32/002D70/real-estate.png" alt="real-estate"/>
+                         <!-- Junção da legenda com o input  -->
+                        <label for="bairro">
+                            <p>Bairro</p>
+                            <input id="bairro" value="Itaum" style="width: 200px;">
+                        </label>
+                    </span>
 
-            <div class="home">
-                <span class="icon5"><ion-icon name="home-outline"></ion-icon></ion-icon></ion-icon>
-               
-                    <label for="rua">
-                        <p>Rua</p>
-                          <input id="rua" value="Rua Grão-Pará" style="width: 200px;">
-                    </label>
-                </span>
-              
-                <span class="icon7">
-                    <img width="32" height="32" src="https://img.icons8.com/windows/32/002D70/real-estate.png" alt="real-estate"/>
-                    <label for="bairro">
-                        <p>Bairro</p>
-                        <input id="bairro" value="Itaum" style="width: 200px;">
-                    </label>
-                </span>
-
-                <span class="icon8">
-                    <img width="37" height="37" src="https://img.icons8.com/ios/50/002D70/numbers-input-form.png" alt="numbers-input-form"/>
-                    <label for="num">
-                        <p>Nº da casa</p>
-                        <input id="num" value="89" style="width: 200px;">
-                    </label>
-                </span>
+                    <span class="icon8">
+                        <!-- Icone dos campos -->
+                        <img width="37" height="37" src="https://img.icons8.com/ios/50/002D70/numbers-input-form.png" alt="numbers-input-form"/>
+                         <!-- Junção da legenda com o input  -->
+                        <label for="num">
+                            <p>Nº da casa</p>
+                            <input id="num" value="89" style="width: 200px;">
+                        </label>
+                    </span>
                 </div>
                     
-                </form>
-            </div>
+            </form>
         </div>
     </div>
+
 <!-- Término do html do bloco branco com os campos -->
 
-<!-- HTML do menu -->
+<!-- Div principal do menu expansivel -->
     <div class="navegacao">
 
+        <!-- Div que guarda a logo dentro do menu -->
         <div class="imagem2">
-            <img src="https://cdn.discordapp.com/attachments/1069135222173601863/1089886762639298580/logo2.png"
-                width="67px">
+            <img src="https://cdn.discordapp.com/attachments/1069135222173601863/1089886762639298580/logo2.png" width="67px">
         </div>
+
+         <!-- Inicio da lista não ordenada do menu expansivel -->
         <ul>
+
+             <!-- Primeiro item de uma lista -->
             <li class="list">
+
+                 <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'home_page.html'">Inicio</span>
                 </a>
+
             </li>
+
+             <!-- Segundo item de uma lista -->
             <li class="list">
+
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'agendamento.html'">Agendamento</span>
                 </a>
+
             </li>
+
+             <!-- Terceiro item de uma lista -->
             <li class="list">
+
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="calendar-number-outline"></ion-icon></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'agenda.html'">Meus Agendamentos</span>
                 </a>
+
             </li>
+
+             <!-- Quarto item de uma lista -->
             <li class="list">
+
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'contato.html'">Contato</span>
                 </a>
+
             </li>
+
+
+            <!-- Quinto item de uma lista -->
             <li class="list active">
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'perfil.html'">Perfil</span>
                 </a>
+
             </li>
+
+             <!-- Sexto item de uma lista -->
             <li class="list">
+
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="ribbon-outline"></ion-icon></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'quem_somos.html'">Quem Somos</span>
                 </a>
+
             </li>
         </ul>
     </div>
+
+    <!-- Fontes de onde foram tirados os icones  -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <a  href="https://icons8.com/icon/19993/imóveis">Imóveis</a> icon by <a href="https://icons8.com">Icons8</a>
-    <a  href="https://icons8.com/icon/123395/formulário-de-entrada-de-números">Formulário de entrada de números</a> icon by <a href="https://icons8.com">Icons8</a>
+    
+<!-- Script que permite o click e direcionamento da página -->
     <script>
         const list = document.querySelectorAll('.list');
         function activeLink() {
@@ -440,8 +499,7 @@
         list.forEach((item) =>
             item.addEventListener('click', activeLink));
     </script>
-    </div>
+    
 <!-- Término do html do menu -->
 </body>
-
 </html>
