@@ -9,16 +9,19 @@
     <title>Quem Somos</title>
 
     <style>
+/* CSS da página geral */
         html {
             scroll-behavior: smooth;
         }
 
+/* CSS que enquadra a página */
         * {
             margin: 0;
             box-sizing: border-box;
             padding: 0;
         }
 
+/* CSS que define o tamanho e estiliza a página  */
         body {
             width: 99%;
             height: 170vh;
@@ -28,6 +31,7 @@
             flex-direction: column;
         }
 
+/* Inicio da estilização do menu, definindo tamanho, cor, posicionamento e funcionalidades */
         .navegacao {
             font-family: 'Poppins', sans-serif;
             position: fixed;
@@ -41,16 +45,19 @@
             margin-left: -10px;
         }
 
+/* Tamanho que o menu irá expandir */
         .navegacao:hover {
             width: 300px;
         }
 
+/* Animação dos campos do menu */
         a:hover {
             background-color: rgb(56, 0, 128);
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
         }
 
+/* Posicionamento de uma lista não ordenada */
         .navegacao ul {
             position: absolute;
             top: 30px;
@@ -60,6 +67,7 @@
             padding-top: 135px;
         }
 
+/* Posicionamento de um item da lista dentro de uma lista não ordenada */
         .navegacao ul li {
             position: relative;
             list-style: none;
@@ -68,6 +76,7 @@
             border-bottom-left-radius: 20px;
         }
 
+/* Estilização e posicionamento do link de outra página dentro de um item da lista */
         .navegacao ul li a {
             position: relative;
             display: flex;
@@ -76,6 +85,7 @@
             color: white;
         }
 
+/* Posicionamento dos icones junto com o link das páginas */
         .navegacao ul li a .icon {
             position: relative;
             display: block;
@@ -85,12 +95,14 @@
             line-height: 70px;
         }
 
+/* Posicionamento dos icones do menu */
         .navegacao ul li a .icon ion-icon {
             position: relative;
             font-size: 1.5rem;
             z-index: 1;
         }
 
+/* Posicionamento das legendas dos itens da lista */
         .navegacao ul li a .title {
             position: relative;
             display: block;
@@ -100,10 +112,12 @@
             white-space: nowrap;
         }
 
+/* Estilização dos itens da lista selecionados */
         .navegacao ul li.active {
             background: rgb(56, 0, 128);
         }
 
+/* Estilização da parte de trás dos campos selecionados  */
         .navegacao ul li.active a::after {
             content: '';
             position: absolute;
@@ -116,15 +130,18 @@
             box-shadow: 15px -15px 0 rgb(56, 0, 128);
         }
 
+/* Estilização da imagem */
         .imagem2 {
             margin-top: 10px;
         }
 
+/* Introdução */
         .intro {
             padding-top: 80px;
             display: flex;
         }
 
+/* Estilização do texto do intro text */
         .intro-text {
             font-family: 'Poppins', sans-serif;
             color: white;
@@ -132,6 +149,7 @@
             width: 50%;
         }
 
+/* Estilização do h1 do intro text */
         .intro-text h1 {
             font-size: 1.4rem;
             letter-spacing: 4px;
@@ -139,6 +157,7 @@
             font-weight: 400;
         }
 
+/* Estilização do h2 do intro text */
         .intro-text h2 {
             font-size: 3.5rem;
             font-weight: 500;
@@ -148,6 +167,7 @@
             line-height: 75px;
         }
 
+/* Estilização p do intro text */
         .intro-text p {
             font-size: 1.1rem;
             line-height: 1.5;
@@ -155,15 +175,18 @@
             text-align: justify;
         }
 
+/* Estilização a do intro text */
         .intro-text a {
             text-decoration: none;
             color: white;
         }
 
+/* Estilização a:hover do intro text */
         .intro-text a:hover {
             background-color: transparent;
         }
 
+/* Estilização do botão do intro text */
         .intro-text button {
             background-color: rgb(58, 4, 102);
             border: none;
@@ -174,18 +197,22 @@
             cursor: pointer;
         }
 
+/* Estilização hover botão */
         .intro-text button:hover{
             background-color: rgb(82, 3, 82);
         }
 
+/* Estilização imagem da intro */
         .intro-img {
             margin-left: 30px;
         }
 
+/* Estilização imagem intro2 */
         .intro-img img {
             margin-top: -70px;
         }
 
+/* Seção do meio */
         .middle {
             font-family: 'Poppins', sans-serif;
             color: white;
@@ -196,24 +223,28 @@
             justify-content: space-around;
         }
 
+/* Seção do meio titulo */
         .middle-title,
         .middle-text {
             width: 40%;
             box-sizing: border-box;
         }
 
+/* Seção do meio titulo p */
         .middle-title p {
             font-size: 1.8rem;
             font-weight: bold;
             text-align: center;
         }
 
+/* Seção do meio texto p */
         .middle-text p {
             font-size: 1rem;
             text-align: justify;
             text-indent: 5%;
         }
 
+/* Seção de baixo */
         .under-middle {
             display: flex;
             justify-content: center;
@@ -222,17 +253,20 @@
             font-family: 'Poppins', sans-serif;
         }
 
+/* Seção de baixo h1 */
         .under-middle h1 {
             color: rgb(58, 4, 102);
             font-size: 4.8rem;
             font-weight: bold;
         }
 
+/* Seção de baixo p */
         .under-middle p {
             color: #5b627d;
             font-size: 16px;
         }
 
+/* Seção de baixo cartão branco */
         .under-middle-whitecard {
             display: flex;
             justify-content: space-between;
@@ -243,6 +277,7 @@
             border-radius: 10px;
         }
 
+/* Seção de baixo cartão branco (cartão 1, 2 e 3) */
         .under-middle-whitecard .card1,
         .under-middle-whitecard .card2,
         .under-middle-whitecard .card3 {
@@ -251,6 +286,7 @@
             padding: 10px;
         }
 
+/* Seção de baixo cartão branco hover (cartão 1, 2 e 3) */
         .under-middle-whitecard .card1:hover,
         .under-middle-whitecard .card2:hover,
         .under-middle-whitecard .card3:hover {
@@ -259,6 +295,7 @@
             background-color: white;
         }
 
+/* Seção quase final */
         #almost-end {
             display: flex;
             justify-content: center;
@@ -266,16 +303,19 @@
             padding-top: 80px;
         }
 
+/* Estilização do vídeo */
         video {
             width: 800px;
             border-radius: 10px;
         }
 
+/* Estilização do flexbox */
         .flexbox {
             display: flex;
             justify-content: center;
         }
 
+/* Seção final2 */
         .end {
             font-family: 'Poppins', sans-serif;
             color: white;
@@ -287,25 +327,30 @@
             width: 80%;
         }
 
+/* Seção final texto */
         .end .end-text {
             width: 100%;
         }
 
+/* Seção do final botão */
         .end .end-button {
             width: 100%;
         }
 
+/* Seção final do texto p */
         .end .end-text p {
             text-align: center;
             font-size: 1.2rem;
             line-height: 1.5;
         }
 
+/* Seção final do texto p span */
         .end .end-text p span {
             color: rgb(58, 4, 102);
             font-weight: bold;
         }
 
+/* Estilização do botão de baixo */
         .end button {
             background-color: rgb(58, 4, 102);
             border: none;
@@ -318,11 +363,13 @@
             margin-bottom: 50px;
         }
 
+/* Estilização do botão de baixo2 */
         .end-button .button {
             display: flex;
             justify-content: center;
         }
 
+/* Estilização do botão (hover) de baixo2 */
         .end button:hover {
             background-color: rgb(82, 3, 82);
             cursor: pointer;
@@ -330,10 +377,13 @@
     </style>
 </head>
 
+<!-- HTML página principal -->
 <body>
 
+<!-- HTML da parte do meio da página -->
     <section class="intro">
 
+<!-- HTML da página do meio da página texto -->
         <div class="intro-text">
 
             <h1>Sobre nós</h1>
@@ -344,10 +394,12 @@
                 Tudo com o máximo conforto e qualidade.
             </p>
 
+<!-- HTML do botão "Nossas Tecnologias" -->
             <button><a href="#almost-end">Nossas tecnologias</a></button>
 
         </div>
 
+<!-- HTML da imagem da página -->
         <div class="intro-img">
             <img src="https://cdn.discordapp.com/attachments/1031736165017071657/1116802435655151676/istockphoto-538121201-612x612-removebg-preview.png"
                 height="440px" width="580px">
@@ -355,13 +407,16 @@
 
     </section>
 
+<!-- HTML da parte de baixo da página -->
     <section class="middle">
 
+<!-- HTML do título da parte de baixo da página -->
         <div class="middle-title">
             <p>A qualidade e a conveniência oferecida conquistaram a confiança de muitos clientes,
                 que se tornaram fiéis e indicam a All Clean para amigos e familiares.</p>
         </div>
 
+<!-- HTML do texto da parte de baixo da página -->
         <div class="middle-text">
             <p> Temos profissionais altamente treinados e equipados com uma van especializada,
                 que contém todos os equipamentos necessários para realizar uma limpeza eficiente.<br>
@@ -377,10 +432,13 @@
 
     </section>
 
+<!-- HTML da parte mais em baixo ainda da página -->
     <section class="under-middle">
 
+<!-- HTML dos cartões brancos da parte bem de baixo da página, onde fala da porcentagem, horas, etc -->
         <div class="under-middle-whitecard">
 
+<!-- HTML de cada card da porcentagem, hora e porcentagem de novo -->
             <div class="card1">
                 <h1>90%</h1>
                 <p>Dos clientes ficaram satisfeitos com os resultados</p>
@@ -400,17 +458,21 @@
 
     </section>
 
+<!-- HTML do vídeo -->
     <section id="almost-end">
 
+<!-- HTML do link do vídeo -->
         <div>
             <video src="video.mp4" controls></video>
         </div>
 
     </section>
 
+<!-- HTML do objetivo da empresa -->
     <div class="flexbox">
         <section class="end">
 
+<!-- HTML do texto do objetivo da empresa -->
             <div class="end-text">
                 <p>À medida que a empresa cresce, nosso objetivo é expandir nossa equipe e frota de vans para atender a
                     uma demanda
@@ -420,6 +482,7 @@
                 </p>
             </div>
 
+<!-- HTML do botão de baixo do objetivo da empresa "Fazer Agendamento" -->
             <div class="end-button">
                 <div class="button">
                     <button onclick="window.location.href = 'agendamento.html'">Fazer agendamento</button>
@@ -429,53 +492,97 @@
         </section>
     </div>
 
+<!-- Div principal do menu expansivel -->
     <div class="navegacao">
 
+<!-- Logo que fica no menu -->
         <div class="imagem2">
             <img src="https://cdn.discordapp.com/attachments/1069135222173601863/1089886762639298580/logo2.png"
                 width="67px">
         </div>
+    
+<!-- Inicio da lista não ordenada do menu expansivel -->
         <ul>
+
+<!-- Primeiro item de uma lista -->
             <li class="list active">
+
+<!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'home_page.html'">Inicio</span>
                 </a>
             </li>
+
+<!-- Segundo item de uma lista -->
             <li class="list">
+
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'agendamento.html'">Agendamento</span>
                 </a>
             </li>
+
+<!-- Terceiro item de uma lista -->
             <li class="list">
+
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="calendar-number-outline"></ion-icon></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'agenda.html'">Meus Agendamentos</span>
                 </a>
             </li>
+
+<!-- Quarto item de uma lista -->
             <li class="list">
+
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'contato.html'">Contato</span>
                 </a>
             </li>
+
+<!-- Quinto item de uma lista -->
             <li class="list">
+
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'perfil.html'">Perfil</span>
                 </a>
             </li>
+
+<!-- Sexto item de uma lista -->
             <li class="list">
+
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="ribbon-outline"></ion-icon></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'quem_somos.html'">Quem Somos</span>
                 </a>
             </li>
         </ul>
     </div>
+
+<!-- Fontes de onde foram tirados os icones  -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+ <!-- Script que permite o click e direcionamento da página -->
     <script>
         const list = document.querySelectorAll('.list');
         function activeLink() {
@@ -486,7 +593,7 @@
         list.forEach((item) =>
             item.addEventListener('click', activeLink));
     </script>
+<!-- Término do html do menu -->
 
 </body>
-
 </html>
