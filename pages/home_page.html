@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
 
@@ -11,164 +9,54 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
-    <style>
-        html {
+    <a  href="https://icons8.com/icon/549/máquina-de-lavar-roupa"></a><a href="https://icons8.com"></a>
+    <a  href="https://icons8.com/icon/63080/tábuas-de-passar-roupa"></a><a href="https://icons8.com"></a>
+    <a  href="https://icons8.com/icon/GSLuIZKlTpHQ/clothes-line"></a><a href="https://icons8.com"></a>
+
+</head>
+
+<style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html{
             scroll-behavior: smooth;
         }
 
-        * {
-            margin: 0;
-        }
-
-        body {
-            width: 99%;
+        body{
+            height: 100vh;
             background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
             font-family: Arial, Helvetica, sans-serif;
-            height: 230vh;
         }
 
-        .cabecalho {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-        }
-
-        .botao {
-            margin-left: 50px;
-            font-family: 'Poppins', sans-serif;
-            background-color: transparent;
-            border: none;
-            font-size: 20px;
-            color: white;
-        }
-
-        .agendar1:hover {
-            background-color: rgb(82, 3, 82);
-            border-radius: 10px;
-            padding: 5px;
-        }
-
-        .missao1 {
-            font-family: 'Poppins', sans-serif;
-            color: rgb(255, 255, 255);
-            margin-left: 40%;
-            font-size: 50px;
-            font-weight: bold;
-        }
-
-        .quadrado1 {
-            background-color: rgb(13, 2, 128);
-            width: 430px;
-            height: 180px;
-            border-radius: 20px;
-            margin-left: 250px;
-            margin-top: -250px;
-        }
-
-        .quadrado2 {
-            background-color: rgb(56, 0, 128);
-            width: 430px;
-            height: 180px;
-            border-radius: 20px;
-            margin-left: 600px;
-            margin-top: 100px;
-        }
-
-        .texto1 {
-            color: white;
-            margin-top: -165px;
-            margin-left: -410px;
-            text-align: center;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .texto2 {
-            color: white;
-            text-align: center;
-            font-family: 'Poppins', sans-serif;
-            margin-left: 310px;
-            margin-top: -71px;
-        }
-
-        .imagem3 {
-            margin-left: 380px;
-            margin-top: 70px;
-        }
-
-        .quadrado4 {
-            background-color: rgb(216, 216, 216);
-            width: 900px;
-            height: 350px;
-            border-radius: 20px;
-            margin-left: 220px;
-            margin-top: 40px;
-            box-shadow: 50px 30px rgb(187, 187, 187);
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-
-        }
-
-        .agendar1 {
-            margin-left: 100px;
-            font-family: 'Poppins', sans-serif;
-            background-color: rgb(56, 0, 128);
-            border-radius: 10px;
-            font-size: 20px;
-            color: white;
-            text-decoration: none;
-        }
-
-        .c_direita {
-            width: 70%;
-        }
-
-        .agendamento {
-            height: 80%;
-            border-radius: 7%;
-        }
-
-        .agendar2 {
-            font-family: 'Poppins', sans-serif;
-            color: black;
-            font-size: 15px;
-            margin-left: 327px;
-            margin-top: -160px;
-        }
-
-        .horario {
-            margin-top: -130px;
-        }
-
-         /* Inicio da estilização do menu, definindo tamanho, cor, posicionamento e funcionalidades */
         .navegacao {
             font-family: 'Poppins', sans-serif;
             position: fixed;
-            height: 690px;
+            height: 100vh;
             background: rgb(104, 49, 149);
             width: 70px;
             box-shadow: 10px 0 0 rgb(56, 0, 128);
             border-left: 10px solid rgb(104, 49, 149);
             overflow-x: hidden;
             transition: 0.5s;
-            margin-top: -20px;
             margin-left: -10px;
+            z-index: 10;
         }
 
-         /* Tamanho que o menu irá expandir */
         .navegacao:hover {
             width: 300px;
         }
 
-         /* Animação dos campos do menu */
         a:hover {
             background-color: rgb(56, 0, 128);
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
         }
 
-        /* Posicionamento de uma lista não ordenada */
         .navegacao ul {
             position: absolute;
             top: 30px;
@@ -178,7 +66,6 @@
             padding-top: 135px;
         }
 
-        /* Posicionamento de um item da lista dentro de uma lista não ordenada */
         .navegacao ul li {
             position: relative;
             list-style: none;
@@ -187,7 +74,6 @@
             border-bottom-left-radius: 20px;
         }
 
-         /* Estilização e posicionamento do link de outra página dentro de um item da lista */
         .navegacao ul li a {
             position: relative;
             display: flex;
@@ -196,7 +82,6 @@
             color: white;
         }
 
-        /* Posicionamento dos icones junto com o link das páginas */
         .navegacao ul li a .icon {
             position: relative;
             display: block;
@@ -206,14 +91,12 @@
             line-height: 70px;
         }
 
-        /* Posicionamento dos icones do menu */
         .navegacao ul li a .icon ion-icon {
             position: relative;
             font-size: 1.5rem;
             z-index: 1;
         }
 
-         /* Posicionamento das legendas dos itens da lista */
         .navegacao ul li a .title {
             position: relative;
             display: block;
@@ -223,12 +106,10 @@
             white-space: nowrap;
         }
 
-         /* Estilização dos itens da lista selecionados */
         .navegacao ul li.active {
             background: rgb(56, 0, 128);
         }
 
-         /* Estilização da parte de trás dos campos selecionados  */
         .navegacao ul li.active a::after {
             content: '';
             position: absolute;
@@ -241,79 +122,348 @@
             box-shadow: 15px -15px 0 rgb(56, 0, 128);
         }
 
-         /* Posicionamento da logo dentro do menu */
         .imagem2 {
-            margin-top: 7px;
+            margin-top: 18px;
         }
 
-       
-        .div {
+        .slider{
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .slides{
+            width: 400%;
+            height: 400px;
+            display: flex;
+        }
+
+        .slides input{
+           display: none; 
+        }
+
+        .slide{
+            width: 25%;
+            position: relative;
+            transition: 2s;
+        }
+
+        .slide img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .overlay{
+            width: inherit;
+            height: inherit;
+            background-color: rgba(56, 0, 128, 0.7);
+            z-index: 1;
+            position: absolute;
+            display: grid;
+            align-items: center;
+            backdrop-filter: blur(2px); 
+        }
+
+        .manual-navigation{
+            position: absolute;
+            width: 100%;
+            margin-top: -40px;
+            display: flex;
+            justify-content: center;
+            z-index: 3;
+        }
+
+        .manual-btn{
+            border: 2px solid white;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        .manual-btn:not(:last-child){
+            margin-right: 40px;
+        }
+
+        .manual-btn:hover{
+            background-color: white;
+        }
+
+        #radio1:checked ~ .first{
+            margin-left: 0; 
+        }
+
+        #radio2:checked ~ .first{
+            margin-left: -25%; 
+        }
+
+        #radio3:checked ~ .first{
+            margin-left: -50%; 
+        }
+
+        #radio4:checked ~ .first{
+            margin-left: -75%; 
+        }
+
+        .navigation-auto div{
+            border: 2px solid blue;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        .navigation-auto{
+            position: absolute;
+            width: 100%;
+            margin-top: 360px;
+            display: flex;
+            justify-content: center;
+            z-index: 3;
+        }
+
+        .navigation-auto div:not(:last-child){
+            margin-right: 40px;
+        }
+
+        #radio1:checked ~ .navigation-auto .auto-btn1{
+            background-color: white;
+        }
+
+        #radio2:checked ~ .navigation-auto .auto-btn2{
+            background-color: white;
+        }
+
+        #radio3:checked ~ .navigation-auto .auto-btn3{
+            background-color: white;
+        }
+
+        #radio4:checked ~ .navigation-auto .auto-btn4{
+            background-color: white;
+        }
+
+        .overlay h1{
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: 70px;
+            transform: scale(0.94);
+            animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+            text-shadow: 3px 3px 3px rgb(56, 0, 128);
+        }
+
+        @keyframes scale{
+        100% {
+            transform: scale(1);
+        }
+        }
+
+        .overlay span{
+            display: inline-block;
+            opacity: 0;
+            filter: blur(4px);
+        }
+
+        .overlay span:nth-child(1) {
+        animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+
+        .overlay span:nth-child(2) {
+        animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+
+        .overlay span:nth-child(3) {
+        animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+
+        .overlay span:nth-child(4) {
+        animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+
+        .overlay span:nth-child(5) {
+        animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+
+        .overlay span:nth-child(6) {
+        animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+
+        .overlay span:nth-child(7) {
+        animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+
+        @keyframes fade-in {
+        100% {
+            opacity: 1;
+            filter: blur(0);
+        }
+        }
+
+        .overlay button{
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(58, 4, 102);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0;
+            animation: fade-in-2 0.8s forwards;
+        }
+
+        button:hover{
+            background-color: rgb(82, 3, 82);
+        }
+
+        @keyframes fade-in-2 {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .flexbox{
+            display: flex;
+            justify-content: center;
+            margin-top: -180px;
+        }
+
+        .mission{
+            height: 280px;
+            width: 100%;
+            display: flex;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            align-items: center;
             margin-top: 20px;
         }
 
-        .avaliacao {
-            background-color: rgb(216, 216, 216);
-            width: 40%;
-            height: 15%;
-            margin-top: 200px;
-            margin-left: 750px;
-            box-shadow: 20px 20px rgb(187, 187, 187);
-            border-radius: 15px;
-            align-items: center;
+        .mission-text{
+            width: 60%;
         }
 
-        .avaliacao2 {
+        .mission-text .title, .text{
+            margin-left: 100px;
+            text-align: justify;
+        }
+
+        .mission-text .title{
+            font-size: 2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .mission-text .text{
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .mission-image{
+            width: 40%;
+        }
+
+        .footer{
+            height: 50px;
+            width: 100%;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            background-color: rgb(104, 49, 149);
+        }
+
+        .footer .link{
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer .link:hover{
+            text-decoration: underline;
+            background-color: transparent;
+        }
+
+        .services{
+            height: 500px;
+            background-color: rgb(58, 4, 102);
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .services .image{
+            width: 40%;
+            display: flex; 
+            justify-content: flex-end;
+        }
+
+        .services .image img{
             margin-top: -100px;
         }
 
-        .imagemavaliacao {
-            margin-top: 0px;
-            margin-left: 225px;
+        .services .content{
+            width: 60%;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            align-self: center;
         }
 
-        .imagemavaliacao2 {
-            opacity: 85%;
+        .services .content h1{
+            font-size: 2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .services .content .subtitulo{
+            font-size: 1rem;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .icons{
+            height: 250px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
             margin-top: 30px;
         }
 
-        .texto10 {
-            text-align: center;
-            font-family: 'Poppins', sans-serif;
-            color: black;
-            margin-left: 150px;
-            margin-top: -190px;
-            font-size: 15px;
+        .icon1,
+        .icon2,
+        .icon3{
+            background-color: rgb(56, 0, 128);
+            height: 250px;
+            width: 250px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
-        .avaliacao3 {
-            background-color: rgb(216, 216, 216);
-            width: 40%;
-            height: 15%;
-            margin-top: -230px;
-            margin-left: 120px;
-            box-shadow: 20px 20px rgb(187, 187, 187);
-            border-radius: 15px;
-            /* align-items: center; */
+        .icon1:hover,
+        .icon2:hover,
+        .icon3:hover{
+            border: 3px solid white;
         }
 
-        .imagem10 {
-            margin-left: 10px;
-            margin-top: 30px;
-        }
-
-        .texto11 {
-            text-align: center;
-            font-family: 'Poppins', sans-serif;
-            color: black;
-            font-size: 15px;
-            margin-top: -160px;
-            margin-left: 140px;
-        }
-    </style>
-</head>
+</style>
 
 <body>
 
+    <!-- Menu -->
     <div class="navegacao">
 
         <div class="imagem2">
@@ -372,55 +522,130 @@
             item.addEventListener('click', activeLink));
     </script>
 
-    <div class="div">
-        <h1 class="missao1"><i><b>Nossa Missão</i></b></h1>
-    </div>
+    <!-- Slider -->
+    <div class="slider">
 
-    <div class="quadrado2"></div>
-    <div class="quadrado1"></div>
+    <div class="overlay">
+        <h1>
+            <span>Faça</span>
+            <span>sua</span>
+            <span>roupa</span>
+            <span>brilhar</span>
+            <span>com</span>
+            <span>a</span>
+            <span>All Clean</span>
+        </h1>
 
-    <p class="texto1">Seu dia a dia já é corrido demais não é verdade?<br>Além disso, as máquinas de lavar roupas
-        estão<br>com um preço bastante elevado. Então, nós<br> da All Clean, decidimos deixar sua vida mais<br> prática
-        e te dar a oportunidade de<br> economizar<br></p>
-    <p class="texto2">Fizemos isso criando um <br>serviço de lavanderia<br> móvel. Marque um horário <br>e iremos até
-        sua residência. <br>Tudo com qualidade máxima e preço justo!</p>
-
-    <div class="imagem3">
-        <img src="https://cdn.discordapp.com/attachments/1045506981823270934/1098216613871882310/imagem-removebg-preview_1.png"
-            width="600px">
-    </div>
-
-    <div class="quadrado4">
-        <div class="horario">
-            <h1>Agende um Horário</h1>
-            <a class="agendar1" onclick="window.location.href = 'agendamento.html'">AGENDAR</a>
+        <div class="flexbox">
+            <div class="flexbox-btn">
+                <button onclick="window.location.href = 'agendamento.html'">Agende um horário</button>
+            </div>
         </div>
-        <img class="agendamento"
-            src="https://cdn.discordapp.com/attachments/1045506981823270934/1098222556269514852/1.png">
+    </div>
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
 
+            <div class="slide first"> 
+                <img src="https://images.ctfassets.net/ajjw8wywicb3/lDF9X6JH6QIjwrPQV7S6x/d3c637b767fa73d9ba714467390ea404/aws_ty_tide_cleaners_0200-V02-571x212_0730.png">
+            </div>
+
+            <div class="slide">
+                <img src="https://www.swisshandgolaundry.com/media/1227/hero-orange-white-laundromat.jpg">
+            </div>
+
+            <div class="slide">
+                <img src="https://images.ctfassets.net/ajjw8wywicb3/1cEx3Lk5lJHyMYOljWvUtG/921e6a144d56d65c0bd779221ba57862/ALP_header_1_How_to_remove_stains_1437x400.jpg?fm=webp">
+            </div>
+
+            <div class="slide">
+                <img src="https://www.halfpricelaundry.com/media/buuabmbh/dry-cleaning-vs-laundry.jpeg?cc=0,0.07641789985266942,0,0.41564261527611285&width=1920&height=650&rnd=133302481111370000&format=webp&quality=80">
+            </div>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+
+        </div>
+
+        <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
     </div>
 
-    <div>
-        <h6 class="agendar2">Classifique as roupas a serem <br> lavadas e indique um horário</h6>
+    <script>
+        let count = 1;
+        document.getElementById("radio1").checked = true;
+
+        setInterval(function(){
+            nextImage();
+        }, 5000)
+
+        function nextImage(){
+            count++;
+            if(count>4){
+                count = 1;
+            }
+
+            document.getElementById("radio"+count).checked = true;
+        }
+    </script>
+
+    <div class="mission">
+        <div class="mission-text">
+            <h1 class="title">Nossa Missão</h1>
+            
+            <p class="text">Seu dia a dia já é corrido demais não é verdade? Além disso, as máquinas de lavar roupas estão com um preço bastante elevado. Então, nós da All Clean, 
+                decidimos deixar sua vida mais prática e te dar a oportunidade de economizar. Fizemos isso criando um serviço de lavanderia móvel. Marque um horário e iremos até sua residência.
+                Tudo com qualidade máxima e preço justo!</p>
+        </div>
+
+        <div class="mission-image">
+            <img src="https://cdn.discordapp.com/attachments/1031736165017071657/1125207934595514388/HOW_TO_WASH_CLOTES_How_to_do_Laundry_570x310-removebg-preview.png">
+        </div>
     </div>
 
-    <div class="avaliacao">
-        <img src="https://cdn.discordapp.com/attachments/1045805391746973727/1110163256351404113/fotoefeitos.com__final_1962443157728507814_-removebg-preview.png"
-            width="180px" class="imagemavaliacao2">
-        <p class="texto10">A empresa demonstrou um excelente <br>desempenho em todas as áreas. <br>
-            Desde o atendimento ao cliente até a <br>qualidade dos serviços
-            oferecidos, <br> tudo foi excepcional. Recomendo essa <br>empresa sem hesitação,
-            pois sua <br>competência e comprometimento são notáveis.<br><b>-João Doria</b></p>
+    <div class="footer">
+        <div><a class="link" target="_blank" href="https://docs.google.com/document/d/1IKWVo4PE-KhODODtlJ68IAIGU5LYinAFXpOqpCSWLEQ/edit#heading=h.nj23sjpj5u97">Consulte nossos Termos de Uso e Política de Privacidade</a></div>
     </div>
 
-    <div class="avaliacao3">
-        <img src="https://cdn.discordapp.com/attachments/1031736165017071657/1109120071349047376/testeeee.png"
-            width="170px" class="imagem10">
-        <p class="texto11">A empresa superou todas as minhas <br>expectativas.
-            O atendimento ao cliente foi <br> impecável, com uma equipe simpática <br> e atenciosa.
-            Os serviços oferecidos são de <br> alta qualidade e atenderam perfeitamente <br> às minhas
-            necessidades.<br><b>-Adriano Silva</b></p>
+    <div class="services">
+        <div class="image">
+            <div>
+                <img src="https://cdn.discordapp.com/attachments/1031736165017071657/1125212704957812768/Shirts-removebg-preview.png">
+            </div>
+        </div>
+
+        <div class="content">
+            <h1>Nossos Serviços</h1>
+            <p class="subtitulo">Qualidade impecável, somada a conveniência e perfeição</p>
+
+            <div class="icons">
+
+                <div class="icon1">
+                    <div class="icon1-link"><img width="60" height="60" src="https://img.icons8.com/ios/50/FFFFFF/washing-machine.png"/></div>
+                    <div class="icon1-text">Lavagem</div>
+                </div>
+
+                <div class="icon2">
+                    <div class="icon2-link"><img width="60" height="60" src="https://img.icons8.com/ios/50/FFFFFF/clothesline.png"/></div>
+                    <div class="icon2-text">Secagem</div>
+                </div>
+
+                <div class="icon3">
+                    <div class="icon3-link"><img width="60" height="60" src="https://img.icons8.com/ios/100/FFFFFF/ironing.png"/></div>
+                    <div class="icon3-text">Roupa Passada</div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
-
 </html>
