@@ -16,23 +16,26 @@
 </head>
 
 <style>
-
+/* CSS da página geral */
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+/* CSS que enquadra a página */
         html{
             scroll-behavior: smooth;
         }
 
+/* CSS que define o tamanho e estiliza a página  */
         body{
             height: 100vh;
             background-image: linear-gradient(450deg, rgb(115, 102, 192), rgba(156, 105, 143), rgb(147, 108, 167), rgb(182, 111, 81));
             font-family: Arial, Helvetica, sans-serif;
         }
 
+/* Inicio da estilização do menu, definindo tamanho, cor, posicionamento e funcionalidades */
         .navegacao {
             font-family: 'Poppins', sans-serif;
             position: fixed;
@@ -47,16 +50,19 @@
             z-index: 10;
         }
 
+/* Tamanho que o menu irá expandir */
         .navegacao:hover {
             width: 300px;
         }
 
+/* Animação dos campos do menu */
         a:hover {
             background-color: rgb(56, 0, 128);
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
         }
 
+/* Posicionamento de uma lista não ordenada */
         .navegacao ul {
             position: absolute;
             top: 30px;
@@ -66,6 +72,7 @@
             padding-top: 135px;
         }
 
+/* Posicionamento de um item da lista dentro de uma lista não ordenada */
         .navegacao ul li {
             position: relative;
             list-style: none;
@@ -74,6 +81,7 @@
             border-bottom-left-radius: 20px;
         }
 
+/* Estilização e posicionamento do link de outra página dentro de um item da lista */
         .navegacao ul li a {
             position: relative;
             display: flex;
@@ -82,6 +90,7 @@
             color: white;
         }
 
+/* Posicionamento dos icones junto com o link das páginas */
         .navegacao ul li a .icon {
             position: relative;
             display: block;
@@ -91,12 +100,14 @@
             line-height: 70px;
         }
 
+/* Posicionamento dos icones do menu */
         .navegacao ul li a .icon ion-icon {
             position: relative;
             font-size: 1.5rem;
             z-index: 1;
         }
 
+/* Posicionamento das legendas dos itens da lista */
         .navegacao ul li a .title {
             position: relative;
             display: block;
@@ -106,10 +117,12 @@
             white-space: nowrap;
         }
 
+/* Estilização dos itens da lista selecionados */
         .navegacao ul li.active {
             background: rgb(56, 0, 128);
         }
 
+/* Estilização da parte de trás dos campos selecionados  */
         .navegacao ul li.active a::after {
             content: '';
             position: absolute;
@@ -122,16 +135,19 @@
             box-shadow: 15px -15px 0 rgb(56, 0, 128);
         }
 
+/* Estilização da imagem */
         .imagem2 {
             margin-top: 18px;
         }
 
+/* Config Slider */
         .slider{
             width: 100%;
             height: 400px;
             overflow: hidden;
         }
 
+/* Config Slides */
         .slides{
             width: 400%;
             height: 400px;
@@ -153,6 +169,7 @@
             height: 100%;
         }
 
+/* Config Overlay(Sobreposição) */
         .overlay{
             width: inherit;
             height: inherit;
@@ -164,6 +181,7 @@
             backdrop-filter: blur(2px); 
         }
 
+/* Navegação nos radios buttons */
         .manual-navigation{
             position: absolute;
             width: 100%;
@@ -242,6 +260,7 @@
             background-color: white;
         }
 
+/* Titulo página */
         .overlay h1{
             font-family: 'Poppins', sans-serif;
             color: white;
@@ -254,6 +273,7 @@
             text-shadow: 3px 3px 3px rgb(56, 0, 128);
         }
 
+/* Animações titulo */
         @keyframes scale{
         100% {
             transform: scale(1);
@@ -301,6 +321,7 @@
         }
         }
 
+/* Botão na div Overlay */
         .overlay button{
             font-family: 'Poppins', sans-serif;
             background-color: rgb(58, 4, 102);
@@ -319,6 +340,7 @@
             background-color: rgb(82, 3, 82);
         }
 
+/* Animação botão */
         @keyframes fade-in-2 {
             from {
                 opacity: 0;
@@ -330,12 +352,14 @@
             }
         }
 
+/* Usado para centralizar */
         .flexbox{
             display: flex;
             justify-content: center;
             margin-top: -180px;
         }
 
+/* Config Sessão Missão */
         .mission{
             height: 280px;
             width: 100%;
@@ -371,6 +395,7 @@
             width: 40%;
         }
 
+/* Config Cabeçalho Fixo */
         .footer{
             height: 50px;
             width: 100%;
@@ -394,6 +419,7 @@
             background-color: transparent;
         }
 
+/* Config Sessão Services */
         .services{
             height: 500px;
             background-color: rgb(58, 4, 102);
@@ -432,6 +458,7 @@
             margin-top: 10px;
         }
 
+/* Cards sessão serviços */
         .icons{
             height: 250px;
             width: 100%;
@@ -463,54 +490,77 @@
 
 <body>
 
-    <!-- Menu -->
+    <!-- Div principal do menu expansivel -->
     <div class="navegacao">
 
+        <!-- Logo que fica no menu -->
         <div class="imagem2">
             <img src="https://cdn.discordapp.com/attachments/1069135222173601863/1089886762639298580/logo2.png"
                 width="67px">
         </div>
         <ul>
             <li class="list active">
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title">Inicio</span>
                 </a>
             </li>
             <li class="list">
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'agendamento.html'">Agendamento</span>
                 </a>
             </li>
             <li class="list">
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="calendar-number-outline"></ion-icon></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'agenda.html'">Meus Agendamentos</span>
                 </a>
             </li>
             <li class="list">
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'contato.html'">Contato</span>
                 </a>
             </li>
             <li class="list">
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'perfil.html'">Perfil</span>
                 </a>
             </li>
             <li class="list">
+                <!-- Link que vai direcionar para outra página  -->
                 <a href="#">
+                    <!-- Icone das listas -->
                     <span class="icon"><ion-icon name="ribbon-outline"></ion-icon></ion-icon></span>
+                    <!-- Vai permitir fazer o click e direcionar para outra página  -->
                     <span class="title" onclick="window.location.href = 'quem_somos.html'">Quem Somos</span>
                 </a>
             </li>
         </ul>
     </div>
+
+    <!-- Fontes de onde foram tirados os icones  -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+     <!-- Script que permite o click e direcionamento da página -->
     <script>
         const list = document.querySelectorAll('.list');
         function activeLink() {
@@ -521,10 +571,12 @@
         list.forEach((item) =>
             item.addEventListener('click', activeLink));
     </script>
+    <!-- Fim Menu -->
 
-    <!-- Slider -->
+    <!-- Início Slider -->
     <div class="slider">
 
+        <!-- Div que adiciona cor e opacidade ao slide -->
     <div class="overlay">
         <h1>
             <span>Faça</span>
@@ -536,18 +588,22 @@
             <span>All Clean</span>
         </h1>
 
+        <!-- Botão de agendamento -->
         <div class="flexbox">
             <div class="flexbox-btn">
                 <button onclick="window.location.href = 'agendamento.html'">Agende um horário</button>
             </div>
         </div>
     </div>
+
+    <!-- Radio button dos slides -->
         <div class="slides">
             <input type="radio" name="radio-btn" id="radio1">
             <input type="radio" name="radio-btn" id="radio2">
             <input type="radio" name="radio-btn" id="radio3">
             <input type="radio" name="radio-btn" id="radio4">
 
+            <!-- Imagens dos slides -->
             <div class="slide first"> 
                 <img src="https://images.ctfassets.net/ajjw8wywicb3/lDF9X6JH6QIjwrPQV7S6x/d3c637b767fa73d9ba714467390ea404/aws_ty_tide_cleaners_0200-V02-571x212_0730.png">
             </div>
@@ -581,6 +637,7 @@
         </div>
     </div>
 
+    <!-- Script que permite a transição dos slides -->
     <script>
         let count = 1;
         document.getElementById("radio1").checked = true;
@@ -598,7 +655,9 @@
             document.getElementById("radio"+count).checked = true;
         }
     </script>
+    <!-- Fim Slider -->
 
+    <!-- Início Sessão Missão -->
     <div class="mission">
         <div class="mission-text">
             <h1 class="title">Nossa Missão</h1>
@@ -612,11 +671,15 @@
             <img src="https://cdn.discordapp.com/attachments/1031736165017071657/1125207934595514388/HOW_TO_WASH_CLOTES_How_to_do_Laundry_570x310-removebg-preview.png">
         </div>
     </div>
+     <!-- Fim Sessão Missão -->
 
+      <!-- Início Rodapé Fixo -->
     <div class="footer">
         <div><a class="link" target="_blank" href="https://docs.google.com/document/d/1IKWVo4PE-KhODODtlJ68IAIGU5LYinAFXpOqpCSWLEQ/edit#heading=h.nj23sjpj5u97">Consulte nossos Termos de Uso e Política de Privacidade</a></div>
     </div>
+    <!--  Fim Rodapé Fixo -->
 
+    <!-- Início Sessão Serviços -->
     <div class="services">
         <div class="image">
             <div>
@@ -628,6 +691,7 @@
             <h1>Nossos Serviços</h1>
             <p class="subtitulo">Qualidade impecável, somada a conveniência e perfeição</p>
 
+            <!-- Início Cards -->
             <div class="icons">
 
                 <div class="icon1">
@@ -645,7 +709,9 @@
                     <div class="icon3-text">Roupa Passada</div>
                 </div>
             </div>
+                <!-- Fim Cards -->
         </div>
     </div>
+    <!-- Fim Sessão Serviços -->
 </body>
 </html>
