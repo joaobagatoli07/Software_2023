@@ -13,11 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
     <style>
-/* CSS da página geral */
-        html{
+        /* CSS da página geral */
+        html {
             scroll-behavior: smooth;
         }
-        
+
         .geral {
             margin-top: 72px;
             display: flex;
@@ -31,46 +31,47 @@
             font-family: Arial, Helvetica, sans-serif;
             font-family: 'Poppins', sans-serif;
         }
-/* Término do css página geral */
 
-/* CSS do título */
-        .titulo{
+        /* Término do css página geral */
+
+        /* CSS do título */
+        .titulo {
             font-size: 45px;
             margin-left: 35px;
         }
 
-/* CSS do subtitulo */
-        .subtitulo{
+        /* CSS do subtitulo */
+        .subtitulo {
             margin-left: 30px;
             margin-top: -25px;
             font-style: italic;
         }
 
-/* CSS da mensagem */
+        /* CSS da mensagem */
         .mensagem {
             color: white;
             text-align: center;
         }
 
-/* CSS dos campos e do botão */
+        /* CSS dos campos e do botão */
         .login {
             color: white;
             width: 40%;
         }
 
-/* CSS do campo de email */
+        /* CSS do campo de email */
         #email::placeholder {
             color: white;
             font-family: 'Poppins', sans-serif;
         }
 
-/* CSS do campo de senha */
+        /* CSS do campo de senha */
         #senha::placeholder {
             color: white;
             font-family: 'Poppins', sans-serif;
         }
 
-/* CSS da estilização de dentro do campo */
+        /* CSS da estilização de dentro do campo */
         input {
             background: transparent;
             padding: 15px;
@@ -83,7 +84,7 @@
             margin-top: 10px;
         }
 
-/* CSS do botão de entrar */
+        /* CSS do botão de entrar */
         button {
             background-color: rgb(58, 4, 102);
             border: none;
@@ -95,36 +96,36 @@
             margin-left: 35%;
         }
 
-/* Hover do botão */
+        /* Hover do botão */
         button:hover {
             background-color: rgb(82, 3, 82);
             cursor: pointer;
         }
 
-/* Fonte da letra */
-        .fonte1{
+        /* Fonte da letra */
+        .fonte1 {
             font-family: 'Poppins', sans-serif;
         }
 
-/* CSS do botão cadastrar-se */
-        a:link{
+        /* CSS do botão cadastrar-se */
+        a:link {
             text-decoration: none;
         }
 
-        a:hover{
+        a:hover {
             text-decoration: underline;
         }
 
-        a:link{
+        a:link {
             color: white;
         }
 
-        .link{
+        .link {
             color: rgb(58, 4, 102);
             font-weight: bold;
         }
 
-        div i{
+        div i {
             font-size: 25px;
             cursor: pointer;
             position: absolute;
@@ -133,62 +134,68 @@
             margin-top: -42px;
         }
 
-        .flexbox{
+        .flexbox {
             display: flex;
             justify-content: center;
             margin-left: 23px;
         }
 
+        .faleconosco{
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
     </style>
 
-<!-- Java script do olho para ver a senha -->
-<script>
-    function mostrarSenha(){
-        var inputPass = document.getElementById('senha')
-        var btnShowPass = document.getElementById('btn-senha')
+    <!-- Java script do olho para ver a senha -->
+    <script>
+        function mostrarSenha() {
+            var inputPass = document.getElementById('senha')
+            var btnShowPass = document.getElementById('btn-senha')
 
-        if(inputPass.type === 'password'){
-            inputPass.setAttribute('type', 'text')
-            btnShowPass.classList.replace('bi-eye-fill', 'bi-eye-slash-fill')
-        }else{
-            inputPass.setAttribute('type', 'password')
-            btnShowPass.classList.replace('bi-eye-slash-fill', 'bi-eye-fill')
+            if (inputPass.type === 'password') {
+                inputPass.setAttribute('type', 'text')
+                btnShowPass.classList.replace('bi-eye-fill', 'bi-eye-slash-fill')
+            } else {
+                inputPass.setAttribute('type', 'password')
+                btnShowPass.classList.replace('bi-eye-slash-fill', 'bi-eye-fill')
+            }
+
         }
-
-    }
-</script>
+    </script>
 
 </head>
 
 <body>
     <div class="geral">
         <div class="mensagem">
-<!-- HTML do título -->
+            <!-- HTML do título -->
             <h1 class="titulo">All Clean</h1>
 
-<!-- HTML do subtitulo -->
+            <!-- HTML do subtitulo -->
             <p class="subtitulo">A melhor maneira de lavar suas roupas<br> e economizar. Tudo ao mesmo tempo!</p>
         </div>
 
-<!-- HTML login, campos -->
+        <!-- HTML login, campos -->
         <div class="login">
 
             <form action="/login" method="post" role="form">
                 <input id="email" type="email" name="email" placeholder="Email">
                 <br><br>
 
-                <input id="senha" type="password" id="password" name= "senha" placeholder="Senha" maxlength="25">
+                <input id="senha" type="password" id="password" name="senha" placeholder="Senha" maxlength="25">
                 <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()"></i>
                 <br><br>
 
-                <button class="fonte1"  type="submit">Entrar</button>
+                <button class="fonte1" type="submit">Entrar</button>
                 <br><br>
             </form>
 
-<!-- HTML do texto e do botão não tenho cadastro -->
+            <!-- HTML do texto e do botão não tenho cadastro -->
             <div class="flexbox">
                 <div class="signup">
-            <p>Não tem cadastro? <a class="link" href="pages/cadastro.html">Cadastre-se</a></p>
+                    <p>Não tem cadastro? <a class="link" href="pages/cadastro.html">Cadastre-se</a></p>
+
                 </div>
             </div>
 
@@ -196,5 +203,11 @@
     </div>
     <div id="mensagem-erro"></div>
 
+<div class="faleconosco">
+    <div>
+        <a onclick="window.location.href = 'faleconosco2.html'">Duvida? Clique aqui e fale conosco!!!</a>
+    </div>
+</div>
 </body>
+
 </html>
